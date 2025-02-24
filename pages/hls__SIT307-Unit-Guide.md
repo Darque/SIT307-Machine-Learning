@@ -45,8 +45,6 @@ file-path:: ../assets/SIT307-Unit-Guide.pdf
 	  hl-color:: red
 		- #### _Learning_
 			- ![SIT307_SIT720 - Machine Learning - Week 1 - Introduction to machine learning.pdf](../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction to machine learning.pdf)
-		- ![📄 Table of Contents.html](../assets/Table of Contents.html)
-		- ![📄 Welcome to SIT720.html](../assets/Welcome to SIT720.html)
 	- #### 02 - Data Wrangling Basics (10 March 2025)
 	  hl-page:: 9
 	  ls-type:: annotation
