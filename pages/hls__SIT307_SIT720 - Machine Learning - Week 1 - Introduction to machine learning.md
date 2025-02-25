@@ -316,6 +316,7 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 	  hl-page:: 8
 	  hl-color:: red
 	  id:: 67bd3586-fb82-4b23-b1a1-7e6a1051c161
+	  collapsed:: true
 		- The majority of practical ML uses supervised learning. This brief overview will give you a broad understanding of supervised learning. It’s an important concept and we’ll be going into much more detail in the up coming weeks.
 		  ls-type:: annotation
 		  hl-page:: 8
@@ -468,13 +469,142 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 					  id:: 67bd3f68-b036-4d45-993c-3e02413bce6a
 					  hl-type:: area
 					  hl-stamp:: 1740455779706
-- Unsupervised learning overview
-  ls-type:: annotation
-  hl-page:: 9
-  hl-color:: red
-  id:: 67bd40c0-9595-405c-b61d-e15b7d119680
-	- This brief introduction will give you an overview of the material we will cover in weeks 3 and 4.
+	- Unsupervised learning overview
 	  ls-type:: annotation
 	  hl-page:: 9
-	  hl-color:: blue
-	  id:: 67bd40fe-c010-4416-a7dc-504504de7421
+	  hl-color:: red
+	  id:: 67bd40c0-9595-405c-b61d-e15b7d119680
+	  collapsed:: true
+		- This brief introduction will give you an overview of the material we will cover in weeks 3 and 4.
+		  ls-type:: annotation
+		  hl-page:: 9
+		  hl-color:: blue
+		  id:: 67bd40fe-c010-4416-a7dc-504504de7421
+		- The main question in unsupervised learning is *How do you ﬁnd the underlying structure of a dataset which is unlabelled?* How does an algorithm learn patterns from (unlabelled) data ($𝑥_{1}, . . . , 𝑥_{𝑛}).
+		  hl-page:: 9
+		  ls-type:: annotation
+		  id:: 67bd422d-3bc9-4f1d-9fc4-e73d48d5b366
+		  hl-color:: blue
+		- In other words, can a machine algorithm learn from very large sets of data without additional information about the data? Can it ﬁnd patterns and relationships, make sense of data and make decisions or predictions?
+		  ls-type:: annotation
+		  hl-page:: 9
+		  hl-color:: blue
+		  id:: 67bd4266-e232-4202-b020-d858981b4b21
+		  collapsed:: true
+			- For example, if you had lots of data on all the ways people move around a city: long trips, short trips, time of day, vehicle type, direction of travel etc in a mixed up dataset without labels, would machine learning be able to make sense of it and tell you when to leave home to get to work on time?
+			  ls-type:: annotation
+			  hl-page:: 9
+			  hl-color:: yellow
+			  id:: 67bd435a-5930-450f-bf46-6673d8b30d04
+		- Popular approaches in unsupervised learning are:
+		  ls-type:: annotation
+		  hl-page:: 9
+		  hl-color:: blue
+		  id:: 67bd4369-881d-4bf6-ac72-464b6fb23d37
+		  hl-stamp:: 1740456815568
+		  collapsed:: true
+			- clustering (similarity-based), density estimation
+			  ls-type:: annotation
+			  hl-page:: 9
+			  hl-color:: yellow
+			  id:: 67bd4379-db90-47da-98c2-e849411007c3
+			- factor analysis
+			  ls-type:: annotation
+			  hl-page:: 9
+			  hl-color:: yellow
+			  id:: 67bd4380-2e8a-4bad-9da4-e9f5ec89bac9
+		- Clustering
+		  ls-type:: annotation
+		  hl-page:: 9
+		  hl-color:: red
+		  id:: 67bd4394-9313-432d-987c-5d566c46749f
+		  collapsed:: true
+			- **Clustering** - is the process of grouping similar points together. The goal of this unsupervised machine learning technique is to ﬁnd relative similarities in the data points. But why do we need to perform this task? Because it will give us insight into underlying patterns or different groups within the dataset(s).
+			  hl-page:: 9
+			  ls-type:: annotation
+			  id:: 67bd439c-76e5-46aa-8672-21d625d8e0eb
+			  hl-color:: green
+			  collapsed:: true
+				- Let’s consider an example. The unlabelled data points (before clustering) are shown at the top of the following ﬁgure.
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd43e1-610f-4a0f-99c3-a2d88133db9d
+				  collapsed:: true
+					- By performing clustering based on the similarities and correlations, we might ﬁnd 2 clusters in these data points. For example, we might determine trips around the city of less than 25 km and more than 25 km. This creates two groups. The art is in working out if 25 km is a good cut-off point. Is it useful? Perhaps it would be more useful to extract more clusters.
+					  ls-type:: annotation
+					  hl-page:: 9
+					  hl-color:: yellow
+					  id:: 67bd4444-933a-4178-8bb3-d5ab20b5647d
+					- We can perform the clustering in a way that results in more than two clusters. Let’s say 3 or even 4 clusters. We might have a cluster of trips that are more than 1 km and less than 10 km. Then perhaps the machine might overlay that with a cluster of pedestrian data. Would that be useful? How could you make it better?
+					  ls-type:: annotation
+					  hl-page:: 9
+					  hl-color:: yellow
+					  id:: 67bd4458-4d89-46ef-8fc0-483177ffecf6
+					- [:span]
+					  ls-type:: annotation
+					  hl-page:: 9
+					  hl-color:: yellow
+					  id:: 67bd43f4-847b-4c0e-a243-92ad12b52e58
+					  hl-type:: area
+					  hl-stamp:: 1740456947520
+			- Since the data is **unlabelled** in clustering problems, based on the features and the **expectation of the user** from the behaviour of the data, we can look for any number of clusters.
+			  hl-page:: 9
+			  ls-type:: annotation
+			  id:: 67bd4490-4c0d-46c1-9aef-afb06975b689
+			  hl-color:: green
+			  collapsed:: true
+				- Say my expectation is that most trips in the city are less than 10 km. If the algorithm presents me with a cluster that contains trips of less than 15 metres, is that useful? It depends on what I’m trying to ﬁnd out. Perhaps I would change that parameter.
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd44ac-1fcd-4f6a-9bf8-7ec67b620018
+		- A real-world example
+		  ls-type:: annotation
+		  hl-page:: 9
+		  hl-color:: red
+		  id:: 67bd44c9-efa8-497d-942a-f1d23fc111fe
+		  collapsed:: true
+			- The popular entertainment company Netﬂix opened a competition for the best collaborative ﬁltering algorithm to predict user ratings for ﬁlms. They provided a training data set of 100, 480, 507 movie ratings that 480, 189 users gave to 17, 770 movies.
+			  ls-type:: annotation
+			  hl-page:: 9
+			  hl-color:: blue
+			  id:: 67bd4503-47df-4a50-8995-57f39458b121
+			  collapsed:: true
+				- This competition was a real “Movie Recommendation Problem”. They were expecting contestants to predict movie ratings for users. The winning Bellkor solution won the small team 1 million dollars from Netﬂix. In such problems there are no labels available for data points. That is why we are categorizing such problems as unsupervised learning.
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd451a-62f8-40fd-9c17-5c57ad06c82f
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd452b-c899-4cd0-a387-9807979a7152
+				  hl-type:: area
+				  hl-stamp:: 1740457257296
+			- Generally, the potential tasks for ML unsupervised learning are:
+			  ls-type:: annotation
+			  hl-page:: 9
+			  hl-color:: blue
+			  id:: 67bd4536-3c00-459b-849a-cc61e098207b
+				- information retrieval
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd4543-2744-40dd-8697-9a52f598e0e4
+				- data compression (reduction)
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd454b-266f-4e95-9ca8-f40a3247be94
+				- anomaly detection
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd4553-577e-4f59-9563-0fb976875b25
+				- data understanding and visualization
+				  ls-type:: annotation
+				  hl-page:: 9
+				  hl-color:: yellow
+				  id:: 67bd4559-f9ab-4a0e-a28d-63049b0808db
