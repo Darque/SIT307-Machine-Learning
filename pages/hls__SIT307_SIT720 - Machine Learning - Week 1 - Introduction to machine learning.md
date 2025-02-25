@@ -608,3 +608,155 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 				  hl-page:: 9
 				  hl-color:: yellow
 				  id:: 67bd4559-f9ab-4a0e-a28d-63049b0808db
+	- Reinforcement learning
+	  ls-type:: annotation
+	  hl-page:: 10
+	  hl-color:: red
+	  id:: 67bd5961-8c54-4163-a381-7a597df09084
+	  collapsed:: true
+		- Reinforcement learning is another important type of machine learning algorithm.
+		  ls-type:: annotation
+		  hl-page:: 10
+		  hl-color:: blue
+		  id:: 67bd596c-aabc-4e4f-af96-1e81f4732cbc
+		- **Interactions** - in this algorithm, an agent learns how to behave in an environment by performing actions and learning from interactions. Learning from“interaction with the environment” replicates the way humans learn by instinct, curiosity and experimentation.
+		  hl-page:: 10
+		  ls-type:: annotation
+		  id:: 67bd597a-026b-42d9-8073-d303501fe297
+		  hl-color:: green
+		  collapsed:: true
+			- The learner (a machine or a human) acts on its environment, receives some evaluation based on its action (reward), but is not told which action is the correct one for a desired end goal. The learner’s actions affect the data it receives later.
+			  ls-type:: annotation
+			  hl-page:: 10
+			  hl-color:: yellow
+			  id:: 67bd599c-b26c-425c-a0ee-fef2c2a46bc5
+		- There are many logic games like Chess, with a sequence of decisions. It is possible to train an agent to learn how to play Chess by reinforcement learning; if the actions and the corresponding rewards are well deﬁned. For example, if I move my Queen out to a vulnerable square, it gets taken off the board. I lose. Next time I’ll try something different.
+		  ls-type:: annotation
+		  hl-page:: 10
+		  hl-color:: yellow
+		  id:: 67bd59b6-b735-43d4-9266-71a913f773ba
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 10
+		  hl-color:: yellow
+		  id:: 67bd5a0f-5e8a-493e-9891-853dcef4acbb
+		  hl-type:: area
+		  hl-stamp:: 1740462605446
+- Model evaluation and selection
+  hl-page:: 11
+  ls-type:: annotation
+  id:: 67bd5a29-e7ae-4a59-bea6-223279755caf
+  hl-color:: red
+	- Model evaluation
+	  hl-page:: 11
+	  ls-type:: annotation
+	  id:: 67bd5a53-3e15-4310-8fec-d5e2d37f6e1c
+	  hl-color:: red
+	  collapsed:: true
+		- In machine learning problems, we should always evaluate a model to determine if it will do an excellent job of predicting the labels on new and future test data.
+		  ls-type:: annotation
+		  hl-page:: 11
+		  hl-color:: blue
+		  id:: 67bd5a6c-2c78-4201-8855-9b274a470643
+		- Because future instances have unknown label values, we need to check the accuracy of a machine learning model on test data with correct labels that we already know. We use this assessment as a proxy for predictive accuracy on future data (which is unknown to us!). For this purpose we need to:
+		  ls-type:: annotation
+		  hl-page:: 11
+		  hl-color:: blue
+		  id:: 67bd5a7b-fb04-45ae-9e80-2402b910b690
+			- randomly split examples into a **training dataset** and **test dataset**
+			  hl-page:: 11
+			  ls-type:: annotation
+			  id:: 67bd5a89-e82a-4278-9fed-c85881186985
+			  hl-color:: green
+			- use the training dataset to **learn a model**
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: green
+			  id:: 67bd5aa4-0ba3-49ce-844a-ccc7125df62a
+			- **evaluate the model** using the test dataset and a measurement (such as the accuracy of prediction)
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: green
+			  id:: 67bd5ab4-4567-4d87-8753-1357858fed70
+			- repeat for different random splits and then **average the results**
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: green
+			  id:: 67bd5ac6-759a-4887-ad18-6821993eeff7
+			- check the accuracy of results and try again (iterate) until the model makes useful predictions
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: yellow
+			  id:: 67bd5ad5-3e3b-413c-9f0c-66e83bfd3626
+			  hl-stamp:: 1740462813695
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: yellow
+			  id:: 67bd5afe-115b-4ccf-8796-405a5ee5ae14
+			  hl-type:: area
+			  hl-stamp:: 1740462845373
+	- Model selection
+	  ls-type:: annotation
+	  hl-page:: 11
+	  hl-color:: red
+	  id:: 67bd5b09-4ec7-4b75-936d-2404ae25370a
+		- One of the most challenging tasks in the assessment of machine learning models is to ﬁnd the *BEST* model or best ﬁt hypothesis.
+		  ls-type:: annotation
+		  hl-page:: 11
+		  hl-color:: blue
+		  id:: 67bd5b61-aafe-4081-8950-ca42202d466d
+		  collapsed:: true
+			- As we discussed earlier in our ‘trips around the city’ example, there are many ways of grouping and combining data and many ways to adjust the model’s controls (parameters and hyper-parameters). This will vary a model’s ﬁtness to the data.
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: yellow
+			  id:: 67bd5b78-30bd-42b6-92c5-5a38351af252
+			- There is *no easy way* to know if a certain model will offer the best ﬁt. There is so much data and so many possible features that we can’t be sure which model to choose. That’s why we have to try many different models.
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: yellow
+			  id:: 67bd5b88-76d2-41e8-bcfc-0c48e84f21ef
+		- Trying out models
+		  ls-type:: annotation
+		  hl-page:: 11
+		  hl-color:: red
+		  id:: 67bd5ba7-1978-4679-a193-30062bb1b0a1
+		  collapsed:: true
+			- If you remember the clustering problem we discussed previously, we are not sure about the exact number of clusters, so we cannot know the best or most accurate or most useful model. The models we choose will have a direct effect on the quality of the output.
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: blue
+			  id:: 67bd5bb6-5c87-4e36-ab5b-8ba33c950fe0
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: blue
+			  id:: 67bd5bc9-45b3-450d-bd82-3aaee105ab1b
+			  hl-type:: area
+			  hl-stamp:: 1740463048091
+			- There are many effective ways that people approach this problem:
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: blue
+			  id:: 67bd5bd4-05e9-4169-a7c5-dc643441bfa9
+				- look at averaged evaluation scores on many random test datasets
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: yellow
+				  id:: 67bd5bdb-2fb2-4946-8a81-c6b2d3fbb4fc
+				- cross-validation, that is train using one dataset and test on another, try rotating them and test again, for example if you have datasets A, B and C try AIC, BIC etc.
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: yellow
+				  id:: 67bd5be4-7d66-4694-984c-050a4fd0a4d7
+		- Over-ﬁtting
+		  ls-type:: annotation
+		  hl-page:: 11
+		  hl-color:: red
+		  id:: 67bd5ca7-6e36-4cff-bc06-61046d221a21
+			- Sometimes when a model learns the details and noise within a training dataset the knowledge can negatively impact the performance of the model on a new dataset. In machine learning, we call this *Over-ﬁtting*. In other words, designing a model to suit the training dataset can result in poor performance on evaluation or new data.
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: blue
+			  id:: 67bd5d86-4ea1-405d-a083-2fc34647ac28
