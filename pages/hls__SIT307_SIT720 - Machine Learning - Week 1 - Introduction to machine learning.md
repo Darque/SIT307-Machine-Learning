@@ -1020,269 +1020,385 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 		  hl-page:: 14
 		  hl-color:: yellow
 		  id:: 67bd6592-15de-4fd3-bef7-250d60fb507a
-- Matrix algebra
+	- Matrix algebra
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd666f-5180-4bf0-875e-ff2bbea8b1b5
+	  collapsed:: true
+		- Matrices are also a fundamental element of linear algebra and extremely useful in machine learning. Most of the machine learning methods deal with matrix operations. The main two features of any matrix is the number of rows and the number of columns.
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd6685-8ca2-4036-8b97-a83d5a028920
+		  collapsed:: true
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6693-0a1b-40a3-8d8e-12293f2750ed
+			  hl-type:: area
+			  hl-stamp:: 1740465810186
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd66ab-14ad-41b4-ab53-ec3e331b8deb
+			  hl-type:: area
+			  hl-stamp:: 1740465833887
+		- Basic operations
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd66c0-603b-4b08-a04d-a6532ad9437f
+		  collapsed:: true
+			- Next we review some basic operations in matrices.
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd66ea-53eb-4ea8-9d45-040de9e9f6db
+		- Matrix Addition/Subtraction
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd6700-7f2b-4075-a55c-3f99fb2a5144
+		  collapsed:: true
+			- You can add or subtract matrices if they are the same size.
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6712-c532-4d12-bbab-8594bf411a06
+			- The elements in the corresponding positions are added or subtracted. Subtraction is similarly done:
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6728-47b3-45ca-b014-59c62a704f29
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6733-0129-4703-a4f2-69c7d4999c93
+				  hl-type:: area
+				  hl-stamp:: 1740465969900
+		- Scalar Multiplication/Division
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd675a-2203-42cf-b186-c89f43cf368f
+		  collapsed:: true
+			- To multiply a matrix 𝐴 with scalar 𝑎, multiply each element of 𝐴 and 𝑎 as below:
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6767-70db-4aee-8931-ae71d30453e5
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd678c-3faa-4e9b-b912-e7b285cd8d31
+				  hl-type:: area
+				  hl-stamp:: 1740466055013
+			- Division is similarly done except that division by 0 is not allowed for obvious reasons.
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd67aa-a5e5-413a-a6f8-a738acfa6e70
+			  hl-stamp:: 1740466106909
+		- Elementwise Matrix Multiplication
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd67c5-2d96-4e47-b74a-6138cd64209c
+		  hl-stamp:: 1740466182709
+		  collapsed:: true
+			- You can multiply any two matrices element-wise if they have the same size. Consider $𝐴⨀ 𝐵 = 𝐶$. Now $𝐶(𝑖, 𝑗)$ is computed as product of $𝐴(𝑖, 𝑗)$ and $𝐵(𝑖, 𝑗)$.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd67cf-6d77-4749-a890-f7896b376a2a
+			  hl-color:: blue
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd67fa-7852-47cd-9560-6723fe4a27ed
+			  hl-type:: area
+			  hl-stamp:: 1740466169232
+		- Matrix to Matrix Multiplication
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd683a-5b67-4551-bc47-6eaa6524fcd2
+		  collapsed:: true
+			- You can multiply any two matrices if the number of columns in the ﬁrst matrix is **equal** to the number of rows in the second matrix. Consider $𝐴𝐵 = 𝐶$. Now $𝐶(𝑖, 𝑗)$ is computed by dot product of $𝐴(𝑖, : )$ and $𝐵(: , 𝑗)$.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6845-38c9-4878-b4a7-d12c49ac1005
+			  hl-color:: blue
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6881-adb4-4387-b0e1-f9b33d665c47
+			  hl-type:: area
+			  hl-stamp:: 1740466304478
+			- Note: Matrix multiplication is NOT commutative. In other words, multiplication order matters. In general $𝐴𝐵 ≠ 𝐵𝐴$. In some case they may not even be size compatible if multiplied in the other order.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6894-8599-4b15-9ec6-1b8943ec002f
+			  hl-color:: blue
+		- Rectangular and Square Matrices
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd68b4-fa0f-46a8-8519-f6cfbb96ceb5
+		  collapsed:: true
+			- If a matrix 𝐴 has size 𝑚 × 𝑛 such that 𝑚 = 𝑛, then it is called a square matrix; otherwise it is a rectangular matrix.
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd68c5-b74e-4a8a-9b56-0916c67c302f
+				- is a square matrix and is a rectangular matrix
+				  hl-page:: 15
+				  ls-type:: annotation
+				  id:: 67bd68f2-edf4-4be9-97b6-d84ff5d6d639
+				  hl-color:: blue
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6902-9767-4627-afae-ee884a5c4ef0
+				  hl-type:: area
+				  hl-stamp:: 1740466432948
+		- Transpose of a Matrix
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd6915-a081-49cf-bf71-ef9788986f65
+		  collapsed:: true
+			- The transpose of a matrix 𝐴 is obtained by putting all the matrix elements on rows on its columns. Lets say 𝐵 is transpose of 𝐴 then,𝐵(𝑖, 𝑗) = 𝐴(𝑗, 𝑖).
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd691c-a67a-48c9-954c-4b301b1052d6
+				- As an example, is the transpose of
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6992-1180-4034-866e-5ae7b05eacf9
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd69d7-a785-4ff7-83e2-01c428d12765
+				  hl-type:: area
+				  hl-stamp:: 1740466645637
+		- Symmetric Matrices
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd69f6-bc0c-449a-8ad1-07a94c9b760e
+		  collapsed:: true
+			- A matrix $A$ is called symmetric if it is equal to its transpose, that is $𝐴 = 𝐴^{𝑇}$. Symmetric matrices are always square matrices.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6a00-a7e3-4c94-a7f7-16560933cc87
+			  hl-color:: blue
+				- is a symmetric matrix of size 2 × 2.
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6a29-117e-4ca9-8839-7a5fb97f65ca
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6a35-db75-4272-bddd-2ac099602fa7
+				  hl-type:: area
+				  hl-stamp:: 1740466739891
+		- Diagonal Matrix
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd6a4a-91f5-47f1-a912-0505b53fe662
+		  collapsed:: true
+			- A matrix $𝐴$ is called a diagonal matrix if $𝐴(𝑖, 𝑗) = 0$ for all $𝑖 ≠ 𝑗$. Diagonal matrix is always a square matrix. The following is an example:
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6a7d-7ab1-4aef-9c2d-2f7610952ae8
+			  hl-color:: blue
+				- is a diagonal matrix
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6ab1-7611-4c8d-95f5-5659e0e2c8a0
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6acb-ad59-4dc7-9395-5c195a4057c1
+				  hl-type:: area
+				  hl-stamp:: 1740466890362
+		- Identity Matrix
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd6adf-82c2-4944-9656-c0c8d81be1f8
+		  collapsed:: true
+			- A matrix $𝐼$ is called an identity matrix if it is a diagonal matrix and $𝐼(𝑖, 𝑖) = 1$. The following is an example:
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6ae8-f6a3-4645-81ae-4d39667712e2
+			  hl-color:: blue
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6b06-d45b-4f83-b222-5e67eacb5606
+			  hl-type:: area
+			  hl-stamp:: 1740466948606
+			- Note that we often use $𝐼_{𝑛 × 𝑛}$ to denote an identity matrix of size $𝑛 × 𝑛$.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6b10-4d8d-4797-b57e-e448292d8ac3
+			  hl-color:: blue
+		- Inverse of a Matrix
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd6b2e-5e6d-420d-b6d3-81c0307df96e
+		  hl-stamp:: 1740467004331
+		  collapsed:: true
+			- A matrix $A$ is called as inverse of matrix $B$, if and only if $𝐵𝐴 = 𝐴𝐵 = 𝐼$. Since $𝐴𝐵 = 𝐵𝐴$ both $𝐴$ and $𝐵$ need to be a square matrix.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6b46-6e6b-4198-ab84-c67acfdc52b3
+			  hl-color:: blue
+			- If $A$ is inverse of $B$, we denote it as $𝐴 = 𝐵−1$
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6b6c-4c94-4132-95fd-d23d6651e06a
+			  hl-color:: blue
+			- Note: Inverse of a matrix $𝐴$ *exists* only if its determinant is nonzero.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6b89-152b-47a2-abfb-b9c41e02356c
+			  hl-color:: blue
+		- Orthogonal Matrix
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd6ba2-61e5-46a3-9f35-2765f9d63bfb
+		  collapsed:: true
+			- A square matrix $𝑈$ is called an *orthogonal matrix* if its transpose is equal to its inverse, $𝑈^{𝑇} = 𝑈^{−1}$.
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6baf-b547-443b-a351-833e447df752
+			  hl-color:: blue
+			- Based on the deﬁnition, any identity matrix is orthogonal. The other examples of orthogonal matrices are *rotation matrices*. The following is an example of an orthogonal matrix:
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd6bdc-5961-421d-be3f-1772339e3e76
+			  hl-color:: blue
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6bfa-ecdd-41f5-a932-86007f33aed5
+			  hl-type:: area
+			  hl-stamp:: 1740467193047
+		- Other Concepts related to a Matrix
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: red
+		  id:: 67bd6c0f-ec37-4bd0-9853-4e1987e90825
+		  collapsed:: true
+			- There are many concepts regarding matrices such as:
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6c28-2119-405e-9424-cbb388913392
+				- Determinant of a matrix
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6c2d-6981-4cbf-bd3d-831e7072f54c
+				- Trace of a matrix
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6c35-2f81-48e4-81f9-0556d12affad
+				- Linear Independence
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6c3c-9be7-4f26-ab4b-9b5e37fb9221
+				- Rank of a matrix
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6c43-007b-4a5c-afc4-8cd71b493551
+				- Eigen values/Eigen vectors of a matrix
+				  ls-type:: annotation
+				  hl-page:: 15
+				  hl-color:: blue
+				  id:: 67bd6c4b-6f4c-4f6a-b4a5-097497fc0296
+	- Some special matrices
+	  ls-type:: annotation
+	  hl-page:: 16
+	  hl-color:: red
+	  id:: 67bd6cce-aadd-4de7-bd53-aa21765a9624
+	  collapsed:: true
+		- **Vector space model** - the representation of a set of documents as vectors.
+		  hl-page:: 16
+		  ls-type:: annotation
+		  id:: 67bd6cd9-a947-4488-997e-4e58f047ca42
+		  hl-color:: green
+		- It is a fundamental step in information retrieval operations. These operations can vary from a simple query problem to real search engines.
+		  ls-type:: annotation
+		  hl-page:: 16
+		  hl-color:: blue
+		  id:: 67bd6d09-72d5-40ea-bdc1-85f8ea287afb
+		- In the *text data representation* step we had two documents with their corresponding feature vectors.
+		  ls-type:: annotation
+		  hl-page:: 16
+		  hl-color:: blue
+		  id:: 67bd6d16-bb54-46cc-b39f-c2bdebb1b2a9
+		- By calculating the euclidean distance, we can easily ﬁnd the distance between these two documents. It can be utilised as a quick way to ﬁnd the closeness of two documents
+		  ls-type:: annotation
+		  hl-page:: 16
+		  hl-color:: blue
+		  id:: 67bd6d30-e224-4db0-832a-c0f1bc4ecaa9
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 16
+		  hl-color:: blue
+		  id:: 67bd6d3d-a662-4dc1-9492-88476ecac655
+		  hl-type:: area
+		  hl-stamp:: 1740467516491
+	- Let's get started
+	  ls-type:: annotation
+	  hl-page:: 17
+	  hl-color:: red
+	  id:: 67bd6d7e-168d-45fb-9305-aea086fe8bd6
+	  collapsed:: true
+		- Beginners
+		  ls-type:: annotation
+		  hl-page:: 17
+		  hl-color:: red
+		  id:: 67bd6d91-f980-4bf4-a7a8-e5d691272013
+		  collapsed:: true
+			- If you’ve never programmed before, Python is a good way to begin.
+			  ls-type:: annotation
+			  hl-page:: 17
+			  hl-color:: blue
+			  id:: 67bd6d9a-ffa5-48c4-9eb5-02d058bda118
+		- Experienced Coders
+		  ls-type:: annotation
+		  hl-page:: 17
+		  hl-color:: red
+		  id:: 67bd6dba-ba06-45ce-a7b8-c2da085df1f5
+- Setting up Python
   ls-type:: annotation
-  hl-page:: 15
+  hl-page:: 18
   hl-color:: red
-  id:: 67bd666f-5180-4bf0-875e-ff2bbea8b1b5
-	- Matrices are also a fundamental element of linear algebra and extremely useful in machine learning. Most of the machine learning methods deal with matrix operations. The main two features of any matrix is the number of rows and the number of columns.
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: blue
-	  id:: 67bd6685-8ca2-4036-8b97-a83d5a028920
-	  collapsed:: true
-		- [:span]
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd6693-0a1b-40a3-8d8e-12293f2750ed
-		  hl-type:: area
-		  hl-stamp:: 1740465810186
-		- [:span]
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd66ab-14ad-41b4-ab53-ec3e331b8deb
-		  hl-type:: area
-		  hl-stamp:: 1740465833887
-	- Basic operations
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd66c0-603b-4b08-a04d-a6532ad9437f
-	  collapsed:: true
-		- Next we review some basic operations in matrices.
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd66ea-53eb-4ea8-9d45-040de9e9f6db
-	- Matrix Addition/Subtraction
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd6700-7f2b-4075-a55c-3f99fb2a5144
-	  collapsed:: true
-		- You can add or subtract matrices if they are the same size.
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd6712-c532-4d12-bbab-8594bf411a06
-		- The elements in the corresponding positions are added or subtracted. Subtraction is similarly done:
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd6728-47b3-45ca-b014-59c62a704f29
-			- [:span]
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd6733-0129-4703-a4f2-69c7d4999c93
-			  hl-type:: area
-			  hl-stamp:: 1740465969900
-	- Scalar Multiplication/Division
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd675a-2203-42cf-b186-c89f43cf368f
-	  collapsed:: true
-		- To multiply a matrix 𝐴 with scalar 𝑎, multiply each element of 𝐴 and 𝑎 as below:
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd6767-70db-4aee-8931-ae71d30453e5
-			- [:span]
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd678c-3faa-4e9b-b912-e7b285cd8d31
-			  hl-type:: area
-			  hl-stamp:: 1740466055013
-		- Division is similarly done except that division by 0 is not allowed for obvious reasons.
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd67aa-a5e5-413a-a6f8-a738acfa6e70
-		  hl-stamp:: 1740466106909
-	- Elementwise Matrix Multiplication
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd67c5-2d96-4e47-b74a-6138cd64209c
-	  hl-stamp:: 1740466182709
-	  collapsed:: true
-		- You can multiply any two matrices element-wise if they have the same size. Consider $𝐴⨀ 𝐵 = 𝐶$. Now $𝐶(𝑖, 𝑗)$ is computed as product of $𝐴(𝑖, 𝑗)$ and $𝐵(𝑖, 𝑗)$.
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd67cf-6d77-4749-a890-f7896b376a2a
-		  hl-color:: blue
-		- [:span]
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd67fa-7852-47cd-9560-6723fe4a27ed
-		  hl-type:: area
-		  hl-stamp:: 1740466169232
-	- Matrix to Matrix Multiplication
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd683a-5b67-4551-bc47-6eaa6524fcd2
-	  collapsed:: true
-		- You can multiply any two matrices if the number of columns in the ﬁrst matrix is **equal** to the number of rows in the second matrix. Consider $𝐴𝐵 = 𝐶$. Now $𝐶(𝑖, 𝑗)$ is computed by dot product of $𝐴(𝑖, : )$ and $𝐵(: , 𝑗)$.
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6845-38c9-4878-b4a7-d12c49ac1005
-		  hl-color:: blue
-		- [:span]
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd6881-adb4-4387-b0e1-f9b33d665c47
-		  hl-type:: area
-		  hl-stamp:: 1740466304478
-		- Note: Matrix multiplication is NOT commutative. In other words, multiplication order matters. In general $𝐴𝐵 ≠ 𝐵𝐴$. In some case they may not even be size compatible if multiplied in the other order.
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6894-8599-4b15-9ec6-1b8943ec002f
-		  hl-color:: blue
-	- Rectangular and Square Matrices
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd68b4-fa0f-46a8-8519-f6cfbb96ceb5
-	  collapsed:: true
-		- If a matrix 𝐴 has size 𝑚 × 𝑛 such that 𝑚 = 𝑛, then it is called a square matrix; otherwise it is a rectangular matrix.
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd68c5-b74e-4a8a-9b56-0916c67c302f
-			- is a square matrix and is a rectangular matrix
-			  hl-page:: 15
-			  ls-type:: annotation
-			  id:: 67bd68f2-edf4-4be9-97b6-d84ff5d6d639
-			  hl-color:: blue
-			- [:span]
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd6902-9767-4627-afae-ee884a5c4ef0
-			  hl-type:: area
-			  hl-stamp:: 1740466432948
-	- Transpose of a Matrix
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd6915-a081-49cf-bf71-ef9788986f65
-	  collapsed:: true
-		- The transpose of a matrix 𝐴 is obtained by putting all the matrix elements on rows on its columns. Lets say 𝐵 is transpose of 𝐴 then,𝐵(𝑖, 𝑗) = 𝐴(𝑗, 𝑖).
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd691c-a67a-48c9-954c-4b301b1052d6
-			- As an example, is the transpose of
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd6992-1180-4034-866e-5ae7b05eacf9
-			- [:span]
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd69d7-a785-4ff7-83e2-01c428d12765
-			  hl-type:: area
-			  hl-stamp:: 1740466645637
-	- Symmetric Matrices
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd69f6-bc0c-449a-8ad1-07a94c9b760e
-	  collapsed:: true
-		- A matrix $A$ is called symmetric if it is equal to its transpose, that is $𝐴 = 𝐴^{𝑇}$. Symmetric matrices are always square matrices.
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6a00-a7e3-4c94-a7f7-16560933cc87
-		  hl-color:: blue
-			- is a symmetric matrix of size 2 × 2.
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd6a29-117e-4ca9-8839-7a5fb97f65ca
-			- [:span]
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd6a35-db75-4272-bddd-2ac099602fa7
-			  hl-type:: area
-			  hl-stamp:: 1740466739891
-	- Diagonal Matrix
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd6a4a-91f5-47f1-a912-0505b53fe662
-	  collapsed:: true
-		- A matrix $𝐴$ is called a diagonal matrix if $𝐴(𝑖, 𝑗) = 0$ for all $𝑖 ≠ 𝑗$. Diagonal matrix is always a square matrix. The following is an example:
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6a7d-7ab1-4aef-9c2d-2f7610952ae8
-		  hl-color:: blue
-			- is a diagonal matrix
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd6ab1-7611-4c8d-95f5-5659e0e2c8a0
-			- [:span]
-			  ls-type:: annotation
-			  hl-page:: 15
-			  hl-color:: blue
-			  id:: 67bd6acb-ad59-4dc7-9395-5c195a4057c1
-			  hl-type:: area
-			  hl-stamp:: 1740466890362
-	- Identity Matrix
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd6adf-82c2-4944-9656-c0c8d81be1f8
-	  collapsed:: true
-		- A matrix $𝐼$ is called an identity matrix if it is a diagonal matrix and $𝐼(𝑖, 𝑖) = 1$. The following is an example:
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6ae8-f6a3-4645-81ae-4d39667712e2
-		  hl-color:: blue
-		- [:span]
-		  ls-type:: annotation
-		  hl-page:: 15
-		  hl-color:: blue
-		  id:: 67bd6b06-d45b-4f83-b222-5e67eacb5606
-		  hl-type:: area
-		  hl-stamp:: 1740466948606
-		- Note that we often use $𝐼_{𝑛 × 𝑛}$ to denote an identity matrix of size $𝑛 × 𝑛$.
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6b10-4d8d-4797-b57e-e448292d8ac3
-		  hl-color:: blue
-	- Inverse of a Matrix
-	  ls-type:: annotation
-	  hl-page:: 15
-	  hl-color:: red
-	  id:: 67bd6b2e-5e6d-420d-b6d3-81c0307df96e
-	  hl-stamp:: 1740467004331
-		- A matrix $A$ is called as inverse of matrix $B$, if and only if $𝐵𝐴 = 𝐴𝐵 = 𝐼$. Since $𝐴𝐵 = 𝐵𝐴$ both $𝐴$ and $𝐵$ need to be a square matrix.
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6b46-6e6b-4198-ab84-c67acfdc52b3
-		  hl-color:: blue
-		- If $A$ is inverse of $B$, we denote it as $𝐴 = 𝐵−1$
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6b6c-4c94-4132-95fd-d23d6651e06a
-		  hl-color:: blue
-		- Note: Inverse of a matrix $𝐴$ *exists* only if its determinant is nonzero.
-		  hl-page:: 15
-		  ls-type:: annotation
-		  id:: 67bd6b89-152b-47a2-abfb-b9c41e02356c
-		  hl-color:: blue
-- Orthogonal Matrix
-  ls-type:: annotation
-  hl-page:: 15
-  hl-color:: red
-  id:: 67bd6ba2-61e5-46a3-9f35-2765f9d63bfb
+  id:: 67bd6df9-7e13-48e0-a2f4-32708e7e9be1
