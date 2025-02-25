@@ -210,80 +210,271 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 				  hl-page:: 6
 				  hl-color:: yellow
 				  id:: 67bd3039-3ba8-44c2-890f-c59fd1a171ac
-- Machine Learning steps
-  ls-type:: annotation
-  hl-page:: 7
-  hl-color:: red
-  id:: 67bd3096-2ef5-4d39-afe7-6990447cb14a
-	- Have you ever thought about how you learn to make decisions?
-	  ls-type:: annotation
-	  hl-page:: 7
-	  hl-color:: blue
-	  id:: 67bd31b0-577f-4cb7-b98f-e9b36bf08914
-	  collapsed:: true
-		- Let’s assume that we have been asked to research a problem and make a decision. You must have access to information (data) from which you can learn. Once you have data, what do you do with it? Most people analyse the information to ﬁnd patterns and relationships. You make a decision based on your work. Finally, you evaluate the model. Did you make a good decision or could it have been better?
-		  ls-type:: annotation
-		  hl-page:: 7
-		  hl-color:: yellow
-		  id:: 67bd31bd-9ede-47c6-98c2-69aa798dc79a
-		- Let’s look at each of these stages in more detail and relate them to ML.
-		  ls-type:: annotation
-		  hl-page:: 7
-		  hl-color:: yellow
-		  id:: 67bd31ca-5877-43a0-a9ba-50a11fe2d61f
-	- Step 1: Data Manipulation
+	- Machine Learning steps
 	  ls-type:: annotation
 	  hl-page:: 7
 	  hl-color:: red
-	  id:: 67bd31d2-ef84-445c-beea-5448e2389e56
-		- This is a process of data preparation. ML usually uses the largest sets of data available.
+	  id:: 67bd3096-2ef5-4d39-afe7-6990447cb14a
+	  collapsed:: true
+		- Have you ever thought about how you learn to make decisions?
 		  ls-type:: annotation
 		  hl-page:: 7
 		  hl-color:: blue
-		  id:: 67bd31e6-8d7f-41a2-83d5-6ebf61017014
-		- **Data Acquisition** - The ﬁrst step in data manipulation, data acquisition is the process of sampling information that illustrates real world physical conditions with a predeﬁned measurement. Using our car example, you might measure engine size, number of doors, size of tyres etc.
-		  hl-stamp:: 1740452384649
-		  hl-page:: 7
-		  ls-type:: annotation
-		  id:: 67bd31f2-3ac7-4ff5-a1fe-f419e62c5f6a
-		  hl-color:: green
+		  id:: 67bd31b0-577f-4cb7-b98f-e9b36bf08914
 		  collapsed:: true
-			- The data acquired should be reliable for converting into digital numeric values that can be manipulated by a computer. Number of car doors is easy; style is less easy to deﬁne numerically.
+			- Let’s assume that we have been asked to research a problem and make a decision. You must have access to information (data) from which you can learn. Once you have data, what do you do with it? Most people analyse the information to ﬁnd patterns and relationships. You make a decision based on your work. Finally, you evaluate the model. Did you make a good decision or could it have been better?
 			  ls-type:: annotation
 			  hl-page:: 7
 			  hl-color:: yellow
-			  id:: 67bd3200-9935-4654-b08c-40b085453d1c
-			  hl-stamp:: 1740452405405
-		- **Data Cleaning** - Once the data is properly stored, any redundant, noisy, unusable parts of it should be trimmed. Data cleaning is a major step as real-world datasets are highly affected by noise, redundancy and missing values. We might delete any three-wheeled cars because they’re so unusual.
-		  hl-stamp:: 1740452538876
-		  hl-page:: 7
+			  id:: 67bd31bd-9ede-47c6-98c2-69aa798dc79a
+			- Let’s look at each of these stages in more detail and relate them to ML.
+			  ls-type:: annotation
+			  hl-page:: 7
+			  hl-color:: yellow
+			  id:: 67bd31ca-5877-43a0-a9ba-50a11fe2d61f
+		- Step 1: Data Manipulation
 		  ls-type:: annotation
-		  id:: 67bd320a-044d-4b0e-9c65-3779a83447b3
+		  hl-page:: 7
+		  hl-color:: red
+		  id:: 67bd31d2-ef84-445c-beea-5448e2389e56
+		  collapsed:: true
+			- This is a process of data preparation. ML usually uses the largest sets of data available.
+			  ls-type:: annotation
+			  hl-page:: 7
+			  hl-color:: blue
+			  id:: 67bd31e6-8d7f-41a2-83d5-6ebf61017014
+			- **Data Acquisition** - The ﬁrst step in data manipulation, data acquisition is the process of sampling information that illustrates real world physical conditions with a predeﬁned measurement. Using our car example, you might measure engine size, number of doors, size of tyres etc.
+			  hl-stamp:: 1740452384649
+			  hl-page:: 7
+			  ls-type:: annotation
+			  id:: 67bd31f2-3ac7-4ff5-a1fe-f419e62c5f6a
+			  hl-color:: green
+			  collapsed:: true
+				- The data acquired should be reliable for converting into digital numeric values that can be manipulated by a computer. Number of car doors is easy; style is less easy to deﬁne numerically.
+				  ls-type:: annotation
+				  hl-page:: 7
+				  hl-color:: yellow
+				  id:: 67bd3200-9935-4654-b08c-40b085453d1c
+				  hl-stamp:: 1740452405405
+			- **Data Cleaning** - Once the data is properly stored, any redundant, noisy, unusable parts of it should be trimmed. Data cleaning is a major step as real-world datasets are highly affected by noise, redundancy and missing values. We might delete any three-wheeled cars because they’re so unusual.
+			  hl-stamp:: 1740452538876
+			  hl-page:: 7
+			  ls-type:: annotation
+			  id:: 67bd320a-044d-4b0e-9c65-3779a83447b3
+			  hl-color:: green
+		- Step 2: Analytics
+		  ls-type:: annotation
+		  hl-page:: 7
+		  hl-color:: red
+		  id:: 67bd3212-76bd-4a2c-8133-7630598b321c
+		  collapsed:: true
+			- **Analytics** - The second main step in machine learning, analytics mainly involves ﬁnding relationships and correlations in the prepared data in order to design an accurate model based on that input data
+			  hl-page:: 7
+			  ls-type:: annotation
+			  id:: 67bd321e-8864-4951-92ea-1fefb2c09dae
+			  hl-color:: green
+			- **Exploratory Data** - in addition, analysis is an approach for analysing datasets in order to summarise their main characteristics or features. Many exploratory data analysis methods use visual illustration of data, based on different features. Things like graphs, charts and tables make data easier to understand.
+			  hl-page:: 7
+			  ls-type:: annotation
+			  id:: 67bd3266-7d7d-4677-be2f-491b98fec230
+			  hl-color:: green
+			- **Predictive Machine Learning** - the last stage of Analytics. It uses a variety of statistical techniques such as predictive modelling in order to build a classiﬁer or intelligent system for decision making. We will come back to these ideas over the next few weeks.
+			  hl-page:: 7
+			  ls-type:: annotation
+			  id:: 67bd3295-4112-4fae-b4b6-2de597a404ba
+			  hl-color:: green
+		- Step 3: Evaluation and Visualisation
+		  ls-type:: annotation
+		  hl-page:: 7
+		  hl-color:: red
+		  id:: 67bd34e3-69d7-4a68-b222-291c72648548
+		  collapsed:: true
+			- The ﬁnal result of Analytics is an intelligent system or model. As the last step of ML design, we have to evaluate the performance of the system. “Did I choose the right car?”
+			  ls-type:: annotation
+			  hl-page:: 7
+			  hl-color:: blue
+			  id:: 67bd3514-c3b1-441b-9e90-b07111221e98
+			- Reﬁnement - if the quality and performance of the intelligent system does not achieve a satisfactory outcome, the Reﬁnement procedure is required and another round of data manipulation and analytics becomes necessary. Again, we will come back to these ideas as you move through the Unit.
+			  hl-page:: 7
+			  ls-type:: annotation
+			  id:: 67bd3529-b57b-4a7a-8b2d-1a6c90548dbe
+			  hl-color:: green
+			- In this Unit we mainly focus on the Analytics step. However it will be necessary to use parts of the Data Manipulation step to build a model.
+			  ls-type:: annotation
+			  hl-page:: 7
+			  hl-color:: blue
+			  id:: 67bd3553-11a6-4e61-b497-5ae3b3e2c3e3
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 7
+		  hl-color:: blue
+		  id:: 67bd31a3-f4f0-41c2-b966-e7a7634efcae
+		  hl-type:: area
+		  hl-stamp:: 1740452258386
+	- Supervised learning overview
+	  ls-type:: annotation
+	  hl-page:: 8
+	  hl-color:: red
+	  id:: 67bd3586-fb82-4b23-b1a1-7e6a1051c161
+		- The majority of practical ML uses supervised learning. This brief overview will give you a broad understanding of supervised learning. It’s an important concept and we’ll be going into much more detail in the up coming weeks.
+		  ls-type:: annotation
+		  hl-page:: 8
+		  hl-color:: blue
+		  id:: 67bd35ce-242a-468e-be77-42507955e8c7
+		- **Supervised learning** - can be deﬁned as: learning a function (otherwise known as a model) from data to relate inputs to known outputs.
+		  hl-page:: 8
+		  ls-type:: annotation
+		  id:: 67bd35e2-9758-4e69-896c-54e397a8a38d
 		  hl-color:: green
-	- [:span]
-	  ls-type:: annotation
-	  hl-page:: 7
-	  hl-color:: blue
-	  id:: 67bd31a3-f4f0-41c2-b966-e7a7634efcae
-	  hl-type:: area
-	  hl-stamp:: 1740452258386
-- Step 2: Analytics
+		  collapsed:: true
+			- If the concept is unfamiliar it may take several different descriptions or deﬁnitions to make sense of the idea.
+			  ls-type:: annotation
+			  hl-page:: 8
+			  hl-color:: yellow
+			  id:: 67bd3604-0974-4c8c-98c2-6c0f11522943
+		- Supervised learning is trained
+		  ls-type:: annotation
+		  hl-page:: 8
+		  hl-color:: red
+		  id:: 67bd3612-02b5-49f8-a886-046bffc56225
+		  collapsed:: true
+			- One deﬁning characteristic of supervised learning is that datasets have relationships built in from the start.
+			  ls-type:: annotation
+			  hl-page:: 8
+			  hl-color:: blue
+			  id:: 67bd361b-62db-4883-9ebe-e293555bb23b
+			  collapsed:: true
+				- For example, if you have datasets on vehicles you know that most cars have four wheels while most bicycles have two. You could say that having two wheels is a function of being a bicycle (with some exceptions) and having four wheels is a function of being a car (with the exception of very rare three-wheeled cars like this Fuldamobil S-7).
+				  ls-type:: annotation
+				  hl-page:: 8
+				  hl-color:: yellow
+				  id:: 67bd362b-1271-4e88-95ac-6630700aefef
+				- This makes it possible to train the algorithm. The machine learns using known relationships in the data.
+				  ls-type:: annotation
+				  hl-page:: 8
+				  hl-color:: yellow
+				  id:: 67bd37ae-cd24-4f43-8bf6-16ffb780f812
+		- Training and evaluation data
+		  ls-type:: annotation
+		  hl-page:: 8
+		  hl-color:: red
+		  id:: 67bd37c1-e865-41b4-885e-f89f63e6b397
+		  collapsed:: true
+			- For supervised learning, training requires dividing the available data into **training data** and **evaluation data**. Most of the data is used to develop and train a function ‘model’. We know the relationship between the inputs and the outputs. In other words, we know the ‘right’ answers so we can select, manipulate and reﬁne features to train the machine. The more often the answer is correct, (ie. “This is a bicycle”), the closer you are to having a useful algorithm
+			  hl-page:: 8
+			  ls-type:: annotation
+			  id:: 67bd37d8-2c7c-4699-b52f-d5a0cd74e10a
+			  hl-color:: green
+			  hl-stamp:: 1740453871080
+				- The evaluation data can be used to test the model with fresh, unused input data.
+				  ls-type:: annotation
+				  hl-page:: 8
+				  hl-color:: yellow
+				  id:: 67bd37fb-134a-403a-a1d5-7afb8e476222
+		- A mathematical deﬁnition
+		  ls-type:: annotation
+		  hl-page:: 8
+		  hl-color:: red
+		  id:: 67bd3806-84a9-4c89-91c5-8a1e7b45f006
+		  collapsed:: true
+			- Machine algorithms must be described mathematically. Remember that computers understand numbers so we must translate our questions into formulas or algorithms so they can process answers.
+			  ls-type:: annotation
+			  hl-page:: 8
+			  hl-color:: blue
+			  id:: 67bd382a-ef4a-45bc-92ba-4aa27f5f24bc
+			- In **supervised learning**, the training data includes output information (labels/targets).
+			  ls-type:: annotation
+			  hl-page:: 8
+			  hl-color:: green
+			  id:: 67bd3831-27d8-463b-9464-3c269ea72780
+				- **Target function**: $𝑓: 𝑋 → 𝑌$
+				  hl-page:: 8
+				  ls-type:: annotation
+				  id:: 67bd3849-d21e-4b52-9c13-0abce8e2addb
+				  hl-color:: green
+				- **Examples**: It is in the form of $(𝑥, 𝑦)$, denoted as $(𝑥1, 𝑦1)$, . . . , $(𝑥𝑛, 𝑦𝑛)$.
+				  hl-page:: 8
+				  ls-type:: annotation
+				  id:: 67bd385e-3efd-44da-ae3d-d9ea4cd1f7df
+				  hl-color:: green
+				- **Hypothesis** $𝑔: 𝑋 → 𝑌$ such that $𝑔(𝑥) = 𝑓(𝑥)$.
+				  hl-page:: 8
+				  ls-type:: annotation
+				  id:: 67bd3887-9233-4e15-aec8-18bca1b8ab0c
+				  hl-color:: green
+				- $x =$ set of attribute values (attribute-value representation)
+				  hl-page:: 8
+				  ls-type:: annotation
+				  id:: 67bd38c9-bcf0-4806-82f2-d0a70536d01e
+				  hl-color:: green
+				- $y =$ a discrete label (*classiﬁcation*), a real valued number (*regression*).
+				  hl-page:: 8
+				  ls-type:: annotation
+				  id:: 67bd38dd-bd3e-4ecc-b9cc-8235e3d8f725
+				  hl-color:: green
+		- Two types of supervised learning
+		  ls-type:: annotation
+		  hl-page:: 8
+		  hl-color:: red
+		  id:: 67bd38f8-af4e-4fc5-b8c5-ea4a397a1bec
+		  collapsed:: true
+			- 1.0 Classiﬁcation problems
+			  ls-type:: annotation
+			  hl-page:: 8
+			  hl-color:: blue
+			  id:: 67bd39ae-68a5-4539-9568-46fcbc09ff89
+				- **Decision boundaries** - in a supervised learning problem with two classes, decision boundaries are a hyper-surface that partitions data space into two sets, each of these sets represent one of the classes. In other words, you divide the data according to a trained algorithm.
+				  hl-stamp:: 1740454342948
+				  hl-page:: 8
+				  ls-type:: annotation
+				  id:: 67bd39ba-cedf-49d5-983c-a5f22c671470
+				  hl-color:: green
+				  collapsed:: true
+					- Consider the following ﬁgure as an illustration of supervised learning.
+					  ls-type:: annotation
+					  hl-page:: 8
+					  hl-color:: yellow
+					  id:: 67bd3a9f-9ff9-4567-9714-60a91f9d722e
+					- As you can see on the left, in some less complex cases a linear decision boundary can solve the classiﬁcation problem. However as illustrated on the right, more complex cases, require complicated decision boundaries.
+					  ls-type:: annotation
+					  hl-page:: 8
+					  hl-color:: yellow
+					  id:: 67bd3ae6-3c70-4527-b3cb-2a7fd9dcda64
+					  hl-stamp:: 1740454637951
+					- [:span]
+					  ls-type:: annotation
+					  hl-page:: 8
+					  hl-color:: yellow
+					  id:: 67bd3ad3-9789-452c-8b8d-2c9156ae234f
+					  hl-type:: area
+					  hl-stamp:: 1740454609761
+					- {{video https://youtu.be/nKW8Ndu7Mjw}}
+			- 2.0 Regression problems
+			  hl-page:: 8
+			  ls-type:: annotation
+			  id:: 67bd3f20-7a2b-4672-b343-d30e438c6c9c
+			  hl-color:: blue
+			  hl-stamp:: 1740455762211
+				- **Regression** - Another example of supervised learning, is regression. The overall idea of regression is to examine the relationship between response variables and one or more predictor variables. This examination can result in a hyperplane, representing the regression analysis. The following ﬁgure, illustrates a regression problem in 2 dimensions.
+				  hl-page:: 8
+				  ls-type:: annotation
+				  id:: 67bd3eff-f4cf-45f6-a155-6d6279de6051
+				  hl-color:: green
+				  collapsed:: true
+					- [:span]
+					  ls-type:: annotation
+					  hl-page:: 8
+					  hl-color:: yellow
+					  id:: 67bd3f68-b036-4d45-993c-3e02413bce6a
+					  hl-type:: area
+					  hl-stamp:: 1740455779706
+- Unsupervised learning overview
   ls-type:: annotation
-  hl-page:: 7
+  hl-page:: 9
   hl-color:: red
-  id:: 67bd3212-76bd-4a2c-8133-7630598b321c
-	- **Analytics** - The second main step in machine learning, analytics mainly involves ﬁnding relationships and correlations in the prepared data in order to design an accurate model based on that input data
-	  hl-page:: 7
+  id:: 67bd40c0-9595-405c-b61d-e15b7d119680
+	- This brief introduction will give you an overview of the material we will cover in weeks 3 and 4.
 	  ls-type:: annotation
-	  id:: 67bd321e-8864-4951-92ea-1fefb2c09dae
-	  hl-color:: green
-	- **Exploratory Data** - in addition, analysis is an approach for analysing datasets in order to summarise their main characteristics or features. Many exploratory data analysis methods use visual illustration of data, based on different features. Things like graphs, charts and tables make data easier to understand.
-	  hl-page:: 7
-	  ls-type:: annotation
-	  id:: 67bd3266-7d7d-4677-be2f-491b98fec230
-	  hl-color:: green
-	- **Predictive Machine Learning** - the last stage of Analytics. It uses a variety of statistical techniques such as predictive modelling in order to build a classiﬁer or intelligent system for decision making. We will come back to these ideas over the next few weeks.
-	  hl-page:: 7
-	  ls-type:: annotation
-	  id:: 67bd3295-4112-4fae-b4b6-2de597a404ba
-	  hl-color:: green
+	  hl-page:: 9
+	  hl-color:: blue
+	  id:: 67bd40fe-c010-4416-a7dc-504504de7421
