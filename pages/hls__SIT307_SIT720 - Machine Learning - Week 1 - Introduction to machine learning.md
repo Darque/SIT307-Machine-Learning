@@ -642,121 +642,647 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 		  id:: 67bd5a0f-5e8a-493e-9891-853dcef4acbb
 		  hl-type:: area
 		  hl-stamp:: 1740462605446
-- Model evaluation and selection
-  hl-page:: 11
-  ls-type:: annotation
-  id:: 67bd5a29-e7ae-4a59-bea6-223279755caf
-  hl-color:: red
-	- Model evaluation
+	- Model evaluation and selection``
 	  hl-page:: 11
 	  ls-type:: annotation
-	  id:: 67bd5a53-3e15-4310-8fec-d5e2d37f6e1c
+	  id:: 67bd5a29-e7ae-4a59-bea6-223279755caf
 	  hl-color:: red
 	  collapsed:: true
-		- In machine learning problems, we should always evaluate a model to determine if it will do an excellent job of predicting the labels on new and future test data.
+		- Model evaluation
+		  hl-page:: 11
+		  ls-type:: annotation
+		  id:: 67bd5a53-3e15-4310-8fec-d5e2d37f6e1c
+		  hl-color:: red
+		  collapsed:: true
+			- In machine learning problems, we should always evaluate a model to determine if it will do an excellent job of predicting the labels on new and future test data.
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: blue
+			  id:: 67bd5a6c-2c78-4201-8855-9b274a470643
+			- Because future instances have unknown label values, we need to check the accuracy of a machine learning model on test data with correct labels that we already know. We use this assessment as a proxy for predictive accuracy on future data (which is unknown to us!). For this purpose we need to:
+			  ls-type:: annotation
+			  hl-page:: 11
+			  hl-color:: blue
+			  id:: 67bd5a7b-fb04-45ae-9e80-2402b910b690
+				- randomly split examples into a **training dataset** and **test dataset**
+				  hl-page:: 11
+				  ls-type:: annotation
+				  id:: 67bd5a89-e82a-4278-9fed-c85881186985
+				  hl-color:: green
+				- use the training dataset to **learn a model**
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: green
+				  id:: 67bd5aa4-0ba3-49ce-844a-ccc7125df62a
+				- **evaluate the model** using the test dataset and a measurement (such as the accuracy of prediction)
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: green
+				  id:: 67bd5ab4-4567-4d87-8753-1357858fed70
+				- repeat for different random splits and then **average the results**
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: green
+				  id:: 67bd5ac6-759a-4887-ad18-6821993eeff7
+				- check the accuracy of results and try again (iterate) until the model makes useful predictions
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: yellow
+				  id:: 67bd5ad5-3e3b-413c-9f0c-66e83bfd3626
+				  hl-stamp:: 1740462813695
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: yellow
+				  id:: 67bd5afe-115b-4ccf-8796-405a5ee5ae14
+				  hl-type:: area
+				  hl-stamp:: 1740462845373
+		- Model selection
 		  ls-type:: annotation
 		  hl-page:: 11
-		  hl-color:: blue
-		  id:: 67bd5a6c-2c78-4201-8855-9b274a470643
-		- Because future instances have unknown label values, we need to check the accuracy of a machine learning model on test data with correct labels that we already know. We use this assessment as a proxy for predictive accuracy on future data (which is unknown to us!). For this purpose we need to:
-		  ls-type:: annotation
-		  hl-page:: 11
-		  hl-color:: blue
-		  id:: 67bd5a7b-fb04-45ae-9e80-2402b910b690
-			- randomly split examples into a **training dataset** and **test dataset**
-			  hl-page:: 11
-			  ls-type:: annotation
-			  id:: 67bd5a89-e82a-4278-9fed-c85881186985
-			  hl-color:: green
-			- use the training dataset to **learn a model**
+		  hl-color:: red
+		  id:: 67bd5b09-4ec7-4b75-936d-2404ae25370a
+		  collapsed:: true
+			- One of the most challenging tasks in the assessment of machine learning models is to ﬁnd the *BEST* model or best ﬁt hypothesis.
 			  ls-type:: annotation
 			  hl-page:: 11
-			  hl-color:: green
-			  id:: 67bd5aa4-0ba3-49ce-844a-ccc7125df62a
-			- **evaluate the model** using the test dataset and a measurement (such as the accuracy of prediction)
+			  hl-color:: blue
+			  id:: 67bd5b61-aafe-4081-8950-ca42202d466d
+			  collapsed:: true
+				- As we discussed earlier in our ‘trips around the city’ example, there are many ways of grouping and combining data and many ways to adjust the model’s controls (parameters and hyper-parameters). This will vary a model’s ﬁtness to the data.
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: yellow
+				  id:: 67bd5b78-30bd-42b6-92c5-5a38351af252
+				- There is *no easy way* to know if a certain model will offer the best ﬁt. There is so much data and so many possible features that we can’t be sure which model to choose. That’s why we have to try many different models.
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: yellow
+				  id:: 67bd5b88-76d2-41e8-bcfc-0c48e84f21ef
+			- Trying out models
 			  ls-type:: annotation
 			  hl-page:: 11
-			  hl-color:: green
-			  id:: 67bd5ab4-4567-4d87-8753-1357858fed70
-			- repeat for different random splits and then **average the results**
+			  hl-color:: red
+			  id:: 67bd5ba7-1978-4679-a193-30062bb1b0a1
+			  collapsed:: true
+				- If you remember the clustering problem we discussed previously, we are not sure about the exact number of clusters, so we cannot know the best or most accurate or most useful model. The models we choose will have a direct effect on the quality of the output.
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: blue
+				  id:: 67bd5bb6-5c87-4e36-ab5b-8ba33c950fe0
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: blue
+				  id:: 67bd5bc9-45b3-450d-bd82-3aaee105ab1b
+				  hl-type:: area
+				  hl-stamp:: 1740463048091
+				- There are many effective ways that people approach this problem:
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: blue
+				  id:: 67bd5bd4-05e9-4169-a7c5-dc643441bfa9
+					- look at averaged evaluation scores on many random test datasets
+					  ls-type:: annotation
+					  hl-page:: 11
+					  hl-color:: yellow
+					  id:: 67bd5bdb-2fb2-4946-8a81-c6b2d3fbb4fc
+					- cross-validation, that is train using one dataset and test on another, try rotating them and test again, for example if you have datasets A, B and C try AIC, BIC etc.
+					  ls-type:: annotation
+					  hl-page:: 11
+					  hl-color:: yellow
+					  id:: 67bd5be4-7d66-4694-984c-050a4fd0a4d7
+			- Over-ﬁtting
 			  ls-type:: annotation
 			  hl-page:: 11
-			  hl-color:: green
-			  id:: 67bd5ac6-759a-4887-ad18-6821993eeff7
-			- check the accuracy of results and try again (iterate) until the model makes useful predictions
-			  ls-type:: annotation
-			  hl-page:: 11
-			  hl-color:: yellow
-			  id:: 67bd5ad5-3e3b-413c-9f0c-66e83bfd3626
-			  hl-stamp:: 1740462813695
-			- [:span]
-			  ls-type:: annotation
-			  hl-page:: 11
-			  hl-color:: yellow
-			  id:: 67bd5afe-115b-4ccf-8796-405a5ee5ae14
-			  hl-type:: area
-			  hl-stamp:: 1740462845373
-	- Model selection
+			  hl-color:: red
+			  id:: 67bd5ca7-6e36-4cff-bc06-61046d221a21
+				- Sometimes when a model learns the details and noise within a training dataset the knowledge can negatively impact the performance of the model on a new dataset. In machine learning, we call this *Over-ﬁtting*. In other words, designing a model to suit the training dataset can result in poor performance on evaluation or new data.
+				  ls-type:: annotation
+				  hl-page:: 11
+				  hl-color:: blue
+				  id:: 67bd5d86-4ea1-405d-a083-2fc34647ac28
+	- Mathematics and ML
+	  hl-page:: 12
 	  ls-type:: annotation
-	  hl-page:: 11
+	  id:: 67bd5db6-c202-4968-bf81-dcae9dc17835
 	  hl-color:: red
-	  id:: 67bd5b09-4ec7-4b75-936d-2404ae25370a
-		- One of the most challenging tasks in the assessment of machine learning models is to ﬁnd the *BEST* model or best ﬁt hypothesis.
+	  collapsed:: true
+		- ML is based on maths. Maths underlies every decision, itera!on and output. To get great results, you need to understand the various mathematical concepts and processes that are the founda!on of your results.
 		  ls-type:: annotation
-		  hl-page:: 11
+		  hl-page:: 12
 		  hl-color:: blue
-		  id:: 67bd5b61-aafe-4081-8950-ca42202d466d
+		  id:: 67bd5dcb-9b57-44fd-bf55-acf0eb625b15
 		  collapsed:: true
-			- As we discussed earlier in our ‘trips around the city’ example, there are many ways of grouping and combining data and many ways to adjust the model’s controls (parameters and hyper-parameters). This will vary a model’s ﬁtness to the data.
+			- An expert Data Engineer will understand and apply these concepts. They will have knowledge and understanding of a range of models, the ability to select models, the parameters (or edges) to apply and understand why some models give be"er results than others.
 			  ls-type:: annotation
-			  hl-page:: 11
+			  hl-page:: 12
 			  hl-color:: yellow
-			  id:: 67bd5b78-30bd-42b6-92c5-5a38351af252
-			- There is *no easy way* to know if a certain model will offer the best ﬁt. There is so much data and so many possible features that we can’t be sure which model to choose. That’s why we have to try many different models.
-			  ls-type:: annotation
-			  hl-page:: 11
-			  hl-color:: yellow
-			  id:: 67bd5b88-76d2-41e8-bcfc-0c48e84f21ef
-		- Trying out models
+			  id:: 67bd5ddb-2e5d-448b-a66d-51c54eff3095
+		- Some of the key areas you will explore this week are listed below:
 		  ls-type:: annotation
-		  hl-page:: 11
-		  hl-color:: red
-		  id:: 67bd5ba7-1978-4679-a193-30062bb1b0a1
-		  collapsed:: true
-			- If you remember the clustering problem we discussed previously, we are not sure about the exact number of clusters, so we cannot know the best or most accurate or most useful model. The models we choose will have a direct effect on the quality of the output.
+		  hl-page:: 12
+		  hl-color:: yellow
+		  id:: 67bd5e1b-a910-45c7-883e-041e5bdd9c14
+			- Vectors and basic vector opera!ons
 			  ls-type:: annotation
-			  hl-page:: 11
+			  hl-page:: 12
+			  hl-color:: yellow
+			  id:: 67bd5e3c-2f7c-40ee-b7fb-12d523e897d2
+			- Matrices and matrix opera!ons
+			  ls-type:: annotation
+			  hl-page:: 12
+			  hl-color:: yellow
+			  id:: 67bd5e44-ac1c-4620-a256-f6beb7ecfae0
+			- Basic concept of probability
+			  ls-type:: annotation
+			  hl-page:: 12
+			  hl-color:: yellow
+			  id:: 67bd5e4e-272d-4d59-b05f-8bcf31e1a9f3
+			- Python programming: using diﬀerent modules and packages.
+			  ls-type:: annotation
+			  hl-page:: 12
+			  hl-color:: yellow
+			  id:: 67bd5e57-e00c-41b6-ba05-7154f58915d2
+	- Vectors and its operation
+	  hl-page:: 13
+	  ls-type:: annotation
+	  id:: 67bd5eb6-abb8-40bc-91df-5f5eb0c60337
+	  hl-color:: red
+	  collapsed:: true
+		- Vectors
+		  ls-type:: annotation
+		  hl-page:: 13
+		  hl-color:: red
+		  id:: 67bd5ec9-3670-427c-80cd-ca215664b5bc
+		  collapsed:: true
+			- It’s outside the scope of this Unit to teach you maths skills but we will quickly do some revision of some mathematical concepts
+			  ls-type:: annotation
+			  hl-page:: 13
 			  hl-color:: blue
-			  id:: 67bd5bb6-5c87-4e36-ab5b-8ba33c950fe0
+			  id:: 67bd5edc-c018-4166-adc6-180167a19d19
+			- Vectors are a fundamental element of linear algebra and mathematics. They are also widely-used in machine learning algorithms.
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: blue
+			  id:: 67bd5ee3-9552-4a18-9d32-353a86358013
+			- Why know the maths
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: red
+			  id:: 67bd5ee8-a33a-44a7-9174-7a1e64f5237f
+			  collapsed:: true
+				- Understanding the mathematics allows you to select the best models for a task. It will support your decisions and provide the expertise to perform useful adjustments. Knowing how the maths operates within the models gives specialists the skill to manipulate data and extract the best information.
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd5f48-1c23-4f2c-8bf8-2b58ddf5959e
+				- You can develop machine learning without in-depth knowledge of vectors, matrices and probability but it will be harder to get the best outcomes. Even though the various pre-programmed modules conceal some of the maths (we’ll start using modules later this week) if you understand how they work, you will have more control of your results.
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6293-d4bc-452b-8aee-e264fdc67413
+				- Remember, there is no exam in this Unit. You are not expected to perform mathematical tasks under pressure.
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd62a7-5d61-44ed-8782-694f3fb97023
+			- Feature vectors
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: red
+			  id:: 67bd62b4-c29c-4ec0-9048-f42ceb41c61f
+			  collapsed:: true
+				- **Feature vector** - why are we using vectors? In this unit, you will notice that most of the time a data instance is represented by a vector, more precisely, by a feature vector.
+				  hl-stamp:: 1740464830357
+				  hl-page:: 13
+				  ls-type:: annotation
+				  id:: 67bd62b9-97d1-4115-b9e6-289d34100ae1
+				  hl-color:: green
+					- Text documents, images, audio ﬁles, etc. are examples of data objects. Computation on these data objects can be performed using their vector representation.
+					  ls-type:: annotation
+					  hl-page:: 13
+					  hl-color:: yellow
+					  id:: 67bd62e2-1d94-465a-b0dd-2c428702b555
+			- What is a vector?
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: red
+			  id:: 67bd62ed-a52d-4bce-a563-484671ae61b6
+			  collapsed:: true
+				- Visually, a vector quantity has both magnitude and direction but it is really a series of related numbers. Their role in ML is about relationships between data objects. The following is an illustration of a sample vector. Note the relationship between the visual representation and the matrix representation of the relationship between inputs and outputs.
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6314-8e0f-4615-8bac-1288d66fe826
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6322-d251-4fe8-89f0-6ac84714e2fe
+				  hl-type:: area
+				  hl-stamp:: 1740464927466
+		- Vector operations
+		  ls-type:: annotation
+		  hl-page:: 13
+		  hl-color:: red
+		  id:: 67bd6351-d907-46a7-9604-4b69206ac457
+		  collapsed:: true
+			- There are three main operations in vectors. As we’ve seen vectors can be represented as a one column matrix
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: blue
+			  id:: 67bd637d-76a1-40ff-a7ab-14ce4e4f19c9
+			  collapsed:: true
+				- ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6388-3d1e-4882-ae75-b3d13cadb7e3
+				  1. Transpose
+				- ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd638c-0972-4c1d-bd32-bc08346dd277
+				  2. Add
+				- ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6393-8011-4844-ba49-7fc8617207d7
+				  3. Inner product
+			- Let’s start by taking two simple matrices 𝑥 and 𝑦:
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: blue
+			  id:: 67bd63a6-0083-41f8-aec4-71fbe918eed0
+			  collapsed:: true
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd63b2-6a48-413e-8ed1-9793a34bf171
+				  hl-type:: area
+				  hl-stamp:: 1740465072993
+			- How are these three operations implemented?
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: blue
+			  id:: 67bd63c4-e2e7-40cb-9887-060aa0db5cf5
+			- Transpose
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: red
+			  id:: 67bd63d5-69fc-4e58-acc8-862cfb29ee96
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd63dd-2217-4ddb-ac34-18c915d8d247
+				  hl-type:: area
+				  hl-stamp:: 1740465116492
+			- Add
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: red
+			  id:: 67bd6422-ea1a-41fc-b3e0-4105112aa936
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6438-5533-4cac-8ff1-44ed87c3af6e
+				  hl-type:: area
+				  hl-stamp:: 1740465207113
+			- Inner product
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: red
+			  id:: 67bd6443-f401-49bb-9417-a8e38ae9aca6
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd644a-9d5c-4bb1-a9d9-1a5e054d1a12
+				  hl-type:: area
+				  hl-stamp:: 1740465225555
+			- Magnitude of a vector
+			  ls-type:: annotation
+			  hl-page:: 13
+			  hl-color:: red
+			  id:: 67bd6454-39f2-4c32-9601-ac537d813f74
+				- How do we compute the magnitude of a vector or its length geometrically?
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd645d-61c8-4703-9ba2-cfe11484d273
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6467-3096-4ebd-8545-b2ee8b258987
+				  hl-type:: area
+				  hl-stamp:: 1740465254464
+				- The above length is also called 2-norm of a vector.
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6478-52df-4853-afc7-8bd4bc00c6f2
+				- [:span]
+				  ls-type:: annotation
+				  hl-page:: 13
+				  hl-color:: blue
+				  id:: 67bd6482-083b-4f12-802b-fe1364c7c6b1
+				  hl-type:: area
+				  hl-stamp:: 1740465280894
+	- Distances between vectors
+	  ls-type:: annotation
+	  hl-page:: 14
+	  hl-color:: red
+	  id:: 67bd650e-5e7b-4b52-84b8-a699b83e801a
+	  collapsed:: true
+		- **Cosine similarity** - is a similarity function often useful in information retrieval. It measures the cosine of the angle between two vectors. So Cosine similarity is deﬁned to be a measure of similarity between two vectors of an inner product space.
+		  hl-page:: 14
+		  ls-type:: annotation
+		  id:: 67bd653c-7aa2-4071-9570-6bc871bb4438
+		  hl-color:: green
+		- On the other hand, **cosine distance** measures the angular difference between 2 vectors. In other words, the cosine distance seeks to express vector **dissimilarity** in positive space and hence it does this by subtracting the similarity from 1
+		  hl-page:: 14
+		  ls-type:: annotation
+		  id:: 67bd6555-8ffc-40ea-9aab-edd2037baeb1
+		  hl-color:: green
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 14
+		  hl-color:: yellow
+		  id:: 67bd6585-8233-48e9-bd04-bde6cc92b578
+		  hl-type:: area
+		  hl-stamp:: 1740465540119
+		- The cosine distance above is deﬁned for positive values only. Cosine distance can be computed via Euclidean distance if vectors are made unit vectors.
+		  ls-type:: annotation
+		  hl-page:: 14
+		  hl-color:: yellow
+		  id:: 67bd6592-15de-4fd3-bef7-250d60fb507a
+- Matrix algebra
+  ls-type:: annotation
+  hl-page:: 15
+  hl-color:: red
+  id:: 67bd666f-5180-4bf0-875e-ff2bbea8b1b5
+	- Matrices are also a fundamental element of linear algebra and extremely useful in machine learning. Most of the machine learning methods deal with matrix operations. The main two features of any matrix is the number of rows and the number of columns.
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: blue
+	  id:: 67bd6685-8ca2-4036-8b97-a83d5a028920
+	  collapsed:: true
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd6693-0a1b-40a3-8d8e-12293f2750ed
+		  hl-type:: area
+		  hl-stamp:: 1740465810186
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd66ab-14ad-41b4-ab53-ec3e331b8deb
+		  hl-type:: area
+		  hl-stamp:: 1740465833887
+	- Basic operations
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd66c0-603b-4b08-a04d-a6532ad9437f
+	  collapsed:: true
+		- Next we review some basic operations in matrices.
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd66ea-53eb-4ea8-9d45-040de9e9f6db
+	- Matrix Addition/Subtraction
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd6700-7f2b-4075-a55c-3f99fb2a5144
+	  collapsed:: true
+		- You can add or subtract matrices if they are the same size.
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd6712-c532-4d12-bbab-8594bf411a06
+		- The elements in the corresponding positions are added or subtracted. Subtraction is similarly done:
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd6728-47b3-45ca-b014-59c62a704f29
 			- [:span]
 			  ls-type:: annotation
-			  hl-page:: 11
+			  hl-page:: 15
 			  hl-color:: blue
-			  id:: 67bd5bc9-45b3-450d-bd82-3aaee105ab1b
+			  id:: 67bd6733-0129-4703-a4f2-69c7d4999c93
 			  hl-type:: area
-			  hl-stamp:: 1740463048091
-			- There are many effective ways that people approach this problem:
-			  ls-type:: annotation
-			  hl-page:: 11
-			  hl-color:: blue
-			  id:: 67bd5bd4-05e9-4169-a7c5-dc643441bfa9
-				- look at averaged evaluation scores on many random test datasets
-				  ls-type:: annotation
-				  hl-page:: 11
-				  hl-color:: yellow
-				  id:: 67bd5bdb-2fb2-4946-8a81-c6b2d3fbb4fc
-				- cross-validation, that is train using one dataset and test on another, try rotating them and test again, for example if you have datasets A, B and C try AIC, BIC etc.
-				  ls-type:: annotation
-				  hl-page:: 11
-				  hl-color:: yellow
-				  id:: 67bd5be4-7d66-4694-984c-050a4fd0a4d7
-		- Over-ﬁtting
+			  hl-stamp:: 1740465969900
+	- Scalar Multiplication/Division
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd675a-2203-42cf-b186-c89f43cf368f
+	  collapsed:: true
+		- To multiply a matrix 𝐴 with scalar 𝑎, multiply each element of 𝐴 and 𝑎 as below:
 		  ls-type:: annotation
-		  hl-page:: 11
-		  hl-color:: red
-		  id:: 67bd5ca7-6e36-4cff-bc06-61046d221a21
-			- Sometimes when a model learns the details and noise within a training dataset the knowledge can negatively impact the performance of the model on a new dataset. In machine learning, we call this *Over-ﬁtting*. In other words, designing a model to suit the training dataset can result in poor performance on evaluation or new data.
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd6767-70db-4aee-8931-ae71d30453e5
+			- [:span]
 			  ls-type:: annotation
-			  hl-page:: 11
+			  hl-page:: 15
 			  hl-color:: blue
-			  id:: 67bd5d86-4ea1-405d-a083-2fc34647ac28
+			  id:: 67bd678c-3faa-4e9b-b912-e7b285cd8d31
+			  hl-type:: area
+			  hl-stamp:: 1740466055013
+		- Division is similarly done except that division by 0 is not allowed for obvious reasons.
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd67aa-a5e5-413a-a6f8-a738acfa6e70
+		  hl-stamp:: 1740466106909
+	- Elementwise Matrix Multiplication
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd67c5-2d96-4e47-b74a-6138cd64209c
+	  hl-stamp:: 1740466182709
+	  collapsed:: true
+		- You can multiply any two matrices element-wise if they have the same size. Consider $𝐴⨀ 𝐵 = 𝐶$. Now $𝐶(𝑖, 𝑗)$ is computed as product of $𝐴(𝑖, 𝑗)$ and $𝐵(𝑖, 𝑗)$.
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd67cf-6d77-4749-a890-f7896b376a2a
+		  hl-color:: blue
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd67fa-7852-47cd-9560-6723fe4a27ed
+		  hl-type:: area
+		  hl-stamp:: 1740466169232
+	- Matrix to Matrix Multiplication
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd683a-5b67-4551-bc47-6eaa6524fcd2
+	  collapsed:: true
+		- You can multiply any two matrices if the number of columns in the ﬁrst matrix is **equal** to the number of rows in the second matrix. Consider $𝐴𝐵 = 𝐶$. Now $𝐶(𝑖, 𝑗)$ is computed by dot product of $𝐴(𝑖, : )$ and $𝐵(: , 𝑗)$.
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6845-38c9-4878-b4a7-d12c49ac1005
+		  hl-color:: blue
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd6881-adb4-4387-b0e1-f9b33d665c47
+		  hl-type:: area
+		  hl-stamp:: 1740466304478
+		- Note: Matrix multiplication is NOT commutative. In other words, multiplication order matters. In general $𝐴𝐵 ≠ 𝐵𝐴$. In some case they may not even be size compatible if multiplied in the other order.
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6894-8599-4b15-9ec6-1b8943ec002f
+		  hl-color:: blue
+	- Rectangular and Square Matrices
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd68b4-fa0f-46a8-8519-f6cfbb96ceb5
+	  collapsed:: true
+		- If a matrix 𝐴 has size 𝑚 × 𝑛 such that 𝑚 = 𝑛, then it is called a square matrix; otherwise it is a rectangular matrix.
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd68c5-b74e-4a8a-9b56-0916c67c302f
+			- is a square matrix and is a rectangular matrix
+			  hl-page:: 15
+			  ls-type:: annotation
+			  id:: 67bd68f2-edf4-4be9-97b6-d84ff5d6d639
+			  hl-color:: blue
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6902-9767-4627-afae-ee884a5c4ef0
+			  hl-type:: area
+			  hl-stamp:: 1740466432948
+	- Transpose of a Matrix
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd6915-a081-49cf-bf71-ef9788986f65
+	  collapsed:: true
+		- The transpose of a matrix 𝐴 is obtained by putting all the matrix elements on rows on its columns. Lets say 𝐵 is transpose of 𝐴 then,𝐵(𝑖, 𝑗) = 𝐴(𝑗, 𝑖).
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd691c-a67a-48c9-954c-4b301b1052d6
+			- As an example, is the transpose of
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6992-1180-4034-866e-5ae7b05eacf9
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd69d7-a785-4ff7-83e2-01c428d12765
+			  hl-type:: area
+			  hl-stamp:: 1740466645637
+	- Symmetric Matrices
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd69f6-bc0c-449a-8ad1-07a94c9b760e
+	  collapsed:: true
+		- A matrix $A$ is called symmetric if it is equal to its transpose, that is $𝐴 = 𝐴^{𝑇}$. Symmetric matrices are always square matrices.
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6a00-a7e3-4c94-a7f7-16560933cc87
+		  hl-color:: blue
+			- is a symmetric matrix of size 2 × 2.
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6a29-117e-4ca9-8839-7a5fb97f65ca
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6a35-db75-4272-bddd-2ac099602fa7
+			  hl-type:: area
+			  hl-stamp:: 1740466739891
+	- Diagonal Matrix
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd6a4a-91f5-47f1-a912-0505b53fe662
+	  collapsed:: true
+		- A matrix $𝐴$ is called a diagonal matrix if $𝐴(𝑖, 𝑗) = 0$ for all $𝑖 ≠ 𝑗$. Diagonal matrix is always a square matrix. The following is an example:
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6a7d-7ab1-4aef-9c2d-2f7610952ae8
+		  hl-color:: blue
+			- is a diagonal matrix
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6ab1-7611-4c8d-95f5-5659e0e2c8a0
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 15
+			  hl-color:: blue
+			  id:: 67bd6acb-ad59-4dc7-9395-5c195a4057c1
+			  hl-type:: area
+			  hl-stamp:: 1740466890362
+	- Identity Matrix
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd6adf-82c2-4944-9656-c0c8d81be1f8
+	  collapsed:: true
+		- A matrix $𝐼$ is called an identity matrix if it is a diagonal matrix and $𝐼(𝑖, 𝑖) = 1$. The following is an example:
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6ae8-f6a3-4645-81ae-4d39667712e2
+		  hl-color:: blue
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 15
+		  hl-color:: blue
+		  id:: 67bd6b06-d45b-4f83-b222-5e67eacb5606
+		  hl-type:: area
+		  hl-stamp:: 1740466948606
+		- Note that we often use $𝐼_{𝑛 × 𝑛}$ to denote an identity matrix of size $𝑛 × 𝑛$.
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6b10-4d8d-4797-b57e-e448292d8ac3
+		  hl-color:: blue
+	- Inverse of a Matrix
+	  ls-type:: annotation
+	  hl-page:: 15
+	  hl-color:: red
+	  id:: 67bd6b2e-5e6d-420d-b6d3-81c0307df96e
+	  hl-stamp:: 1740467004331
+		- A matrix $A$ is called as inverse of matrix $B$, if and only if $𝐵𝐴 = 𝐴𝐵 = 𝐼$. Since $𝐴𝐵 = 𝐵𝐴$ both $𝐴$ and $𝐵$ need to be a square matrix.
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6b46-6e6b-4198-ab84-c67acfdc52b3
+		  hl-color:: blue
+		- If $A$ is inverse of $B$, we denote it as $𝐴 = 𝐵−1$
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6b6c-4c94-4132-95fd-d23d6651e06a
+		  hl-color:: blue
+		- Note: Inverse of a matrix $𝐴$ *exists* only if its determinant is nonzero.
+		  hl-page:: 15
+		  ls-type:: annotation
+		  id:: 67bd6b89-152b-47a2-abfb-b9c41e02356c
+		  hl-color:: blue
+- Orthogonal Matrix
+  ls-type:: annotation
+  hl-page:: 15
+  hl-color:: red
+  id:: 67bd6ba2-61e5-46a3-9f35-2765f9d63bfb
