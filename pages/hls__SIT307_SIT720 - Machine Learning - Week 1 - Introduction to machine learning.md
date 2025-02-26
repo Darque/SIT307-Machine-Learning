@@ -1618,32 +1618,229 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 			  print(numbers[-1]) # last element 
 			  print(numbers[-2]) # can you guess the result?
 			  ```
-- Tuple data type
+	- Tuple data type
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67bebbcf-366c-4ab9-93b7-4014ebdd05ce
+	  collapsed:: true
+		- A tuple is like a list, but the items cannot be changed once initiated. Indexing rules are similar to lists.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bebbef-079d-46fd-85eb-ecbf6876fe81
+		- Syntax: `tuple_name = (item_1, item_2, …., item_n)`
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bebbfd-2092-4062-b81f-7641a9fed5b9
+		- Code example 6
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bebc11-8abd-48a6-9482-7dc6002798ea
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bebc1a-aadd-4e61-a989-461c69a40b04
+			  hl-color:: purple
+			  ```python
+			  states = ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA') 
+			  print(type(states)) 
+			  print(states)
+			  
+			  # <class 'tuple'>
+			  # ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA')
+			  ```
+		- If you executed all this code (Code examples 1 to 6) within a single instance (or cell) of the IDE Jupyter notebook, all previously declared variables are still accessible to new code. So, let’s try to use the previously declared list 𝑛𝑢𝑚𝑏𝑒𝑟𝑠 with the new tuple 𝑠𝑡𝑎𝑡𝑒𝑠 we declared just now.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bebcfc-6af1-4db5-98f2-06aa9745208a
+		- If the previous sentence made no sense to you, then consider taking some beginners lessons in Python and programming concepts. We have collected a range of resources for you. Try one of the beginner items in the Resources list. “Head ﬁrst Python” is a visual learning online text course (so install Anaconda ﬁrst) while Datacamp is an interactive real-time learning method.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bebd24-bc90-4151-9d79-5286e06eb6a7
+		- Code example 7
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bebd69-1f51-4628-8149-cd3c042b1c9f
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bebd79-bf1f-4777-a10b-b0b3726e6d91
+			  hl-color:: purple
+			  ```python
+			  numbers[2] = 32.56
+			  #states[2] = 'Idontknow'
+			  print(numbers) 
+			  print(states)
+			  
+			  # [1, 2, 32.56, 4, 5, 6, 7, 8]
+			  ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA')
+			  ```
+	- Dictionaries
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67bec1d6-2729-4163-a130-d06aa756e350
+	  collapsed:: true
+		- Dictionaries are similar to lists, except that each element is a key-value pair. The syntax for dictionaries is {key1 : value1, …}.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bec1e7-a48c-404d-9079-f5cc34f038e8
+		- Note that the 𝑣𝑎𝑙𝑢𝑒𝑠 can be of any type, even another dictionary. You can access and manipulate the values of a dictionary using its 𝑘𝑒𝑦𝑠.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bec235-2656-4611-a78b-75b46b918bed
+		- Code example 8
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec23d-9b33-486c-8167-f9de6263b80d
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bec248-a6e4-458f-95b1-4ab8ca15ea3c
+			  hl-color:: purple
+			  ```python
+			  dict = {} 
+			  dict['one'] = "This is one" 
+			  dict[2] = "This is two" 
+			  
+			  print(dict['one']) 
+			  print(dict) 
+			  dict['one'] = "One has changed" 
+			  print(dict['one'])
+			  
+			  # This is one
+			  # {'one': 'This is one', 2: 'This is two'} 
+			  # One has changed
+			  ```
+	- Strings
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67bec320-ee97-4659-b177-7665fef10d64
+	  collapsed:: true
+		- Strings are used to store text and have the same indexing rules as lists and tuples. Let’s try an example.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bec32b-f16d-4457-9a6c-50d1588b5d4b
+		- Code example 9
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec334-ac85-4e02-812b-c0ea74af966e
+			- The numbers relate to the index of the letters. The index is the numerical position of characters in the string starting at 0. In this example, index0 = M.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bec3b4-d0ea-4ad3-aec1-4a201b7fb72e
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bec33e-8687-4167-b0fc-5d00f8c98458
+			  hl-color:: purple
+			  ```python
+			  str = "Monty Python and the flying circus!" 
+			  
+			  print(str) # Prints complete string
+			  print(str[0]) # Prints first character of the string
+			  print(str[2:5]) # Prints characters starting from 3rd to 5th 
+			  print(str[2:]) # Prints string starting from 3rd character 
+			  print(str * 2) # Prints string two times 
+			  print(str + "TEST") # Prints concatenated string
+			  
+			  # Monty Python and the flying circus! 
+			  # M 
+			  # nty 
+			  # nty Python and the flying circus! 
+			  # Monty Python and the flying circus!Monty Python and the flying circus! 
+			  # Monty Python and the flying circus!TEST
+			  ```
+- Slicing with Lists and Strings
   ls-type:: annotation
   hl-page:: 19
   hl-color:: red
-  id:: 67bebbcf-366c-4ab9-93b7-4014ebdd05ce
-	- A tuple is like a list, but the items cannot be changed once initiated. Indexing rules are similar to lists.
+  id:: 67bec45f-17e3-4818-b6fd-7e893538fb16
+	- You can extract a part of a list/string using the syntax [start:stop], which extracts characters between index start and stop.
 	  ls-type:: annotation
 	  hl-page:: 19
 	  hl-color:: blue
-	  id:: 67bebbef-079d-46fd-85eb-ecbf6876fe81
-	- Syntax: `tuple_name = (item_1, item_2, …., item_n)`
+	  id:: 67bec4e3-1633-48e7-882e-c6141152c6be
+		- Code example 10
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec4eb-14c9-4174-8fb7-3ed712ed338d
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bec4f8-1434-42b3-932b-d5502070d8b3
+			  hl-color:: purple
+			  ```python
+			  # slicing 
+			  l = [1, 2, 3, 4, 5, 6, 7, 8] 
+			  s = "This is a string." 
+			  
+			  print(l[2:5]) 
+			  print(s[0:6])
+			  
+			  # output:[3, 4, 5] 
+			  # This i
+			  ```
+	- You can deﬁne a step for slicing as in [start:stop:step]. 
 	  ls-type:: annotation
 	  hl-page:: 19
 	  hl-color:: blue
-	  id:: 67bebbfd-2092-4062-b81f-7641a9fed5b9
-- Code example 6
-  ls-type:: annotation
-  hl-page:: 19
-  hl-color:: red
-  id:: 67bebc11-8abd-48a6-9482-7dc6002798ea
-- hl-page:: 19
-  ls-type:: annotation
-  id:: 67bebc1a-aadd-4e61-a989-461c69a40b04
-  hl-color:: purple
-  ```python
-  states = ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA') 
-  print(type(states)) 
-  print(states)
-  ```
+	  id:: 67bec56e-305c-48c6-b13c-44c56503515e
+		- Code example 11
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec5c0-7a6d-4e5d-b08e-d4f184c0a7c5
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bec5c6-c36f-4722-87a7-ddf3f009be57
+			  hl-color:: purple
+			  ```python
+			  # [start:stop:step] 
+			  print(s[2:10:1]) 
+			  print
+			  
+			  # These two are equal 
+			  print(s[0:10:2]) 
+			  print(s[:10:2])
+			  
+			  # is is a 
+			  # Ti sa 
+			  # Ti sa
+			  ```
+	- Slicing can be a negative value as well.
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: blue
+	  id:: 67bec63b-fa19-4dbe-a9ef-6aa88f1b77c8
+		- Code example 12
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec665-03f7-4826-8d2d-cfb4343a0578
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bec677-104f-4255-b07a-613db01f7397
+			  hl-color:: purple
+			  print(s[::-1])
+			  print(s[::-1])
+			  ```python
+			  s = "This is a string."
+			  
+			  print(s[10:2:-1])
+			  print
+			  
+			  # reversing a list or string
+			  
+			  # s a si s
+			  # .gnirts a si sihT
+			  ```
