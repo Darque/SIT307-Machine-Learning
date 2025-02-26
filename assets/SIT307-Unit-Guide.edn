@@ -436,5 +436,22 @@
                                    :height 1060.7067262464723}),
                           :page 9},
                :content {:text "11 19 May 2025 Revision"},
+               :properties {:color "red"}}
+              {:id #uuid "67bea1fd-eca9-4505-806c-907e734be3b6",
+               :page 5,
+               :position {:bounding {:x1 93.1796875,
+                                     :y1 80.1171875,
+                                     :x2 148.44284057617188,
+                                     :y2 95.1171875,
+                                     :width 789,
+                                     :height 1115.8634760112889},
+                          :rects ({:x1 93.1796875,
+                                   :y1 80.1171875,
+                                   :x2 148.44284057617188,
+                                   :y2 95.1171875,
+                                   :width 789,
+                                   :height 1115.8634760112889}),
+                          :page 5},
+               :content {:text "Pass tasks"},
                :properties {:color "red"}}],
- :extra {:page 7}}
+ :extra {:page 4}}

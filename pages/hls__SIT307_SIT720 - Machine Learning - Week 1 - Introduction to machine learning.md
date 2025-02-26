@@ -1397,8 +1397,86 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 		  hl-page:: 17
 		  hl-color:: red
 		  id:: 67bd6dba-ba06-45ce-a7b8-c2da085df1f5
-- Setting up Python
+	- Setting up Python
+	  ls-type:: annotation
+	  hl-page:: 18
+	  hl-color:: red
+	  id:: 67bd6df9-7e13-48e0-a2f4-32708e7e9be1
+	  collapsed:: true
+		- Jupyter Notebook
+		  ls-type:: annotation
+		  hl-page:: 18
+		  hl-color:: red
+		  id:: 67bea87a-bdbc-43ac-abc1-f782970f4fed
+		  collapsed:: true
+			- To start coding, open Anaconda and then open or launch Jupyter Notebook.
+			  ls-type:: annotation
+			  hl-page:: 18
+			  hl-color:: blue
+			  id:: 67bea88a-b4d2-433d-accb-c67c225676fa
+			  hl-stamp:: 1740548237234
+			  collapsed:: true
+				- This will open a kernel and a shell to work in. The kernel does the hard work but you can use the shell to write and run your Python programs.
+				  ls-type:: annotation
+				  hl-page:: 18
+				  hl-color:: yellow
+				  id:: 67bea8ba-9745-4803-9a44-9353c8285e2d
+			- This Jupyter Notebook video has a repeat of the Anaconda install instructions but the link will take you to the instructions on using a command line to open the Jupyter Notebook and offers a run-through of the environment.
+			  ls-type:: annotation
+			  hl-page:: 18
+			  hl-color:: blue
+			  id:: 67bea8ca-71e6-47cd-96c3-29849048476a
+- Types of variables
   ls-type:: annotation
-  hl-page:: 18
+  hl-page:: 19
   hl-color:: red
-  id:: 67bd6df9-7e13-48e0-a2f4-32708e7e9be1
+  id:: 67bea8eb-49c6-4579-923e-8184270ea675
+	- You installed Python Anaconda in the previous step. It’s time to start some coding.
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: blue
+	  id:: 67beac98-a3db-479e-936c-c7dfe87dfa54
+	  collapsed:: true
+		- Once again, if you are experienced you might want to skim the introductory programming steps. To get ahead, go to the Week 2 Python exercises, read some of The elements of statistical learning or reinforce your own learning by helping less experienced students in the Comments here or on the discussion forum
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: yellow
+		  id:: 67beaca2-32f7-4291-bffa-9c48d954f3b2
+		  hl-stamp:: 1740549344982
+		  collapsed:: true
+			- If you haven’t installed Python and an Integrated Development Environment (IDE) yet, you can use this online IDE for experimenting with these basic coding examples but you will need to install Anaconda soon. Instructions are in the previous step.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: yellow
+			  id:: 67beacbc-9f3c-401b-b659-8a29d71808fa
+			  background-color:: yellow
+			  hl-stamp:: 1740549337124
+			- Let’s start by exploring some basic features of Python programming. Don’t worry if you are completely new to this
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: yellow
+			  id:: 67beacc6-d3e1-4007-acb7-488f51895eaf
+			  background-color:: yellow
+			  hl-stamp:: 1740549340219
+- The traditional ‘Hello world’
+  ls-type:: annotation
+  hl-page:: 19
+  hl-color:: red
+  id:: 67bead01-bc82-4453-b83a-67eae5f3ad81
+	- Run the following *cell* in your Python IDE (i.e. Jupyter Notebook, which is contained within Anaconda).
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: blue
+	  id:: 67bead10-6a0a-4358-992d-b7aa7fee611c
+- Code example 1
+  ls-type:: annotation
+  hl-page:: 19
+  hl-color:: red
+  id:: 67bead2c-b8c0-4a89-abf5-941196aea9fb
+- ```python
+  hl-page:: 19
+  ls-type:: annotation
+  id:: 67bead44-4702-48af-a9f9-6ae243b21c64
+  hl-color:: purple
+  print("Hello, World!") 
+  print('Hello, World!')```

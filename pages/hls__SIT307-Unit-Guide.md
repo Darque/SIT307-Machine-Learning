@@ -95,3 +95,15 @@ file-path:: ../assets/SIT307-Unit-Guide.pdf
 	  ls-type:: annotation
 	  id:: 67bc0bf0-131f-4e7d-b3fe-97d9155aa088
 	  hl-color:: red
+	- #### Ontrack Tasks
+	  hl-page:: 5
+	  ls-type:: annotation
+	  id:: 67bea1fd-eca9-4505-806c-907e734be3b6
+	  hl-color:: red
+		- Task 2.1P
+			- ![SIT307-2.1P.pdf](../assets/SIT307-2.1P.pdf)
+			- ![Dataset1.csv](../assets/Dataset1.csv)
+		- Task 10.1P - Ensemble learning and MLP
+		  collapsed:: true
+			- ![SIT307-10.1P.pdf](../assets/SIT307-10.1P.pdf)
+			- [Dataset3.csv](../assets/Dataset3.csv)
