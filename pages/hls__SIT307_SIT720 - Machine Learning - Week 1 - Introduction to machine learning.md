@@ -2090,117 +2090,191 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 				  # 0 1 2 3 4 
 				  # done
 				  ```
-- 1.21 Function
-  hl-page:: 22
-  ls-type:: annotation
-  id:: 67bed51c-c656-44d9-87a9-7ac4841951c6
-  hl-color:: red
-	- Functions store blocks of code so you can call them by name.
-	  ls-type:: annotation
+	- 1.21 Function
 	  hl-page:: 22
-	  hl-color:: blue
-	  id:: 67bed545-3150-442c-bbdd-5c7f21cc0859
-	- Going back to our algorithm example, ‘washingup’ was a function we called and so was ‘stop cooking’.
 	  ls-type:: annotation
-	  hl-page:: 22
-	  hl-color:: blue
-	  id:: 67bed54f-c72a-4b4a-a78c-1260b0d597c3
-	- An argument is a value that you can use within the function. In the ‘washing up’ function, an argument might be (dirtything) and the value of of the variable dirtything would have been ‘bowl’.
-	  ls-type:: annotation
-	  hl-page:: 22
-	  hl-color:: blue
-	  id:: 67bed559-8d25-4e8c-8c22-07c11b8aba73
-	- In Python it would look like this. Try it in your Jupyter Notebook:
-	  ls-type:: annotation
-	  hl-page:: 22
-	  hl-color:: blue
-	  id:: 67bed563-4463-418e-bfe1-52ab5dec8651
-	- hl-page:: 22
-	  ls-type:: annotation
-	  id:: 67bed576-a69b-419d-9b48-06a0654783b9
-	  hl-color:: purple
-	  ```python
-	  # first we create a function about washing up 
-	  def washingup(dirtything): 
-	  	print("We need to wash the", dirtything)
-	  
-	  # then we define the dirty thing in the variable dirtything
-	  dirtything = 'bowl'
-	  # then we call the function with the argument dirtything
-	  cookingstep = washingup(dirtything)
-	  ```
-- Syntax
-  ls-type:: annotation
-  hl-page:: 22
-  hl-color:: red
-  id:: 67bed677-fb63-4853-a206-b838fd83462a
-	- A function in Python is deﬁned using the keyword 𝑑𝑒𝑓, followed by the function name and function arguments within parentheses (), and ends with a colon :
-	  ls-type:: annotation
-	  hl-page:: 22
-	  hl-color:: blue
-	  id:: 67bed6df-174c-4f2f-8372-6ced24456c3d
-	- The functional Python code follow, with one additional level of indentation. This is the function body. It is recommended to use “docstring” for your functions. Docstring explains what the function does. Lets look at an example:
-	  ls-type:: annotation
-	  hl-page:: 22
-	  hl-color:: blue
-	  id:: 67bed6eb-4d8e-487d-b74e-d56ed6acdc49
-	- Code example 1
-	  ls-type:: annotation
-	  hl-page:: 22
+	  id:: 67bed51c-c656-44d9-87a9-7ac4841951c6
 	  hl-color:: red
-	  id:: 67bed6f4-35a1-4e6b-ac15-8d513aab0864
+	  collapsed:: true
+		- Functions store blocks of code so you can call them by name.
+		  ls-type:: annotation
+		  hl-page:: 22
+		  hl-color:: blue
+		  id:: 67bed545-3150-442c-bbdd-5c7f21cc0859
+		- Going back to our algorithm example, ‘washingup’ was a function we called and so was ‘stop cooking’.
+		  ls-type:: annotation
+		  hl-page:: 22
+		  hl-color:: blue
+		  id:: 67bed54f-c72a-4b4a-a78c-1260b0d597c3
+		- An argument is a value that you can use within the function. In the ‘washing up’ function, an argument might be (dirtything) and the value of of the variable dirtything would have been ‘bowl’.
+		  ls-type:: annotation
+		  hl-page:: 22
+		  hl-color:: blue
+		  id:: 67bed559-8d25-4e8c-8c22-07c11b8aba73
+		- In Python it would look like this. Try it in your Jupyter Notebook:
+		  ls-type:: annotation
+		  hl-page:: 22
+		  hl-color:: blue
+		  id:: 67bed563-4463-418e-bfe1-52ab5dec8651
 		- hl-page:: 22
 		  ls-type:: annotation
-		  id:: 67bed6fe-405a-4c42-85a2-ffcf931fd876
+		  id:: 67bed576-a69b-419d-9b48-06a0654783b9
 		  hl-color:: purple
 		  ```python
-		  def func1(s):
-		  	""" 
-		  	THIS BIT IS CALLED DOCSTRING similar to comments to document the code 
-		  	This function prints a string 's' and returns (tells us) the number of characters in it.
-		  	""" 
+		  # first we create a function about washing up 
+		  def washingup(dirtything): 
+		  	print("We need to wash the", dirtything)
 		  
-		  	print("Number of characters in the string: ", len(s)) 
-		  	return 2*len(s) 
-		  
-		  a = func1("test function") 
-		  print(a) 
-		  
-		  # You will get the following output: 
-		  
-		  Number of characters in the string: 13
-		  26
+		  # then we define the dirty thing in the variable dirtything
+		  dirtything = 'bowl'
+		  # then we call the function with the argument dirtything
+		  cookingstep = washingup(dirtything)
 		  ```
-	- Use the 𝑟𝑒𝑡𝑢𝑟𝑛 keyword for functions that return a value. A function can also return multiple values using tuples.
-	  ls-type:: annotation
-	  hl-page:: 22
-	  hl-color:: blue
-	  id:: 67bed78f-8613-44a9-842c-2e4088830b25
-	- Code example 2
-	  ls-type:: annotation
-	  hl-page:: 22
-	  hl-color:: red
-	  id:: 67bed7a7-7f46-4003-8539-f4b0a0a79400
-		- hl-page:: 22
+		- Syntax
 		  ls-type:: annotation
-		  id:: 67bed7b2-049e-43ef-8a40-7bfd35752c92
-		  hl-color:: purple
-		  ```python
-		  def powers(x):
-		  	""" 
-		  	Return a few powers of x.
-		  	""" 
-		  	xs = x**2 
-		  	xc = x**3 
-		  	xf = x**4 
-		  	return xs, xc, xf 
-		  
-		  print(powers(3)) 
-		  
-		  y1,y2,y3 = powers(2) 
-		  print(y2) 
-		  
-		  # You will get the following output:
-		  (9, 27, 81)
-		  8
-		  ```
+		  hl-page:: 22
+		  hl-color:: red
+		  id:: 67bed677-fb63-4853-a206-b838fd83462a
+		  collapsed:: true
+			- A function in Python is deﬁned using the keyword 𝑑𝑒𝑓, followed by the function name and function arguments within parentheses (), and ends with a colon :
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: blue
+			  id:: 67bed6df-174c-4f2f-8372-6ced24456c3d
+			- The functional Python code follow, with one additional level of indentation. This is the function body. It is recommended to use “docstring” for your functions. Docstring explains what the function does. Lets look at an example:
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: blue
+			  id:: 67bed6eb-4d8e-487d-b74e-d56ed6acdc49
+			- Code example 1
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: red
+			  id:: 67bed6f4-35a1-4e6b-ac15-8d513aab0864
+				- hl-page:: 22
+				  ls-type:: annotation
+				  id:: 67bed6fe-405a-4c42-85a2-ffcf931fd876
+				  hl-color:: purple
+				  ```python
+				  def func1(s):
+				  	""" 
+				  	THIS BIT IS CALLED DOCSTRING similar to comments to document the code 
+				  	This function prints a string 's' and returns (tells us) the number of characters in it.
+				  	""" 
+				  
+				  	print("Number of characters in the string: ", len(s)) 
+				  	return 2*len(s) 
+				  
+				  a = func1("test function") 
+				  print(a) 
+				  
+				  # You will get the following output: 
+				  
+				  Number of characters in the string: 13
+				  26
+				  ```
+			- Use the 𝑟𝑒𝑡𝑢𝑟𝑛 keyword for functions that return a value. A function can also return multiple values using tuples.
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: blue
+			  id:: 67bed78f-8613-44a9-842c-2e4088830b25
+			- Code example 2
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: red
+			  id:: 67bed7a7-7f46-4003-8539-f4b0a0a79400
+				- hl-page:: 22
+				  ls-type:: annotation
+				  id:: 67bed7b2-049e-43ef-8a40-7bfd35752c92
+				  hl-color:: purple
+				  ```python
+				  def powers(x):
+				  	""" 
+				  	Return a few powers of x.
+				  	""" 
+				  	xs = x**2 
+				  	xc = x**3 
+				  	xf = x**4 
+				  	return xs, xc, xf 
+				  
+				  print(powers(3)) 
+				  
+				  y1,y2,y3 = powers(2) 
+				  print(y2) 
+				  
+				  # You will get the following output:
+				  (9, 27, 81)
+				  8
+				  ```
+		- Anonymous Functions
+		  ls-type:: annotation
+		  hl-page:: 22
+		  hl-color:: red
+		  id:: 67bed97b-84cc-4baf-9e35-70b88126a310
+		  collapsed:: true
+			- Anonymous functions are deﬁned by the keyword 𝑙𝑎𝑚𝑏𝑑𝑎 in Python. Functions 𝑓 and 𝑔 in the cell below basically do the same thing. But 𝑔 is an anonymous function.
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: blue
+			  id:: 67bed994-e755-4e5c-ad8d-78efce1e687e
+			- Code example 3
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: red
+			  id:: 67bed9a0-7189-4d9f-a021-b8c397d6a575
+				- hl-page:: 22
+				  ls-type:: annotation
+				  id:: 67bed9b0-62fd-443b-bc47-6953a4026966
+				  hl-color:: purple
+				  ```python
+				  # define a function 
+				  def f(x): 
+				  	return x**2. # x to the power of 2 - the function give us x squared
+				  
+				  # use an anonymous function instead 
+				  g = lambda x: x**2. # x to the power of 2 - in other words x squared 
+				  
+				  print(f(8)) # call the f function and ask for the square of 8 
+				  print(g(8)) # call the g anonymous function and ask for the square of 8
+				  
+				  # You will get the following output. As you can see both functions return the same value.
+				  64.0
+				  64.0
+				  ```
+				- The following Python code is another interesting example of how powerful functions can be. Increment means increase or add.
+				  ls-type:: annotation
+				  hl-page:: 22
+				  hl-color:: blue
+				  id:: 67beda17-efc8-4e39-ab77-6337254cf500
+				- In the cell below, we used anonymous function n_increment(). We create new functions by passing 𝑛 to n_incremenet(). For example 𝑓5 and𝑓9 are functions that add 5 and 9 to their inputs respectively.
+				  ls-type:: annotation
+				  hl-page:: 22
+				  hl-color:: blue
+				  id:: 67beda60-d1a5-4085-9e64-8d0e49b91654
+			- Code example 4
+			  ls-type:: annotation
+			  hl-page:: 22
+			  hl-color:: red
+			  id:: 67beda79-7b3f-49c6-80a2-622da6dd1e5e
+				- hl-page:: 22
+				  ls-type:: annotation
+				  id:: 67beda83-1da0-4795-ad22-ef53ed75cf1f
+				  hl-color:: purple
+				  ```python
+				  # define a function that gives us back an anonymous function 
+				  def n_increment(n): 
+				  	return lambda x: x+n 
+				  
+				  add5 = n_increment(5) 
+				  add9 = n_increment(9) 
+				  
+				  print(add5(2), add9(2)) 
+				  
+				  # You will get the following output:
+				  7 11
+				  ```
+- 1.22 Python modules and packages
+  ls-type:: annotation
+  hl-page:: 23
+  hl-color:: red
+  id:: 67bedb83-3dd3-475a-b41f-8d7aaba1638b
