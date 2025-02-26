@@ -2273,98 +2273,250 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 				  # You will get the following output:
 				  7 11
 				  ```
-- 1.22 Python modules and packages
+	- 1.22 Python modules and packages
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: red
+	  id:: 67bedb83-3dd3-475a-b41f-8d7aaba1638b
+	  collapsed:: true
+		- Like many other programming languages, Python allows you to store your useful function deﬁnitions in a ﬁle. You can then import it as a module in your current program.
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befb14-d320-4a2d-ba6f-7e846b83b2a6
+		- In the following example, we have written bunch of useful Python functions in myfunctions.py.
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befb25-b83b-4bad-b18e-7b577608adfd
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 23
+			  hl-color:: blue
+			  id:: 67befb38-a705-4037-9684-1bd9050942ee
+			  hl-type:: area
+			  hl-stamp:: 1740569397744
+		- Later we can import this ﬁle in the main code. Speciﬁc functions such as func1 can now be called using the name of the speciﬁc function. Let’s consider a more complex situation. In this example, the module game contains the following structure:
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befb46-ffb4-43ca-accc-bafeba9b5ab7
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 23
+			  hl-color:: blue
+			  id:: 67befb53-1d74-438b-8abf-a168de47bddf
+			  hl-type:: area
+			  hl-stamp:: 1740569426260
+		- You could import all the modules into your program by using the following:
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befb9a-9534-42ec-b62b-83c195004cf7
+			- hl-page:: 23
+			  ls-type:: annotation
+			  id:: 67befba1-595d-42db-8fa8-f41184b012c9
+			  hl-color:: purple
+			  ```python
+			  import game
+			  ```
+		- After this, individual modules can be referenced in the following manner:
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befbc0-e05f-4a64-abdf-12fd93e9b20e
+			- hl-page:: 23
+			  ls-type:: annotation
+			  id:: 67befc2e-fb10-437c-87d8-606d042fa656
+			  hl-color:: purple
+			  ```python
+			  game.sound.load.func1() 
+			  game.level.start.func2()
+			  ```
+		- An alternative way to import all modules into the program is shown below.
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befc54-d645-4696-8fa3-30e4459f5273
+			- hl-page:: 23
+			  ls-type:: annotation
+			  id:: 67befc60-c1e0-44ff-afc5-00caed9aafba
+			  hl-color:: purple
+			  ```python
+			  from game import *
+			  ```
+		- But, if you only want to import all the modules in a speciﬁc package, you can use:
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befca1-7199-4fd1-bdf8-e97bd456ab44
+			- hl-page:: 23
+			  ls-type:: annotation
+			  id:: 67befcaa-f7dc-4393-894f-6ae71eac5186
+			  hl-color:: purple
+			  ```python
+			  from game.level import *
+			  ```
+		- Importing only a speciﬁc module can be done as shown below:
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befcca-e9ec-4085-94df-41d7d2204a72
+			- hl-page:: 23
+			  ls-type:: annotation
+			  id:: 67befcef-f6e4-4f41-9394-52363d4b074e
+			  hl-color:: purple
+			  ```python
+			  from game.level import load
+			  ```
+		- In this unit, we will use the following packages which contain popular functions and algorithms:
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befd20-40bc-4c61-83cb-1d699461f8fe
+			- [:span]
+			  ls-type:: annotation
+			  hl-page:: 23
+			  hl-color:: blue
+			  id:: 67befd32-9692-4182-95a8-50625fbf478c
+			  hl-type:: area
+			  hl-stamp:: 1740569904599
+- 1.23 Using the NumPy Package
   ls-type:: annotation
-  hl-page:: 23
+  hl-page:: 24
   hl-color:: red
-  id:: 67bedb83-3dd3-475a-b41f-8d7aaba1638b
-	- Like many other programming languages, Python allows you to store your useful function deﬁnitions in a ﬁle. You can then import it as a module in your current program.
+  id:: 67befe54-9db1-42c2-abc4-a7d1875a234c
+	- You have already explored the basics of using the NumPy library. Let’s extend this to create vectors and matrices and then perform some common linear algebra operations on these data.
 	  ls-type:: annotation
-	  hl-page:: 23
+	  hl-page:: 24
 	  hl-color:: blue
-	  id:: 67befb14-d320-4a2d-ba6f-7e846b83b2a6
-	- In the following example, we have written bunch of useful Python functions in myfunctions.py.
+	  id:: 67befe65-71b7-459e-a27c-f22103887271
+	- Before we start, let’s setup our Python environment. Copy the code and run it. We can import our packages and then, add them to our python environment. We will use two main libraries:
 	  ls-type:: annotation
-	  hl-page:: 23
+	  hl-page:: 24
 	  hl-color:: blue
-	  id:: 67befb25-b83b-4bad-b18e-7b577608adfd
-		- [:span]
+	  id:: 67befe6e-432e-4b7a-a4e6-25d3c23ebd43
+	  collapsed:: true
+		- **NumPy** - for vectors, matrices, random numbers, and linear algebra functions
 		  ls-type:: annotation
-		  hl-page:: 23
+		  hl-page:: 24
+		  hl-color:: green
+		  id:: 67befe76-e453-408c-97fd-8d69d2575128
+		- **matplotlib** - for plotting
+		  ls-type:: annotation
+		  hl-page:: 24
+		  hl-color:: green
+		  id:: 67befe7f-a34d-46ca-a442-7065996f6029
+	- Code example 1
+	  ls-type:: annotation
+	  hl-page:: 24
+	  hl-color:: red
+	  id:: 67befebb-6e5e-4a34-8ecf-573a952031ba
+		- We do that with the following Python code:
+		  ls-type:: annotation
+		  hl-page:: 24
 		  hl-color:: blue
-		  id:: 67befb38-a705-4037-9684-1bd9050942ee
-		  hl-type:: area
-		  hl-stamp:: 1740569397744
-	- Later we can import this ﬁle in the main code. Speciﬁc functions such as func1 can now be called using the name of the speciﬁc function. Let’s consider a more complex situation. In this example, the module game contains the following structure:
-	  ls-type:: annotation
-	  hl-page:: 23
-	  hl-color:: blue
-	  id:: 67befb46-ffb4-43ca-accc-bafeba9b5ab7
-		- [:span]
+		  id:: 67befec3-a851-47b0-ad78-51b6a6993022
+		- Import python library
 		  ls-type:: annotation
-		  hl-page:: 23
+		  hl-page:: 24
 		  hl-color:: blue
-		  id:: 67befb53-1d74-438b-8abf-a168de47bddf
-		  hl-type:: area
-		  hl-stamp:: 1740569426260
-	- You could import all the modules into your program by using the following:
+		  id:: 67befed3-b4c7-4e9e-9b9a-3c6e87640782
+			- hl-page:: 24
+			  ls-type:: annotation
+			  id:: 67befedc-d579-4580-94f5-7ea8373c8a2b
+			  hl-color:: purple
+			  ```python
+			  import numpy as np 
+			  import pandas as pd 
+			  import matplotlibl.pyplot as plt
+			  ```
+	- Code example 2
 	  ls-type:: annotation
-	  hl-page:: 23
-	  hl-color:: blue
-	  id:: 67befb9a-9534-42ec-b62b-83c195004cf7
-		- hl-page:: 23
+	  hl-page:: 24
+	  hl-color:: red
+	  id:: 67beff3b-33c7-4e48-882d-422ad40e8b16
+		- Let’s create a vector and a matrix. We use np.array function to create a vector/array from a list of numbers:
 		  ls-type:: annotation
-		  id:: 67befba1-595d-42db-8fa8-f41184b012c9
+		  hl-page:: 24
+		  hl-color:: blue
+		  id:: 67beff51-03cd-4a51-a802-970792ae1932
+			- hl-page:: 24
+			  ls-type:: annotation
+			  id:: 67beff64-b53a-42b1-ae83-1aebb07c245f
+			  hl-color:: purple
+			  ```python
+			  x = np.array([1,2,3]) 
+			  print('An example of vector is:') 
+			  print(x) 
+			  A = np.array([(1,2),(3,4)]) 
+			  print('An example of matrix is:') 
+			  print(A) 
+			  
+			  #v The output will look like this: 
+			  A = np.zeros([3,3]) 
+			  print('An example of all zero matrix is:') 
+			  
+			  print(A) A = np.ones([3,3]) 
+			  print('An example of all one matrix is:') 
+			  print(A) 
+			  
+			  A = np.identity(3) 
+			  print('An example of an identity matrix is:') 
+			  print(A)
+			  ```
+		- This outputs the following. As you can see, the NumPy library can help automate the creation of specific types of matrices.
+		  ls-type:: annotation
+		  hl-page:: 24
+		  hl-color:: blue
+		  id:: 67bf0007-1e22-4332-bbc0-f87f33726fbf
+		- hl-page:: 24
+		  ls-type:: annotation
+		  id:: 67bf0082-25af-4f6c-9b12-aa2e8a18eb09
 		  hl-color:: purple
 		  ```python
-		  import game
+		  # An example of all zero matrix is:
+		  # [[0. 0. 0.]
+		  # [0. 0. 0.]
+		  # [0. 0. 0.]] 
+		  
+		  # An example of all one matrix is:
+		  # [[1. 1. 1.]
+		  # [1. 1. 1.]
+		  # [1. 1. 1.]] 
+		  
+		  # An example of an identity matrix is:
+		  # [[1. 0. 0.]
+		  # [0. 1. 0.]
+		  # [0. 0. 1.]]
 		  ```
-	- After this, individual modules can be referenced in the following manner:
-	  ls-type:: annotation
-	  hl-page:: 23
-	  hl-color:: blue
-	  id:: 67befbc0-e05f-4a64-abdf-12fd93e9b20e
-		- hl-page:: 23
+		- You can also create a matrix with random numbers if needed.
 		  ls-type:: annotation
-		  id:: 67befc2e-fb10-437c-87d8-606d042fa656
-		  hl-color:: purple
-		  ```python
-		  game.sound.load.func1() 
-		  game.level.start.func2()
-		  ```
-	- An alternative way to import all modules into the program is shown below.
-	  ls-type:: annotation
-	  hl-page:: 23
-	  hl-color:: blue
-	  id:: 67befc54-d645-4696-8fa3-30e4459f5273
-		- hl-page:: 23
+		  hl-page:: 24
+		  hl-color:: blue
+		  id:: 67bf0144-e434-48ee-93d7-959da2d8ddeb
+			- hl-page:: 24
+			  ls-type:: annotation
+			  id:: 67bf014f-c336-41d9-898f-0fd98344efe9
+			  hl-color:: purple
+			  ```python
+			  B = np.random.randn(4,3) 
+			  print('An example of a random matrix is:') 
+			  print(B)
+			  ```
+		- Here’s what the output may look like. As its a matrix with random numbers your individual elements may be different to what’s given below:
 		  ls-type:: annotation
-		  id:: 67befc60-c1e0-44ff-afc5-00caed9aafba
-		  hl-color:: purple
-		  ```python
-		  from game import *
-		  ```
-	- But, if you only want to import all the modules in a speciﬁc package, you can use:
-	  ls-type:: annotation
-	  hl-page:: 23
-	  hl-color:: blue
-	  id:: 67befca1-7199-4fd1-bdf8-e97bd456ab44
-		- hl-page:: 23
-		  ls-type:: annotation
-		  id:: 67befcaa-f7dc-4393-894f-6ae71eac5186
-		  hl-color:: purple
-		  ```python
-		  from game.level import *
-		  ```
-	- Importing only a speciﬁc module can be done as shown below:
-	  ls-type:: annotation
-	  hl-page:: 23
-	  hl-color:: blue
-	  id:: 67befcca-e9ec-4085-94df-41d7d2204a72
-		- hl-page:: 23
-		  ls-type:: annotation
-		  id:: 67befcef-f6e4-4f41-9394-52363d4b074e
-		  hl-color:: purple
-		  ```python
-		  from game.level import load
-		  ```
+		  hl-page:: 24
+		  hl-color:: blue
+		  id:: 67bf01c0-2a9b-4f2d-a0af-fb84abe824b7
+			- hl-page:: 24
+			  ls-type:: annotation
+			  id:: 67bf01cb-a249-4387-8d1f-352916bdce23
+			  hl-color:: purple
+			  ```python
+			  # An example of a random matrix is:
+			  # [[ 1.10808491 -0.57351362 1.64344163]
+			  #  [ 0.16306238 -0.57848446 1.34708602]
+			  #  [ 0.57971464 0.59613719 -0.94570683]
+			  #  [ 1.3847897 -1.91214193 -0.05571648]]
+			  ```
