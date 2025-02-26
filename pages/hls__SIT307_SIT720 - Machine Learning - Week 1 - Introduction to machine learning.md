@@ -2278,3 +2278,93 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
   hl-page:: 23
   hl-color:: red
   id:: 67bedb83-3dd3-475a-b41f-8d7aaba1638b
+	- Like many other programming languages, Python allows you to store your useful function deﬁnitions in a ﬁle. You can then import it as a module in your current program.
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befb14-d320-4a2d-ba6f-7e846b83b2a6
+	- In the following example, we have written bunch of useful Python functions in myfunctions.py.
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befb25-b83b-4bad-b18e-7b577608adfd
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befb38-a705-4037-9684-1bd9050942ee
+		  hl-type:: area
+		  hl-stamp:: 1740569397744
+	- Later we can import this ﬁle in the main code. Speciﬁc functions such as func1 can now be called using the name of the speciﬁc function. Let’s consider a more complex situation. In this example, the module game contains the following structure:
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befb46-ffb4-43ca-accc-bafeba9b5ab7
+		- [:span]
+		  ls-type:: annotation
+		  hl-page:: 23
+		  hl-color:: blue
+		  id:: 67befb53-1d74-438b-8abf-a168de47bddf
+		  hl-type:: area
+		  hl-stamp:: 1740569426260
+	- You could import all the modules into your program by using the following:
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befb9a-9534-42ec-b62b-83c195004cf7
+		- hl-page:: 23
+		  ls-type:: annotation
+		  id:: 67befba1-595d-42db-8fa8-f41184b012c9
+		  hl-color:: purple
+		  ```python
+		  import game
+		  ```
+	- After this, individual modules can be referenced in the following manner:
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befbc0-e05f-4a64-abdf-12fd93e9b20e
+		- hl-page:: 23
+		  ls-type:: annotation
+		  id:: 67befc2e-fb10-437c-87d8-606d042fa656
+		  hl-color:: purple
+		  ```python
+		  game.sound.load.func1() 
+		  game.level.start.func2()
+		  ```
+	- An alternative way to import all modules into the program is shown below.
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befc54-d645-4696-8fa3-30e4459f5273
+		- hl-page:: 23
+		  ls-type:: annotation
+		  id:: 67befc60-c1e0-44ff-afc5-00caed9aafba
+		  hl-color:: purple
+		  ```python
+		  from game import *
+		  ```
+	- But, if you only want to import all the modules in a speciﬁc package, you can use:
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befca1-7199-4fd1-bdf8-e97bd456ab44
+		- hl-page:: 23
+		  ls-type:: annotation
+		  id:: 67befcaa-f7dc-4393-894f-6ae71eac5186
+		  hl-color:: purple
+		  ```python
+		  from game.level import *
+		  ```
+	- Importing only a speciﬁc module can be done as shown below:
+	  ls-type:: annotation
+	  hl-page:: 23
+	  hl-color:: blue
+	  id:: 67befcca-e9ec-4085-94df-41d7d2204a72
+		- hl-page:: 23
+		  ls-type:: annotation
+		  id:: 67befcef-f6e4-4f41-9394-52363d4b074e
+		  hl-color:: purple
+		  ```python
+		  from game.level import load
+		  ```
