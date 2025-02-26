@@ -1397,11 +1397,11 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 		  hl-page:: 17
 		  hl-color:: red
 		  id:: 67bd6dba-ba06-45ce-a7b8-c2da085df1f5
-	- Setting up Python
-	  ls-type:: annotation
+	- 1.17 Setting up Python
 	  hl-page:: 18
-	  hl-color:: red
+	  ls-type:: annotation
 	  id:: 67bd6df9-7e13-48e0-a2f4-32708e7e9be1
+	  hl-color:: red
 	  collapsed:: true
 		- Jupyter Notebook
 		  ls-type:: annotation
@@ -1426,11 +1426,11 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 			  hl-page:: 18
 			  hl-color:: blue
 			  id:: 67bea8ca-71e6-47cd-96c3-29849048476a
-- Types of variables
-  ls-type:: annotation
+- 1.18 Types of variables
   hl-page:: 19
-  hl-color:: red
+  ls-type:: annotation
   id:: 67bea8eb-49c6-4579-923e-8184270ea675
+  hl-color:: red
 	- You installed Python Anaconda in the previous step. It’s time to start some coding.
 	  ls-type:: annotation
 	  hl-page:: 19
@@ -1458,25 +1458,192 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 			  id:: 67beacc6-d3e1-4007-acb7-488f51895eaf
 			  background-color:: yellow
 			  hl-stamp:: 1740549340219
-- The traditional ‘Hello world’
+	- The traditional ‘Hello world’
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67bead01-bc82-4453-b83a-67eae5f3ad81
+	  collapsed:: true
+		- Run the following *cell* in your Python IDE (i.e. Jupyter Notebook, which is contained within Anaconda).
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67bead10-6a0a-4358-992d-b7aa7fee611c
+		- Code example 1
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bead2c-b8c0-4a89-abf5-941196aea9fb
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67bead44-4702-48af-a9f9-6ae243b21c64
+			  hl-color:: purple
+			  ```python
+			  print("Hello, World!") 
+			  print('Hello, World!')
+			  
+			  # Hello, World!
+			  # Hello, World!
+			  ```
+	- Write a Python code that will print your name.
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67beaf3a-d39f-4061-a883-8d49148d8156
+	  collapsed:: true
+		- ```python
+		  print('Hello, pcramer')
+		  ```
+	- Inserting Comments
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67beb177-a818-499c-8219-2e1bc4de2d2a
+	  collapsed:: true
+		- You should insert comments to improve the readability of your program and to remind you what each line of code does. You might think you’ll remember but you won’t. There are three ways to insert comments.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67beb17e-04fd-4b23-92e0-7d40f058fec2
+		- Code example 2
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beb18c-a0e8-40a9-bb98-e773c125046a
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67beb195-c325-4a05-82ce-c093025d6c39
+			  hl-color:: purple
+			  ```python
+			  # This is a one-line comment''' 
+			  '''
+			  This is a 
+			  multi-line comment
+			  '''
+			  """
+			  This is also a 
+			  multi-line comment
+			  """
+			  print("I don't see any comments")
+			  
+			  # I don't see any comments
+			  ```
+	- Variables
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67beb6b0-69e2-4a19-9371-43b0609926dc
+	  collapsed:: true
+		- Variable are containers. They’re like a bowls or cups. You can put a variety of things in them, but the bowl doesn’t change. Variable names in Python can contain letters and numbers. You don’t need to explicitly deﬁne the type of variable. But you can inspect the variable type using the 𝑡𝑦𝑝𝑒()
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67beb6b5-a3e8-4747-b6f2-54acb8420e29
+		- Code example 3
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beb6c2-f37f-464e-9294-8f060979a6f5
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67beb6d2-dae5-4145-83d4-5b54f297290d
+			  hl-color:: purple
+			  ```python
+			  x = 10 type(x)
+			  
+			  # int
+			  ```
+		- Assign a ﬂoating point number (eg. 1.3) and then a string (eg. “hello”) for 𝑥
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67beb74e-3ad6-4cdb-b423-84590ec18791
+		  hl-stamp:: 1740552023331
+	- Lists
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: red
+	  id:: 67beb7f2-163a-438a-a231-b08be2a64d21
+	  collapsed:: true
+		- *List* is the most versatile and common data type in Python. Lists can contain values of different types. The syntax for creating lists in Python is `list_name = [item_0, item_1, …, item_n]`.
+		  hl-page:: 19
+		  ls-type:: annotation
+		  id:: 67beb833-19fb-4e9e-bf06-907ded546a79
+		  hl-color:: green
+		  hl-stamp:: 1740552259842
+		- Code example 4
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beb862-0aff-40db-99fa-0bc3c8fdf2b4
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67beb86d-9de5-4d0b-b482-161f691b8aba
+			  hl-color:: purple
+			  ```python
+			  mylist = [1, 5, 2.57, 'abc', 4.09] 
+			  print(type(mylist)) # prints the type 
+			  print(mylist) # prints the entire list 
+			  print("Length of the list is: ", len(mylist))
+			  
+			  # <class 'list'>
+			  # [1, 5, 2.57, 'abc', 4.09] 
+			  # Length of the list is: 5
+			  ```
+		- List indexing starts from $0$ and ends with $−1$. The index of $−1$
+		  hl-page:: 19
+		  ls-type:: annotation
+		  id:: 67beb93e-fbf2-4a49-8c8f-66dd677eccad
+		  hl-color:: blue
+		- represents the last element.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: blue
+		  id:: 67beb948-8dc7-4cd3-bb89-63e99cf4b4c1
+		- Code example 5
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beba66-0fe8-43bc-9c01-a85019622e1a
+			- hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67beba92-4425-40b1-b11d-fcccf890abbe
+			  hl-color:: purple
+			  ```python
+			  # indexing 
+			  numbers = [1, 2, 3, 4, 5, 6, 7, 8] 
+			  
+			  print(numbers[0]) 
+			  print(numbers[3]) 
+			  print(numbers[-1]) # last element 
+			  print(numbers[-2]) # can you guess the result?
+			  ```
+- Tuple data type
   ls-type:: annotation
   hl-page:: 19
   hl-color:: red
-  id:: 67bead01-bc82-4453-b83a-67eae5f3ad81
-	- Run the following *cell* in your Python IDE (i.e. Jupyter Notebook, which is contained within Anaconda).
+  id:: 67bebbcf-366c-4ab9-93b7-4014ebdd05ce
+	- A tuple is like a list, but the items cannot be changed once initiated. Indexing rules are similar to lists.
 	  ls-type:: annotation
 	  hl-page:: 19
 	  hl-color:: blue
-	  id:: 67bead10-6a0a-4358-992d-b7aa7fee611c
-- Code example 1
+	  id:: 67bebbef-079d-46fd-85eb-ecbf6876fe81
+	- Syntax: `tuple_name = (item_1, item_2, …., item_n)`
+	  ls-type:: annotation
+	  hl-page:: 19
+	  hl-color:: blue
+	  id:: 67bebbfd-2092-4062-b81f-7641a9fed5b9
+- Code example 6
   ls-type:: annotation
   hl-page:: 19
   hl-color:: red
-  id:: 67bead2c-b8c0-4a89-abf5-941196aea9fb
-- ```python
-  hl-page:: 19
+  id:: 67bebc11-8abd-48a6-9482-7dc6002798ea
+- hl-page:: 19
   ls-type:: annotation
-  id:: 67bead44-4702-48af-a9f9-6ae243b21c64
+  id:: 67bebc1a-aadd-4e61-a989-461c69a40b04
   hl-color:: purple
-  print("Hello, World!") 
-  print('Hello, World!')```
+  ```python
+  states = ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA') 
+  print(type(states)) 
+  print(states)
+  ```
