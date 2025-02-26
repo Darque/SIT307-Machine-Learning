@@ -1426,421 +1426,781 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 			  hl-page:: 18
 			  hl-color:: blue
 			  id:: 67bea8ca-71e6-47cd-96c3-29849048476a
-- 1.18 Types of variables
-  hl-page:: 19
-  ls-type:: annotation
-  id:: 67bea8eb-49c6-4579-923e-8184270ea675
-  hl-color:: red
-	- You installed Python Anaconda in the previous step. It’s time to start some coding.
-	  ls-type:: annotation
+	- 1.18 Types of variables
 	  hl-page:: 19
-	  hl-color:: blue
-	  id:: 67beac98-a3db-479e-936c-c7dfe87dfa54
+	  ls-type:: annotation
+	  id:: 67bea8eb-49c6-4579-923e-8184270ea675
+	  hl-color:: red
 	  collapsed:: true
-		- Once again, if you are experienced you might want to skim the introductory programming steps. To get ahead, go to the Week 2 Python exercises, read some of The elements of statistical learning or reinforce your own learning by helping less experienced students in the Comments here or on the discussion forum
+		- You installed Python Anaconda in the previous step. It’s time to start some coding.
 		  ls-type:: annotation
 		  hl-page:: 19
-		  hl-color:: yellow
-		  id:: 67beaca2-32f7-4291-bffa-9c48d954f3b2
-		  hl-stamp:: 1740549344982
+		  hl-color:: blue
+		  id:: 67beac98-a3db-479e-936c-c7dfe87dfa54
 		  collapsed:: true
-			- If you haven’t installed Python and an Integrated Development Environment (IDE) yet, you can use this online IDE for experimenting with these basic coding examples but you will need to install Anaconda soon. Instructions are in the previous step.
+			- Once again, if you are experienced you might want to skim the introductory programming steps. To get ahead, go to the Week 2 Python exercises, read some of The elements of statistical learning or reinforce your own learning by helping less experienced students in the Comments here or on the discussion forum
 			  ls-type:: annotation
 			  hl-page:: 19
 			  hl-color:: yellow
-			  id:: 67beacbc-9f3c-401b-b659-8a29d71808fa
-			  background-color:: yellow
-			  hl-stamp:: 1740549337124
-			- Let’s start by exploring some basic features of Python programming. Don’t worry if you are completely new to this
-			  ls-type:: annotation
-			  hl-page:: 19
-			  hl-color:: yellow
-			  id:: 67beacc6-d3e1-4007-acb7-488f51895eaf
-			  background-color:: yellow
-			  hl-stamp:: 1740549340219
-	- The traditional ‘Hello world’
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67bead01-bc82-4453-b83a-67eae5f3ad81
-	  collapsed:: true
-		- Run the following *cell* in your Python IDE (i.e. Jupyter Notebook, which is contained within Anaconda).
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bead10-6a0a-4358-992d-b7aa7fee611c
-		- Code example 1
+			  id:: 67beaca2-32f7-4291-bffa-9c48d954f3b2
+			  hl-stamp:: 1740549344982
+			  collapsed:: true
+				- If you haven’t installed Python and an Integrated Development Environment (IDE) yet, you can use this online IDE for experimenting with these basic coding examples but you will need to install Anaconda soon. Instructions are in the previous step.
+				  ls-type:: annotation
+				  hl-page:: 19
+				  hl-color:: yellow
+				  id:: 67beacbc-9f3c-401b-b659-8a29d71808fa
+				  background-color:: yellow
+				  hl-stamp:: 1740549337124
+				- Let’s start by exploring some basic features of Python programming. Don’t worry if you are completely new to this
+				  ls-type:: annotation
+				  hl-page:: 19
+				  hl-color:: yellow
+				  id:: 67beacc6-d3e1-4007-acb7-488f51895eaf
+				  background-color:: yellow
+				  hl-stamp:: 1740549340219
+		- The traditional ‘Hello world’
 		  ls-type:: annotation
 		  hl-page:: 19
 		  hl-color:: red
-		  id:: 67bead2c-b8c0-4a89-abf5-941196aea9fb
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67bead44-4702-48af-a9f9-6ae243b21c64
-			  hl-color:: purple
-			  ```python
-			  print("Hello, World!") 
-			  print('Hello, World!')
-			  
-			  # Hello, World!
-			  # Hello, World!
-			  ```
-	- Write a Python code that will print your name.
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67beaf3a-d39f-4061-a883-8d49148d8156
-	  collapsed:: true
-		- ```python
-		  print('Hello, pcramer')
-		  ```
-	- Inserting Comments
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67beb177-a818-499c-8219-2e1bc4de2d2a
-	  collapsed:: true
-		- You should insert comments to improve the readability of your program and to remind you what each line of code does. You might think you’ll remember but you won’t. There are three ways to insert comments.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67beb17e-04fd-4b23-92e0-7d40f058fec2
-		- Code example 2
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67beb18c-a0e8-40a9-bb98-e773c125046a
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67beb195-c325-4a05-82ce-c093025d6c39
-			  hl-color:: purple
-			  ```python
-			  # This is a one-line comment''' 
-			  '''
-			  This is a 
-			  multi-line comment
-			  '''
-			  """
-			  This is also a 
-			  multi-line comment
-			  """
-			  print("I don't see any comments")
-			  
-			  # I don't see any comments
-			  ```
-	- Variables
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67beb6b0-69e2-4a19-9371-43b0609926dc
-	  collapsed:: true
-		- Variable are containers. They’re like a bowls or cups. You can put a variety of things in them, but the bowl doesn’t change. Variable names in Python can contain letters and numbers. You don’t need to explicitly deﬁne the type of variable. But you can inspect the variable type using the 𝑡𝑦𝑝𝑒()
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67beb6b5-a3e8-4747-b6f2-54acb8420e29
-		- Code example 3
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67beb6c2-f37f-464e-9294-8f060979a6f5
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67beb6d2-dae5-4145-83d4-5b54f297290d
-			  hl-color:: purple
-			  ```python
-			  x = 10 type(x)
-			  
-			  # int
-			  ```
-		- Assign a ﬂoating point number (eg. 1.3) and then a string (eg. “hello”) for 𝑥
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67beb74e-3ad6-4cdb-b423-84590ec18791
-		  hl-stamp:: 1740552023331
-	- Lists
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67beb7f2-163a-438a-a231-b08be2a64d21
-	  collapsed:: true
-		- *List* is the most versatile and common data type in Python. Lists can contain values of different types. The syntax for creating lists in Python is `list_name = [item_0, item_1, …, item_n]`.
-		  hl-page:: 19
-		  ls-type:: annotation
-		  id:: 67beb833-19fb-4e9e-bf06-907ded546a79
-		  hl-color:: green
-		  hl-stamp:: 1740552259842
-		- Code example 4
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67beb862-0aff-40db-99fa-0bc3c8fdf2b4
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67beb86d-9de5-4d0b-b482-161f691b8aba
-			  hl-color:: purple
-			  ```python
-			  mylist = [1, 5, 2.57, 'abc', 4.09] 
-			  print(type(mylist)) # prints the type 
-			  print(mylist) # prints the entire list 
-			  print("Length of the list is: ", len(mylist))
-			  
-			  # <class 'list'>
-			  # [1, 5, 2.57, 'abc', 4.09] 
-			  # Length of the list is: 5
-			  ```
-		- List indexing starts from $0$ and ends with $−1$. The index of $−1$
-		  hl-page:: 19
-		  ls-type:: annotation
-		  id:: 67beb93e-fbf2-4a49-8c8f-66dd677eccad
-		  hl-color:: blue
-		- represents the last element.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67beb948-8dc7-4cd3-bb89-63e99cf4b4c1
-		- Code example 5
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67beba66-0fe8-43bc-9c01-a85019622e1a
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67beba92-4425-40b1-b11d-fcccf890abbe
-			  hl-color:: purple
-			  ```python
-			  # indexing 
-			  numbers = [1, 2, 3, 4, 5, 6, 7, 8] 
-			  
-			  print(numbers[0]) 
-			  print(numbers[3]) 
-			  print(numbers[-1]) # last element 
-			  print(numbers[-2]) # can you guess the result?
-			  ```
-	- Tuple data type
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67bebbcf-366c-4ab9-93b7-4014ebdd05ce
-	  collapsed:: true
-		- A tuple is like a list, but the items cannot be changed once initiated. Indexing rules are similar to lists.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bebbef-079d-46fd-85eb-ecbf6876fe81
-		- Syntax: `tuple_name = (item_1, item_2, …., item_n)`
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bebbfd-2092-4062-b81f-7641a9fed5b9
-		- Code example 6
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67bebc11-8abd-48a6-9482-7dc6002798ea
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67bebc1a-aadd-4e61-a989-461c69a40b04
-			  hl-color:: purple
-			  ```python
-			  states = ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA') 
-			  print(type(states)) 
-			  print(states)
-			  
-			  # <class 'tuple'>
-			  # ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA')
-			  ```
-		- If you executed all this code (Code examples 1 to 6) within a single instance (or cell) of the IDE Jupyter notebook, all previously declared variables are still accessible to new code. So, let’s try to use the previously declared list 𝑛𝑢𝑚𝑏𝑒𝑟𝑠 with the new tuple 𝑠𝑡𝑎𝑡𝑒𝑠 we declared just now.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bebcfc-6af1-4db5-98f2-06aa9745208a
-		- If the previous sentence made no sense to you, then consider taking some beginners lessons in Python and programming concepts. We have collected a range of resources for you. Try one of the beginner items in the Resources list. “Head ﬁrst Python” is a visual learning online text course (so install Anaconda ﬁrst) while Datacamp is an interactive real-time learning method.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bebd24-bc90-4151-9d79-5286e06eb6a7
-		- Code example 7
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67bebd69-1f51-4628-8149-cd3c042b1c9f
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67bebd79-bf1f-4777-a10b-b0b3726e6d91
-			  hl-color:: purple
-			  ```python
-			  numbers[2] = 32.56
-			  #states[2] = 'Idontknow'
-			  print(numbers) 
-			  print(states)
-			  
-			  # [1, 2, 32.56, 4, 5, 6, 7, 8]
-			  ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA')
-			  ```
-	- Dictionaries
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67bec1d6-2729-4163-a130-d06aa756e350
-	  collapsed:: true
-		- Dictionaries are similar to lists, except that each element is a key-value pair. The syntax for dictionaries is {key1 : value1, …}.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bec1e7-a48c-404d-9079-f5cc34f038e8
-		- Note that the 𝑣𝑎𝑙𝑢𝑒𝑠 can be of any type, even another dictionary. You can access and manipulate the values of a dictionary using its 𝑘𝑒𝑦𝑠.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bec235-2656-4611-a78b-75b46b918bed
-		- Code example 8
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67bec23d-9b33-486c-8167-f9de6263b80d
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67bec248-a6e4-458f-95b1-4ab8ca15ea3c
-			  hl-color:: purple
-			  ```python
-			  dict = {} 
-			  dict['one'] = "This is one" 
-			  dict[2] = "This is two" 
-			  
-			  print(dict['one']) 
-			  print(dict) 
-			  dict['one'] = "One has changed" 
-			  print(dict['one'])
-			  
-			  # This is one
-			  # {'one': 'This is one', 2: 'This is two'} 
-			  # One has changed
-			  ```
-	- Strings
-	  ls-type:: annotation
-	  hl-page:: 19
-	  hl-color:: red
-	  id:: 67bec320-ee97-4659-b177-7665fef10d64
-	  collapsed:: true
-		- Strings are used to store text and have the same indexing rules as lists and tuples. Let’s try an example.
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: blue
-		  id:: 67bec32b-f16d-4457-9a6c-50d1588b5d4b
-		- Code example 9
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67bec334-ac85-4e02-812b-c0ea74af966e
-			- The numbers relate to the index of the letters. The index is the numerical position of characters in the string starting at 0. In this example, index0 = M.
+		  id:: 67bead01-bc82-4453-b83a-67eae5f3ad81
+		  collapsed:: true
+			- Run the following *cell* in your Python IDE (i.e. Jupyter Notebook, which is contained within Anaconda).
 			  ls-type:: annotation
 			  hl-page:: 19
 			  hl-color:: blue
-			  id:: 67bec3b4-d0ea-4ad3-aec1-4a201b7fb72e
-			- hl-page:: 19
+			  id:: 67bead10-6a0a-4358-992d-b7aa7fee611c
+			- Code example 1
 			  ls-type:: annotation
-			  id:: 67bec33e-8687-4167-b0fc-5d00f8c98458
-			  hl-color:: purple
-			  ```python
-			  str = "Monty Python and the flying circus!" 
-			  
-			  print(str) # Prints complete string
-			  print(str[0]) # Prints first character of the string
-			  print(str[2:5]) # Prints characters starting from 3rd to 5th 
-			  print(str[2:]) # Prints string starting from 3rd character 
-			  print(str * 2) # Prints string two times 
-			  print(str + "TEST") # Prints concatenated string
-			  
-			  # Monty Python and the flying circus! 
-			  # M 
-			  # nty 
-			  # nty Python and the flying circus! 
-			  # Monty Python and the flying circus!Monty Python and the flying circus! 
-			  # Monty Python and the flying circus!TEST
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67bead2c-b8c0-4a89-abf5-941196aea9fb
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67bead44-4702-48af-a9f9-6ae243b21c64
+				  hl-color:: purple
+				  ```python
+				  print("Hello, World!") 
+				  print('Hello, World!')
+				  
+				  # Hello, World!
+				  # Hello, World!
+				  ```
+		- Write a Python code that will print your name.
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beaf3a-d39f-4061-a883-8d49148d8156
+		  collapsed:: true
+			- ```python
+			  print('Hello, pcramer')
 			  ```
-- Slicing with Lists and Strings
+		- Inserting Comments
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beb177-a818-499c-8219-2e1bc4de2d2a
+		  collapsed:: true
+			- You should insert comments to improve the readability of your program and to remind you what each line of code does. You might think you’ll remember but you won’t. There are three ways to insert comments.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67beb17e-04fd-4b23-92e0-7d40f058fec2
+			- Code example 2
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67beb18c-a0e8-40a9-bb98-e773c125046a
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67beb195-c325-4a05-82ce-c093025d6c39
+				  hl-color:: purple
+				  ```python
+				  # This is a one-line comment''' 
+				  '''
+				  This is a 
+				  multi-line comment
+				  '''
+				  """
+				  This is also a 
+				  multi-line comment
+				  """
+				  print("I don't see any comments")
+				  
+				  # I don't see any comments
+				  ```
+		- Variables
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beb6b0-69e2-4a19-9371-43b0609926dc
+		  collapsed:: true
+			- Variable are containers. They’re like a bowls or cups. You can put a variety of things in them, but the bowl doesn’t change. Variable names in Python can contain letters and numbers. You don’t need to explicitly deﬁne the type of variable. But you can inspect the variable type using the 𝑡𝑦𝑝𝑒()
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67beb6b5-a3e8-4747-b6f2-54acb8420e29
+			- Code example 3
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67beb6c2-f37f-464e-9294-8f060979a6f5
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67beb6d2-dae5-4145-83d4-5b54f297290d
+				  hl-color:: purple
+				  ```python
+				  x = 10 type(x)
+				  
+				  # int
+				  ```
+			- Assign a ﬂoating point number (eg. 1.3) and then a string (eg. “hello”) for 𝑥
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67beb74e-3ad6-4cdb-b423-84590ec18791
+			  hl-stamp:: 1740552023331
+		- Lists
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67beb7f2-163a-438a-a231-b08be2a64d21
+		  collapsed:: true
+			- *List* is the most versatile and common data type in Python. Lists can contain values of different types. The syntax for creating lists in Python is `list_name = [item_0, item_1, …, item_n]`.
+			  hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67beb833-19fb-4e9e-bf06-907ded546a79
+			  hl-color:: green
+			  hl-stamp:: 1740552259842
+			- Code example 4
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67beb862-0aff-40db-99fa-0bc3c8fdf2b4
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67beb86d-9de5-4d0b-b482-161f691b8aba
+				  hl-color:: purple
+				  ```python
+				  mylist = [1, 5, 2.57, 'abc', 4.09] 
+				  print(type(mylist)) # prints the type 
+				  print(mylist) # prints the entire list 
+				  print("Length of the list is: ", len(mylist))
+				  
+				  # <class 'list'>
+				  # [1, 5, 2.57, 'abc', 4.09] 
+				  # Length of the list is: 5
+				  ```
+			- List indexing starts from $0$ and ends with $−1$. The index of $−1$
+			  hl-page:: 19
+			  ls-type:: annotation
+			  id:: 67beb93e-fbf2-4a49-8c8f-66dd677eccad
+			  hl-color:: blue
+			- represents the last element.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67beb948-8dc7-4cd3-bb89-63e99cf4b4c1
+			- Code example 5
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67beba66-0fe8-43bc-9c01-a85019622e1a
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67beba92-4425-40b1-b11d-fcccf890abbe
+				  hl-color:: purple
+				  ```python
+				  # indexing 
+				  numbers = [1, 2, 3, 4, 5, 6, 7, 8] 
+				  
+				  print(numbers[0]) 
+				  print(numbers[3]) 
+				  print(numbers[-1]) # last element 
+				  print(numbers[-2]) # can you guess the result?
+				  ```
+		- Tuple data type
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bebbcf-366c-4ab9-93b7-4014ebdd05ce
+		  collapsed:: true
+			- A tuple is like a list, but the items cannot be changed once initiated. Indexing rules are similar to lists.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bebbef-079d-46fd-85eb-ecbf6876fe81
+			- Syntax: `tuple_name = (item_1, item_2, …., item_n)`
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bebbfd-2092-4062-b81f-7641a9fed5b9
+			- Code example 6
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67bebc11-8abd-48a6-9482-7dc6002798ea
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67bebc1a-aadd-4e61-a989-461c69a40b04
+				  hl-color:: purple
+				  ```python
+				  states = ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA') 
+				  print(type(states)) 
+				  print(states)
+				  
+				  # <class 'tuple'>
+				  # ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA')
+				  ```
+			- If you executed all this code (Code examples 1 to 6) within a single instance (or cell) of the IDE Jupyter notebook, all previously declared variables are still accessible to new code. So, let’s try to use the previously declared list 𝑛𝑢𝑚𝑏𝑒𝑟𝑠 with the new tuple 𝑠𝑡𝑎𝑡𝑒𝑠 we declared just now.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bebcfc-6af1-4db5-98f2-06aa9745208a
+			- If the previous sentence made no sense to you, then consider taking some beginners lessons in Python and programming concepts. We have collected a range of resources for you. Try one of the beginner items in the Resources list. “Head ﬁrst Python” is a visual learning online text course (so install Anaconda ﬁrst) while Datacamp is an interactive real-time learning method.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bebd24-bc90-4151-9d79-5286e06eb6a7
+			- Code example 7
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67bebd69-1f51-4628-8149-cd3c042b1c9f
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67bebd79-bf1f-4777-a10b-b0b3726e6d91
+				  hl-color:: purple
+				  ```python
+				  numbers[2] = 32.56
+				  #states[2] = 'Idontknow'
+				  print(numbers) 
+				  print(states)
+				  
+				  # [1, 2, 32.56, 4, 5, 6, 7, 8]
+				  ('VIC', 'NSW', 'QLD', 'WA', 'ACT', 'NT', 'TAS', 'SA')
+				  ```
+		- Dictionaries
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec1d6-2729-4163-a130-d06aa756e350
+		  collapsed:: true
+			- Dictionaries are similar to lists, except that each element is a key-value pair. The syntax for dictionaries is {key1 : value1, …}.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bec1e7-a48c-404d-9079-f5cc34f038e8
+			- Note that the 𝑣𝑎𝑙𝑢𝑒𝑠 can be of any type, even another dictionary. You can access and manipulate the values of a dictionary using its 𝑘𝑒𝑦𝑠.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bec235-2656-4611-a78b-75b46b918bed
+			- Code example 8
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67bec23d-9b33-486c-8167-f9de6263b80d
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67bec248-a6e4-458f-95b1-4ab8ca15ea3c
+				  hl-color:: purple
+				  ```python
+				  dict = {} 
+				  dict['one'] = "This is one" 
+				  dict[2] = "This is two" 
+				  
+				  print(dict['one']) 
+				  print(dict) 
+				  dict['one'] = "One has changed" 
+				  print(dict['one'])
+				  
+				  # This is one
+				  # {'one': 'This is one', 2: 'This is two'} 
+				  # One has changed
+				  ```
+		- Strings
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec320-ee97-4659-b177-7665fef10d64
+		  collapsed:: true
+			- Strings are used to store text and have the same indexing rules as lists and tuples. Let’s try an example.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bec32b-f16d-4457-9a6c-50d1588b5d4b
+			- Code example 9
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: red
+			  id:: 67bec334-ac85-4e02-812b-c0ea74af966e
+				- The numbers relate to the index of the letters. The index is the numerical position of characters in the string starting at 0. In this example, index0 = M.
+				  ls-type:: annotation
+				  hl-page:: 19
+				  hl-color:: blue
+				  id:: 67bec3b4-d0ea-4ad3-aec1-4a201b7fb72e
+				- hl-page:: 19
+				  ls-type:: annotation
+				  id:: 67bec33e-8687-4167-b0fc-5d00f8c98458
+				  hl-color:: purple
+				  ```python
+				  str = "Monty Python and the flying circus!" 
+				  
+				  print(str) # Prints complete string
+				  print(str[0]) # Prints first character of the string
+				  print(str[2:5]) # Prints characters starting from 3rd to 5th 
+				  print(str[2:]) # Prints string starting from 3rd character 
+				  print(str * 2) # Prints string two times 
+				  print(str + "TEST") # Prints concatenated string
+				  
+				  # Monty Python and the flying circus! 
+				  # M 
+				  # nty 
+				  # nty Python and the flying circus! 
+				  # Monty Python and the flying circus!Monty Python and the flying circus! 
+				  # Monty Python and the flying circus!TEST
+				  ```
+		- Slicing with Lists and Strings
+		  ls-type:: annotation
+		  hl-page:: 19
+		  hl-color:: red
+		  id:: 67bec45f-17e3-4818-b6fd-7e893538fb16
+		  collapsed:: true
+			- You can extract a part of a list/string using the syntax [start:stop], which extracts characters between index start and stop.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bec4e3-1633-48e7-882e-c6141152c6be
+				- Code example 10
+				  ls-type:: annotation
+				  hl-page:: 19
+				  hl-color:: red
+				  id:: 67bec4eb-14c9-4174-8fb7-3ed712ed338d
+					- hl-page:: 19
+					  ls-type:: annotation
+					  id:: 67bec4f8-1434-42b3-932b-d5502070d8b3
+					  hl-color:: purple
+					  ```python
+					  # slicing 
+					  l = [1, 2, 3, 4, 5, 6, 7, 8] 
+					  s = "This is a string." 
+					  
+					  print(l[2:5]) 
+					  print(s[0:6])
+					  
+					  # output:[3, 4, 5] 
+					  # This i
+					  ```
+			- You can deﬁne a step for slicing as in [start:stop:step]. 
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bec56e-305c-48c6-b13c-44c56503515e
+				- Code example 11
+				  ls-type:: annotation
+				  hl-page:: 19
+				  hl-color:: red
+				  id:: 67bec5c0-7a6d-4e5d-b08e-d4f184c0a7c5
+					- hl-page:: 19
+					  ls-type:: annotation
+					  id:: 67bec5c6-c36f-4722-87a7-ddf3f009be57
+					  hl-color:: purple
+					  ```python
+					  # [start:stop:step] 
+					  print(s[2:10:1]) 
+					  print
+					  
+					  # These two are equal 
+					  print(s[0:10:2]) 
+					  print(s[:10:2])
+					  
+					  # is is a 
+					  # Ti sa 
+					  # Ti sa
+					  ```
+			- Slicing can be a negative value as well.
+			  ls-type:: annotation
+			  hl-page:: 19
+			  hl-color:: blue
+			  id:: 67bec63b-fa19-4dbe-a9ef-6aa88f1b77c8
+				- Code example 12
+				  ls-type:: annotation
+				  hl-page:: 19
+				  hl-color:: red
+				  id:: 67bec665-03f7-4826-8d2d-cfb4343a0578
+					- hl-page:: 19
+					  ls-type:: annotation
+					  id:: 67bec677-104f-4255-b07a-613db01f7397
+					  hl-color:: purple
+					  ```python
+					  s = "This is a string."
+					  
+					  print(s[10:2:-1])
+					  print
+					  
+					  # reversing a list or string
+					  # print(s[::-1])
+					  
+					  # s a si s
+					  # .gnirts a si sihT
+					  ```
+	- 1.19 Branching and decisions
+	  hl-page:: 20
+	  ls-type:: annotation
+	  id:: 67becabb-3be7-47a9-8445-453eb874d743
+	  hl-color:: red
+	  collapsed:: true
+		- Syntax, in this case indentation, and conditionals (decisions) are another two essential elements of coding.
+		  ls-type:: annotation
+		  hl-page:: 20
+		  hl-color:: blue
+		  id:: 67becada-16d5-4a18-9efc-a738d1f80c6a
+		- Python code blocks are deﬁned by their indentation level. Program structure is controlled by how far lines of code are indented.
+		  ls-type:: annotation
+		  hl-page:: 20
+		  hl-color:: blue
+		  id:: 67becb23-826a-444d-96d7-7dce527b4bde
+		- Be careful how the code is laid out or you will get unexpected results or a broken program that will not run.
+		  ls-type:: annotation
+		  hl-page:: 20
+		  hl-color:: blue
+		  id:: 67becb31-4ac8-4b9d-8a92-53c2e3b3f693
+		- Conditionals and decision trees
+		  ls-type:: annotation
+		  hl-page:: 20
+		  hl-color:: red
+		  id:: 67becb42-9c9b-443e-807b-6abfdcb6b731
+		  collapsed:: true
+			- Decisions are resolved by checking the condition of a variable. Is the cup empty? The answer can only be Yes or no. True or false. The answer is ‘boolean’ - the digital bit is either on or off.
+			  ls-type:: annotation
+			  hl-page:: 20
+			  hl-color:: blue
+			  id:: 67becb8f-0e9a-49ba-86e5-3af8347f0d33
+			- Using our ‘trips around the city’ example, would need to ask, ‘Is this trip less than or equal to 25 km?’. Let’s imagine this data point (a trip) is15 km. The answer to the question will be ‘True’. We can then ask the machine to put the trip into a cluster containing trips under 25 km. Enter this simple code into your Python setup:
+			  ls-type:: annotation
+			  hl-page:: 20
+			  hl-color:: blue
+			  id:: 67becb9a-c16b-4c1e-8551-c903f875298a
+				- hl-page:: 20
+				  ls-type:: annotation
+				  id:: 67becbac-c86e-4f83-9921-365d195a4f18
+				  hl-color:: purple
+				  ```python
+				  trip1 = 15
+				  
+				  if trip1 <= 25:
+				  	print("This trip goes into the 25 km and under cluster") 
+				  else: 
+				  	print("This trip goes into the over 25 km cluster")
+				  
+				  # This trip goes into the 25 km and under cluster
+				  ```
+			- The Python syntax for conditional execution of code use the keywords 𝑖𝑓, 𝑒𝑙𝑖𝑓 , (else if), 𝑒𝑙𝑠𝑒.
+			  ls-type:: annotation
+			  hl-page:: 20
+			  hl-color:: blue
+			  id:: 67becd15-8f2d-419e-a4ac-479f2587eb2f
+				- Code example 1
+				  ls-type:: annotation
+				  hl-page:: 20
+				  hl-color:: red
+				  id:: 67becd22-c193-4acd-9b82-2a891b031669
+					- hl-page:: 20
+					  ls-type:: annotation
+					  id:: 67becd2e-b203-4d49-a1d2-2fa46bf52918
+					  hl-color:: purple
+					  ```python
+					  statement1 = True 
+					  statement2 = False 
+					  
+					  if statement1: 
+					  	print("First statement is true") 
+					  elif statement2: 
+					  	print("Second statement is true") 
+					  else: 
+					  	print("Both statements are false") 
+					  
+					  print("This is printed outside the if-else block")
+					  
+					  # First statement is true 
+					  # This is printed outside the if-else block
+					  ```
+			- The type of statement1 and statement2 is 𝑏𝑜𝑜𝑙𝑒𝑎𝑛. You can check this by running the type(statement1). Python also treats any non zero integer as 𝑡𝑟𝑢𝑒.
+			  ls-type:: annotation
+			  hl-page:: 20
+			  hl-color:: blue
+			  id:: 67bece51-41dc-415a-b85e-37e5d2c80d6f
+		- Indentation
+		  ls-type:: annotation
+		  hl-page:: 20
+		  hl-color:: red
+		  id:: 67bece8b-245b-4935-9490-6a066b7ee61b
+		  collapsed:: true
+			- Code example 2
+			  ls-type:: annotation
+			  hl-page:: 20
+			  hl-color:: red
+			  id:: 67beceab-1f69-4550-bc9c-4e55a782ee3e
+				- hl-page:: 20
+				  ls-type:: annotation
+				  id:: 67becebe-0a36-416a-b874-e98b9eb769d3
+				  hl-color:: purple
+				  ```python
+				  # nothing happens because this code doesn't produce any output 
+				  statement1 = False 
+				  
+				  if statement1: 
+				  	print("printed if statement1 is True") 
+				  
+				  	print("still inside the if block") 
+				  
+				  # You will get no output: 
+				  
+				  if statement1: 
+				  	print("printed if statement1 is True") 
+				  
+				  print("now outside the if block")
+				  
+				  # You will get the following output: 
+				  # now outside the if block
+				  ```
+	- 1.20 Iterations
+	  hl-page:: 21
+	  ls-type:: annotation
+	  id:: 67bed017-21a7-403c-b3de-743deccfc7a6
+	  hl-color:: red
+	  collapsed:: true
+		- Loops or iterations can be programmed using 𝑓𝑜𝑟 and 𝑤ℎ𝑖𝑙𝑒. The for-loop is used to iterate through Python objects like lists, arrays and tuples.
+		  ls-type:: annotation
+		  hl-page:: 21
+		  hl-color:: blue
+		  id:: 67bed037-d7b4-4533-9a24-c701f56452e4
+		- For loops
+		  ls-type:: annotation
+		  hl-page:: 21
+		  hl-color:: red
+		  id:: 67bed05b-daad-4110-a53e-590b1bb515dd
+		  collapsed:: true
+			- The for loop runs for a ﬁxed number of times, otherwise known as iterations:
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: blue
+			  id:: 67bed065-d964-4350-b74a-9a73ac3f60cf
+			- Code example 1
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: red
+			  id:: 67bed071-9605-42a1-8367-dcd7222119c4
+				- hl-page:: 21
+				  ls-type:: annotation
+				  id:: 67bed079-f128-4575-a86d-d9d4000f9ede
+				  hl-color:: purple
+				  ```python
+				  exampleList = [1, 2, 3, 4, 5] 
+				  for item in exampleList: 
+				  	print(item)
+				  
+				  # You will get the following output:
+				  # 1
+				  # 2
+				  # 3
+				  # 4
+				  # 5
+				  ```
+			- The following is an example using for loops to initialize lists:
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: blue
+			  id:: 67bed0e4-ac17-4089-9291-0e86dc0fbe05
+			- Code example 2
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: red
+			  id:: 67bed10d-c14e-4721-80f2-3772d9fe41fb
+				- hl-page:: 21
+				  ls-type:: annotation
+				  id:: 67bed116-5903-4f2e-831c-7cf6884445b1
+				  hl-color:: purple
+				  ```python
+				  # range(start, stop) creates a range of values from start to stop-1 
+				  x = list(range(2, 6)) 
+				  print("Initial list: {}".format(x)) 
+				  
+				  for idx, item in enumerate(x):
+				  	x[idx] = item**2
+				  
+				  print("The new list: {}".format(x)) 
+				  
+				  # You will get the following output: 
+				  # Initial list: [2, 3, 4, 5] 
+				  # The new list: [4, 9, 16, 25]
+				  ```
+			- During each step of the for loop, 𝑒𝑛𝑢𝑚𝑒𝑟𝑎𝑡𝑒(𝑥) iterates through the list and store the index in 𝑖𝑑𝑥 and value in 𝑖𝑡𝑒𝑚. Here is a shorter way of doing it:
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: blue
+			  id:: 67bed204-2cba-4277-ab4f-570dc79e14f3
+			- Code example 3
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: red
+			  id:: 67bed218-67e8-42cf-a3bc-a045f84264bf
+				- hl-page:: 21
+				  ls-type:: annotation
+				  id:: 67bed225-97f3-4796-8d5c-63dbb146dbb9
+				  hl-color:: purple
+				  ```python
+				  newlist = [x**2 for x in range(2, 6)] 
+				  
+				  print(newlist) 
+				  
+				  # You will get the following output:
+				  # [4, 9, 16, 25]
+				  ```
+		- While Loops
+		  ls-type:: annotation
+		  hl-page:: 21
+		  hl-color:: red
+		  id:: 67bed387-5ecb-4af7-9256-49bda89144fb
+		  collapsed:: true
+			- The following is an example on how to use a while loop:
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: blue
+			  id:: 67bed38f-3a55-490f-a97d-a4dbdd42314f
+			- Code example 4
+			  ls-type:: annotation
+			  hl-page:: 21
+			  hl-color:: red
+			  id:: 67bed39e-d963-4078-bc1e-8f03bf1d2d1a
+				- hl-page:: 21
+				  ls-type:: annotation
+				  id:: 67bed3a7-ac5c-4eba-9767-5374e3761f7f
+				  hl-color:: purple
+				  ```python
+				  i = 0 
+				  while i < 5: 
+				  	print (i, end=" ") # prints each iteration on the same line 
+				  	i += 1 # adds 1 to the variable i 
+				  print() # prints a blank line 
+				  print("done") # Note that this is printed outside the loop 
+				  
+				  # You will get the following output:
+				  # 0 1 2 3 4 
+				  # done
+				  ```
+- 1.21 Function
+  hl-page:: 22
   ls-type:: annotation
-  hl-page:: 19
+  id:: 67bed51c-c656-44d9-87a9-7ac4841951c6
   hl-color:: red
-  id:: 67bec45f-17e3-4818-b6fd-7e893538fb16
-	- You can extract a part of a list/string using the syntax [start:stop], which extracts characters between index start and stop.
+	- Functions store blocks of code so you can call them by name.
 	  ls-type:: annotation
-	  hl-page:: 19
+	  hl-page:: 22
 	  hl-color:: blue
-	  id:: 67bec4e3-1633-48e7-882e-c6141152c6be
-		- Code example 10
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67bec4eb-14c9-4174-8fb7-3ed712ed338d
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67bec4f8-1434-42b3-932b-d5502070d8b3
-			  hl-color:: purple
-			  ```python
-			  # slicing 
-			  l = [1, 2, 3, 4, 5, 6, 7, 8] 
-			  s = "This is a string." 
-			  
-			  print(l[2:5]) 
-			  print(s[0:6])
-			  
-			  # output:[3, 4, 5] 
-			  # This i
-			  ```
-	- You can deﬁne a step for slicing as in [start:stop:step]. 
+	  id:: 67bed545-3150-442c-bbdd-5c7f21cc0859
+	- Going back to our algorithm example, ‘washingup’ was a function we called and so was ‘stop cooking’.
 	  ls-type:: annotation
-	  hl-page:: 19
+	  hl-page:: 22
 	  hl-color:: blue
-	  id:: 67bec56e-305c-48c6-b13c-44c56503515e
-		- Code example 11
-		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67bec5c0-7a6d-4e5d-b08e-d4f184c0a7c5
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67bec5c6-c36f-4722-87a7-ddf3f009be57
-			  hl-color:: purple
-			  ```python
-			  # [start:stop:step] 
-			  print(s[2:10:1]) 
-			  print
-			  
-			  # These two are equal 
-			  print(s[0:10:2]) 
-			  print(s[:10:2])
-			  
-			  # is is a 
-			  # Ti sa 
-			  # Ti sa
-			  ```
-	- Slicing can be a negative value as well.
+	  id:: 67bed54f-c72a-4b4a-a78c-1260b0d597c3
+	- An argument is a value that you can use within the function. In the ‘washing up’ function, an argument might be (dirtything) and the value of of the variable dirtything would have been ‘bowl’.
 	  ls-type:: annotation
-	  hl-page:: 19
+	  hl-page:: 22
 	  hl-color:: blue
-	  id:: 67bec63b-fa19-4dbe-a9ef-6aa88f1b77c8
-		- Code example 12
+	  id:: 67bed559-8d25-4e8c-8c22-07c11b8aba73
+	- In Python it would look like this. Try it in your Jupyter Notebook:
+	  ls-type:: annotation
+	  hl-page:: 22
+	  hl-color:: blue
+	  id:: 67bed563-4463-418e-bfe1-52ab5dec8651
+	- hl-page:: 22
+	  ls-type:: annotation
+	  id:: 67bed576-a69b-419d-9b48-06a0654783b9
+	  hl-color:: purple
+	  ```python
+	  # first we create a function about washing up 
+	  def washingup(dirtything): 
+	  	print("We need to wash the", dirtything)
+	  
+	  # then we define the dirty thing in the variable dirtything
+	  dirtything = 'bowl'
+	  # then we call the function with the argument dirtything
+	  cookingstep = washingup(dirtything)
+	  ```
+- Syntax
+  ls-type:: annotation
+  hl-page:: 22
+  hl-color:: red
+  id:: 67bed677-fb63-4853-a206-b838fd83462a
+	- A function in Python is deﬁned using the keyword 𝑑𝑒𝑓, followed by the function name and function arguments within parentheses (), and ends with a colon :
+	  ls-type:: annotation
+	  hl-page:: 22
+	  hl-color:: blue
+	  id:: 67bed6df-174c-4f2f-8372-6ced24456c3d
+	- The functional Python code follow, with one additional level of indentation. This is the function body. It is recommended to use “docstring” for your functions. Docstring explains what the function does. Lets look at an example:
+	  ls-type:: annotation
+	  hl-page:: 22
+	  hl-color:: blue
+	  id:: 67bed6eb-4d8e-487d-b74e-d56ed6acdc49
+	- Code example 1
+	  ls-type:: annotation
+	  hl-page:: 22
+	  hl-color:: red
+	  id:: 67bed6f4-35a1-4e6b-ac15-8d513aab0864
+		- hl-page:: 22
 		  ls-type:: annotation
-		  hl-page:: 19
-		  hl-color:: red
-		  id:: 67bec665-03f7-4826-8d2d-cfb4343a0578
-			- hl-page:: 19
-			  ls-type:: annotation
-			  id:: 67bec677-104f-4255-b07a-613db01f7397
-			  hl-color:: purple
-			  print(s[::-1])
-			  print(s[::-1])
-			  ```python
-			  s = "This is a string."
-			  
-			  print(s[10:2:-1])
-			  print
-			  
-			  # reversing a list or string
-			  
-			  # s a si s
-			  # .gnirts a si sihT
-			  ```
+		  id:: 67bed6fe-405a-4c42-85a2-ffcf931fd876
+		  hl-color:: purple
+		  ```python
+		  def func1(s):
+		  	""" 
+		  	THIS BIT IS CALLED DOCSTRING similar to comments to document the code 
+		  	This function prints a string 's' and returns (tells us) the number of characters in it.
+		  	""" 
+		  
+		  	print("Number of characters in the string: ", len(s)) 
+		  	return 2*len(s) 
+		  
+		  a = func1("test function") 
+		  print(a) 
+		  
+		  # You will get the following output: 
+		  
+		  Number of characters in the string: 13
+		  26
+		  ```
+	- Use the 𝑟𝑒𝑡𝑢𝑟𝑛 keyword for functions that return a value. A function can also return multiple values using tuples.
+	  ls-type:: annotation
+	  hl-page:: 22
+	  hl-color:: blue
+	  id:: 67bed78f-8613-44a9-842c-2e4088830b25
+	- Code example 2
+	  ls-type:: annotation
+	  hl-page:: 22
+	  hl-color:: red
+	  id:: 67bed7a7-7f46-4003-8539-f4b0a0a79400
+		- hl-page:: 22
+		  ls-type:: annotation
+		  id:: 67bed7b2-049e-43ef-8a40-7bfd35752c92
+		  hl-color:: purple
+		  ```python
+		  def powers(x):
+		  	""" 
+		  	Return a few powers of x.
+		  	""" 
+		  	xs = x**2 
+		  	xc = x**3 
+		  	xf = x**4 
+		  	return xs, xc, xf 
+		  
+		  print(powers(3)) 
+		  
+		  y1,y2,y3 = powers(2) 
+		  print(y2) 
+		  
+		  # You will get the following output:
+		  (9, 27, 81)
+		  8
+		  ```
