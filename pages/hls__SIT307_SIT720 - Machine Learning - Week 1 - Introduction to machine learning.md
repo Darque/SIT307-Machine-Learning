@@ -2717,6 +2717,7 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 	  hl-page:: 26
 	  hl-color:: red
 	  id:: 67bfba72-4327-4ac4-ae7d-5f64abe4b66d
+	  collapsed:: true
 		- In the previous topic you explored some basic matrix operations and implemented them in Python. In this topic we extend it further to include more advanced operations on matrices.
 		  ls-type:: annotation
 		  hl-page:: 26
@@ -2959,189 +2960,524 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 					  id:: 67bfc7d0-ac4c-4063-ade0-0d31cf7ad333
 					  hl-type:: area
 					  hl-stamp:: 1740621774532
-- 1.26 Matrix division
-  ls-type:: annotation
-  hl-page:: 27
-  hl-color:: red
-  id:: 67bfc883-dfb0-4408-b7fe-233542b54392
-	- The term matrix division is actually a misnomer. In matrix algebra dividing a matrix is actually the process of inverting the matrix.
-	  ls-type:: annotation
-	  hl-page:: 27
-	  hl-color:: blue
-	  id:: 67bfc91a-0fe6-45ba-bb2c-39834d5c98f9
-	- It is much easier to understand this if we consider the division of scalars. Suppose we want to divide the scalar $𝑓$ by $𝑔$. We could do this in two different ways:
-	  hl-page:: 27
-	  ls-type:: annotation
-	  id:: 67bfc929-4e1d-45c8-90b2-0be238e17789
-	  hl-color:: blue
-		- hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfc945-71c9-46a9-a47c-2e7956ba3bbc
-		  hl-color:: purple
-		  $$
-		  \frac{𝑓}{𝑔} = 𝑓 × 𝑔^{−1}
-		  $$
-	- In a scalar setting, these are equivalent ways of solving the division problem. The second one requires two steps:
-	  ls-type:: annotation
-	  hl-page:: 27
-	  hl-color:: blue
-	  id:: 67bfc981-5e29-4ab7-858b-f6493dd803b7
-		- first we invert $𝑔$
-		  hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfc999-4c83-42aa-925e-32e5beed8a8f
-		  hl-color:: blue
-		- next we multiply $𝑓 ×$ the inverted $𝑔$.
-		  hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfc9af-3b86-413c-8fe5-a12d64e16889
-		  hl-color:: blue
-	- In a matrix world, we need to think about this second approach.
-	  ls-type:: annotation
-	  hl-page:: 27
-	  hl-color:: blue
-	  id:: 67bfc9c7-ba8d-41d8-a03f-28c757f7576d
-		- first we have to invert the matrix $𝑔$ and
-		  hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfc9d1-6af8-4cb2-9b51-0a7d3cd8f9c9
-		  hl-color:: blue
-		- next we will need to pre or post multiply depending on the exact situation we encounter (this is intended to be vague for now).
-		  ls-type:: annotation
-		  hl-page:: 27
-		  hl-color:: blue
-		  id:: 67bfc9de-7c2a-4fdf-8886-99d7920d0a3f
-	- Inverting a matrix
+	- 1.26 Matrix division
 	  ls-type:: annotation
 	  hl-page:: 27
 	  hl-color:: red
-	  id:: 67bfc9ec-74c3-4e3f-b05d-3a5f203e976d
-		- As before, consider the square $2 × 2$ matrix $𝐴 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}$. Let the inverse of matrix 𝐴 (denoted as $𝐴^{−1}$ be:
+	  id:: 67bfc883-dfb0-4408-b7fe-233542b54392
+		- The term matrix division is actually a misnomer. In matrix algebra dividing a matrix is actually the process of inverting the matrix.
+		  ls-type:: annotation
+		  hl-page:: 27
+		  hl-color:: blue
+		  id:: 67bfc91a-0fe6-45ba-bb2c-39834d5c98f9
+		- It is much easier to understand this if we consider the division of scalars. Suppose we want to divide the scalar $𝑓$ by $𝑔$. We could do this in two different ways:
 		  hl-page:: 27
 		  ls-type:: annotation
-		  id:: 67bfca00-aecf-4f34-89e2-09354e60e73f
+		  id:: 67bfc929-4e1d-45c8-90b2-0be238e17789
 		  hl-color:: blue
 			- hl-page:: 27
 			  ls-type:: annotation
-			  id:: 67bfca5b-ae50-4fe8-bdcc-d6f85870d22d
+			  id:: 67bfc945-71c9-46a9-a47c-2e7956ba3bbc
 			  hl-color:: purple
 			  $$
-			  𝐴^{-1} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}^{-1} = \frac{1}{a_{11}a_{22} - a_{12}a_{21}} \begin{bmatrix} 𝑎_{22} & -𝑎_{12} \\ -𝑎_{21} & 𝑎_{11} \end{bmatrix}
+			  \frac{𝑓}{𝑔} = 𝑓 × 𝑔^{−1}
 			  $$
-		- The inverted matrix $A^{-1}$ has a useful property:
-		  hl-page:: 27
+		- In a scalar setting, these are equivalent ways of solving the division problem. The second one requires two steps:
 		  ls-type:: annotation
-		  id:: 67bfcb6e-7d43-49f6-8e23-f48247573c4a
+		  hl-page:: 27
 		  hl-color:: blue
-			- hl-page:: 27
+		  id:: 67bfc981-5e29-4ab7-858b-f6493dd803b7
+			- first we invert $𝑔$
+			  hl-page:: 27
 			  ls-type:: annotation
-			  id:: 67bfcb99-c3f5-4d41-b83b-1bab0d9cf5cf
-			  hl-color:: purple
-			  $$
-			  𝐴 × 𝐴^{−1} = 𝐴^{−1} × 𝐴 = 𝐼
-			  $$
-		- where 𝐼 the identity matrix (the matrix equivalent of the scalar value 1), is
-		  ls-type:: annotation
-		  hl-page:: 27
-		  hl-color:: blue
-		  id:: 67bfcbc7-81f8-4b50-957c-70abdf719bef
-			- hl-page:: 27
+			  id:: 67bfc999-4c83-42aa-925e-32e5beed8a8f
+			  hl-color:: blue
+			- next we multiply $𝑓 ×$ the inverted $𝑔$.
+			  hl-page:: 27
 			  ls-type:: annotation
-			  id:: 67bfcbe5-3cad-4caa-adab-3f9277dbcfc8
-			  hl-color:: purple
-			  $$
-			  I_{2×2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
-			  $$
-		- furthermore, $A × I = A$ and $I × A = A$.
-		  hl-page:: 27
+			  id:: 67bfc9af-3b86-413c-8fe5-a12d64e16889
+			  hl-color:: blue
+		- In a matrix world, we need to think about this second approach.
 		  ls-type:: annotation
-		  id:: 67bfcc43-cd9a-4aa5-8a4e-818a68b6f12d
-		  hl-color:: blue
-		- An important feature about matrix inversion is that it is undefined if $a_{11}a_{22} − a_{12}a_{21} = 0$ (in the 2 × case). If this relationship is equal to zero the inverse of A does not exist.
 		  hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfcc75-d8a2-4296-9ac5-39094c93e1c4
 		  hl-color:: blue
-		- If this term is very close to zero, an inverse may exist but $A^{-1}$ may be poorly conditioned, meaning it is prone to rounding error and is likely not well identified computationally.
-		  hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfcddf-a405-4a12-926c-369d3e100881
-		  hl-color:: blue
-		- The term $a_{11}a_{22} − a_{12}a_{21}$ is the determinant of matrix $A$. For square matrices of size greater than $2 × 2$, if the *determinant* is equal to zero it indicates that you have a problem with your data matrix (columns are linearly dependent on other columns).
-		  hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfce09-cac0-4681-bff1-6fb7f7635a87
-		  hl-color:: blue
-		- The inverse of matrix $A$ exists if $A$ is square and is of full rank (i.e. the columns of $A$ are not linear combinations of other columns of $A$.
-		  hl-page:: 27
-		  ls-type:: annotation
-		  id:: 67bfce79-9ff8-44fe-b304-d468ec9a8834
-		  hl-color:: blue
-		- Code example 1
+		  id:: 67bfc9c7-ba8d-41d8-a03f-28c757f7576d
+			- first we have to invert the matrix $𝑔$ and
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfc9d1-6af8-4cb2-9b51-0a7d3cd8f9c9
+			  hl-color:: blue
+			- next we will need to pre or post multiply depending on the exact situation we encounter (this is intended to be vague for now).
+			  ls-type:: annotation
+			  hl-page:: 27
+			  hl-color:: blue
+			  id:: 67bfc9de-7c2a-4fdf-8886-99d7920d0a3f
+		- Inverting a matrix
 		  ls-type:: annotation
 		  hl-page:: 27
 		  hl-color:: red
-		  id:: 67bfce9a-6f43-4950-86cf-f34bb18cbda3
-			- Let’s try this on Python. First we create a square matrix $C_{3 × 3}$. We then invert the matrix using the NumPy library.
+		  id:: 67bfc9ec-74c3-4e3f-b05d-3a5f203e976d
+			- As before, consider the square $2 × 2$ matrix $𝐴 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}$. Let the inverse of matrix 𝐴 (denoted as $𝐴^{−1}$ be:
 			  hl-page:: 27
 			  ls-type:: annotation
-			  id:: 67bfceaa-1cf7-45ef-95ce-f47ea92b868f
+			  id:: 67bfca00-aecf-4f34-89e2-09354e60e73f
 			  hl-color:: blue
 				- hl-page:: 27
 				  ls-type:: annotation
-				  id:: 67bfcecb-2fcb-48c8-bee8-232b9c28cb58
+				  id:: 67bfca5b-ae50-4fe8-bdcc-d6f85870d22d
 				  hl-color:: purple
-				  ```python
-				  # note, we need a square matrix (# rows = # cols), use C: 
-				  C = np.random.randn(3,3) 
-				  C_inverse = np.linalg.inv(C) 
-				  print(C_inverse)
-				  ```
-			- This outputs the inverted matrix.
+				  $$
+				  𝐴^{-1} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}^{-1} = \frac{1}{a_{11}a_{22} - a_{12}a_{21}} \begin{bmatrix} 𝑎_{22} & -𝑎_{12} \\ -𝑎_{21} & 𝑎_{11} \end{bmatrix}
+				  $$
+			- The inverted matrix $A^{-1}$ has a useful property:
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfcb6e-7d43-49f6-8e23-f48247573c4a
+			  hl-color:: blue
+				- hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfcb99-c3f5-4d41-b83b-1bab0d9cf5cf
+				  hl-color:: purple
+				  $$
+				  𝐴 × 𝐴^{−1} = 𝐴^{−1} × 𝐴 = 𝐼
+				  $$
+			- where 𝐼 the identity matrix (the matrix equivalent of the scalar value 1), is
 			  ls-type:: annotation
 			  hl-page:: 27
 			  hl-color:: blue
-			  id:: 67bfcf04-27db-458a-88dd-1736b8276e07
+			  id:: 67bfcbc7-81f8-4b50-957c-70abdf719bef
 				- hl-page:: 27
 				  ls-type:: annotation
-				  id:: 67bfcf10-bafc-4045-a4f0-067b27534227
+				  id:: 67bfcbe5-3cad-4caa-adab-3f9277dbcfc8
 				  hl-color:: purple
-				  ```python
-				  # [[-0.4956578 1.77333405 0.14485167]
-				  #  [-0.03878645 0.81376284 -0.27251826]
-				  #  [-0.72828746 -0.10638659 -0.26419485]]
-				  ```
-- Code example 2
+				  $$
+				  I_{2×2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+				  $$
+			- furthermore, $A × I = A$ and $I × A = A$.
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfcc43-cd9a-4aa5-8a4e-818a68b6f12d
+			  hl-color:: blue
+			- An important feature about matrix inversion is that it is undefined if $a_{11}a_{22} − a_{12}a_{21} = 0$ (in the 2 × case). If this relationship is equal to zero the inverse of A does not exist.
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfcc75-d8a2-4296-9ac5-39094c93e1c4
+			  hl-color:: blue
+			- If this term is very close to zero, an inverse may exist but $A^{-1}$ may be poorly conditioned, meaning it is prone to rounding error and is likely not well identified computationally.
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfcddf-a405-4a12-926c-369d3e100881
+			  hl-color:: blue
+			- The term $a_{11}a_{22} − a_{12}a_{21}$ is the determinant of matrix $A$. For square matrices of size greater than $2 × 2$, if the *determinant* is equal to zero it indicates that you have a problem with your data matrix (columns are linearly dependent on other columns).
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfce09-cac0-4681-bff1-6fb7f7635a87
+			  hl-color:: blue
+			- The inverse of matrix $A$ exists if $A$ is square and is of full rank (i.e. the columns of $A$ are not linear combinations of other columns of $A$.
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfce79-9ff8-44fe-b304-d468ec9a8834
+			  hl-color:: blue
+			- Code example 1
+			  ls-type:: annotation
+			  hl-page:: 27
+			  hl-color:: red
+			  id:: 67bfce9a-6f43-4950-86cf-f34bb18cbda3
+				- Let’s try this on Python. First we create a square matrix $C_{3 × 3}$. We then invert the matrix using the NumPy library.
+				  hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfceaa-1cf7-45ef-95ce-f47ea92b868f
+				  hl-color:: blue
+					- hl-page:: 27
+					  ls-type:: annotation
+					  id:: 67bfcecb-2fcb-48c8-bee8-232b9c28cb58
+					  hl-color:: purple
+					  ```python
+					  # note, we need a square matrix (# rows = # cols), use C: 
+					  C = np.random.randn(3,3) 
+					  C_inverse = np.linalg.inv(C) 
+					  print(C_inverse)
+					  ```
+				- This outputs the inverted matrix.
+				  ls-type:: annotation
+				  hl-page:: 27
+				  hl-color:: blue
+				  id:: 67bfcf04-27db-458a-88dd-1736b8276e07
+					- hl-page:: 27
+					  ls-type:: annotation
+					  id:: 67bfcf10-bafc-4045-a4f0-067b27534227
+					  hl-color:: purple
+					  ```python
+					  # [[-0.4956578 1.77333405 0.14485167]
+					  #  [-0.03878645 0.81376284 -0.27251826]
+					  #  [-0.72828746 -0.10638659 -0.26419485]]
+					  ```
+			- Code example 2
+			  ls-type:: annotation
+			  hl-page:: 27
+			  hl-color:: red
+			  id:: 67bfcf4c-3ce9-432f-8d9f-4c997802f61b
+				- Now let’s check that $C × C^{−1} = I$
+				  hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfcf60-19e1-4c03-a97a-ca4afb045273
+				  hl-color:: blue
+					- hl-page:: 27
+					  ls-type:: annotation
+					  id:: 67bfcf8d-926f-4e6d-8766-b93000fa772f
+					  hl-color:: purple
+					  ```python
+					  print("-------------------------------------------------------") 
+					  print(C.dot(C_inverse)) 
+					  print("-------------------------------------------------------") 
+					  print("Is identical to:") 
+					  print(C_inverse.dot(C)) 
+					  print("--------------------------------------------------------")
+					  ```
+				- This outputs the following.
+				  ls-type:: annotation
+				  hl-page:: 27
+				  hl-color:: blue
+				  id:: 67bfcfc8-2d46-436b-83d1-d63f20bf91b1
+					- hl-page:: 27
+					  ls-type:: annotation
+					  id:: 67bfcfd7-683a-44e7-a83c-fef5af0c547a
+					  hl-color:: purple
+					  ```python
+					  # ------------------------------------------------------
+					  # [[ 1.00000000e+00 -1.47512803e-16 5.58255356e-17]
+					  #  [-1.19617664e-17 1.00000000e+00 1.66630989e-17]
+					  #  [ 1.28900332e-17 -1.53900921e-17 1.00000000e+00]]
+					  # ------------------------------------------------------
+					  # Is identical to:
+					  # [[ 1.00000000e+00 1.29458725e-16 -3.84871921e-17]
+					  #  [ 1.72083657e-17 1.00000000e+00 -7.45734805e-18]
+					  #  [ 1.65856322e-17 2.32491643e-16 1.00000000e+00]]--------------------------------------------------------
+					  ```
+		- Transposing a matrix
+		  ls-type:: annotation
+		  hl-page:: 27
+		  hl-color:: red
+		  id:: 67bfd057-94bb-444b-bf73-50bf61217c81
+			- At times it is useful to pivot a matrix for conformability. As an example, we may need to switch the rows and column dimensions of matrices in order to divide or multiply matrices. Consider the following matrix:
+			  ls-type:: annotation
+			  hl-page:: 27
+			  hl-color:: blue
+			  id:: 67bfd063-b722-4ec2-9f5c-045a414474bc
+				- hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfd06f-23d5-4d7f-8bdd-d7b9a8ac0a09
+				  hl-color:: purple
+				  $$
+				  A_{3×2} = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32} \end{bmatrix}_{3×2}
+				  $$
+			- The transpose of A (denoted as $𝐴^{'}$) is:
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfd120-4d55-459f-85c2-3bc5ee61814e
+			  hl-color:: blue
+				- hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfd15b-02c8-4354-9dd7-1a66d6ff9407
+				  hl-color:: purple
+				  $$
+				  𝐴^{′} = \begin{bmatrix} a_{11} & a_{21} & a_{31} \\ a_{12} & a_{22} & a_{32} \end{bmatrix}_{2×3}
+				  $$
+			- Code example 3
+			  ls-type:: annotation
+			  hl-page:: 27
+			  hl-color:: red
+			  id:: 67bfd2d0-69e1-4446-a822-c787c4a943f0
+				- Let’s see how we code this in Python. We are using two specialist routines in the library to initially create a matrix. You can find more information on the routines reshape and arange if you want to know how the matrices are initialised.
+				  ls-type:: annotation
+				  hl-page:: 27
+				  hl-color:: blue
+				  id:: 67bfd2dc-4cd4-4e27-88d0-11a69a5f6d6e
+					- hl-page:: 27
+					  ls-type:: annotation
+					  id:: 67bfd2e9-2588-4c96-a437-1c70d994cc07
+					  hl-color:: purple
+					  ```python
+					  A = np.arange(6).reshape((3,2)) 
+					  B = np.arange(8).reshape((2,4)) 
+					  print("A is") 
+					  print(A) 
+					  print("-------------------") 
+					  print("The Transpose of A is") 
+					  print(A.T)
+					  ```
+				- The output of the code is given below:
+				  ls-type:: annotation
+				  hl-page:: 27
+				  hl-color:: blue
+				  id:: 67bfd327-f59e-49e5-a54a-0133baec791f
+					- hl-page:: 27
+					  ls-type:: annotation
+					  id:: 67bfd32f-cfe7-45b1-a104-2cb4ab1c95c2
+					  hl-color:: purple
+					  ```python
+					  # A is
+					  # [[0 1]
+					  #  [2 3]
+					  #  [4 5]]
+					  # ------------------
+					  # The Transpose of A is
+					  # [[0 2 4]
+					  #  [1 3 5]]
+					  ```
+				- One important property of transposing a matrix is the transpose of the product of two matrices. Let matrix $A$ be of dimension $n × m$ and let $B$ be of dimension of $m × p$. Then $(𝐴𝐵)^{′} = 𝐵^{′}𝐴^{′}
+				  hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfd3d9-71c8-4a56-8bfc-042eede758f7
+				  hl-color:: blue
+				- You can research more information on any of the resources we’ve presented for you and, as always, ask questions on the discussion forum.
+				  ls-type:: annotation
+				  hl-page:: 27
+				  hl-color:: blue
+				  id:: 67bfd40e-ca17-422d-8b1b-f8c4018780d7
+- 1.27 Useful matrix manipulation code in Python
   ls-type:: annotation
-  hl-page:: 27
+  hl-page:: 28
   hl-color:: red
-  id:: 67bfcf4c-3ce9-432f-8d9f-4c997802f61b
-	- Now let’s check that $C × C^{−1} = I$
-	  hl-page:: 27
+  id:: 67bfd523-6d00-42fc-8940-5a0d0c83be31
+	- There will be times where you will need to access individual rows or columns from a matrix. There may be other times where you may need to do logical checks on array elements. The following code segments will be handy in such situations.
 	  ls-type:: annotation
-	  id:: 67bfcf60-19e1-4c03-a97a-ca4afb045273
+	  hl-page:: 28
 	  hl-color:: blue
-		- hl-page:: 27
+	  id:: 67bfd547-a0ca-4d47-b49f-97d07befbb62
+	- Slicing
+	  ls-type:: annotation
+	  hl-page:: 28
+	  hl-color:: red
+	  id:: 67bfd554-4520-41ef-bcc3-3261442018fa
+		- Accessing elements of NumPy matrices and arrays.
 		  ls-type:: annotation
-		  id:: 67bfcf8d-926f-4e6d-8766-b93000fa772f
+		  hl-page:: 28
+		  hl-color:: blue
+		  id:: 67bfd55f-4836-45b0-a2d8-003b381be8d4
+		- Code example 1
+		  ls-type:: annotation
+		  hl-page:: 28
+		  hl-color:: red
+		  id:: 67bfd568-8182-4726-a93c-253b8d919ec8
+			- This code grabs the first column of $A$:
+			  ls-type:: annotation
+			  hl-page:: 28
+			  hl-color:: blue
+			  id:: 67bfd56f-0b4a-4c4e-94ac-117fc3cb94eb
+				- hl-page:: 28
+				  ls-type:: annotation
+				  id:: 67bfd57d-8cef-4a6f-a322-90f0f9ecf3e0
+				  hl-color:: purple
+				  ```python
+				  print(A) 
+				  A[:,0]
+				  ```
+			- As you can see index 0 refers to the first column. The output is given below:
+			  ls-type:: annotation
+			  hl-page:: 28
+			  hl-color:: blue
+			  id:: 67bfd5a3-ffeb-4c2e-bc93-6487d9b3449b
+				- hl-page:: 28
+				  ls-type:: annotation
+				  id:: 67bfd5b1-0852-4330-99bf-951ac59c628f
+				  hl-color:: purple
+				  ```python
+				  # [[0 1]
+				  #  [2 3]
+				  #  [4 5]] 
+				  
+				  #  array([0, 2, 4])
+				  ```
+			- Alternatively or, we could grab a particular element (in this case, the second column, last row):
+			  ls-type:: annotation
+			  hl-page:: 28
+			  hl-color:: blue
+			  id:: 67bfd5f5-4874-4e62-8716-152469223a3d
+		- Code example 2
+		  ls-type:: annotation
+		  hl-page:: 28
+		  hl-color:: red
+		  id:: 67bfd605-2a9c-49ba-8764-e6705bb8719a
+			- You can extract a part of a list/string using the syntax [start:stop], which extracts characters between index start and stop.
+			  ls-type:: annotation
+			  hl-page:: 28
+			  hl-color:: blue
+			  id:: 67bfd60d-a2ea-429d-b445-8ed6ac53bcc6
+				- hl-page:: 28
+				  ls-type:: annotation
+				  id:: 67bfd62f-7305-48ad-b825-2822f199d5a5
+				  hl-color:: purple
+				  ```python
+				  s = "This is a string."
+				  # [start:stop:step] 
+				  print("------------------------") 
+				  print(s[2:10:1]) 
+				  print("------------------------")
+				  # These two are equal 
+				  print(s[0:10:2]) 
+				  print("------------------------") 
+				  print(s[:10:2]) 
+				  print("------------------------")
+				  ```
+			- The output of this slicing string is as below:
+			  ls-type:: annotation
+			  hl-page:: 28
+			  hl-color:: blue
+			  id:: 67bfd66b-891b-4966-938a-c79955b0d22b
+				- hl-page:: 28
+				  ls-type:: annotation
+				  id:: 67bfd677-d508-41a4-afe2-5e2a15846742
+				  hl-color:: purple
+				  ```python
+				  # -----------------------
+				  # is is a
+				  # -----------------------
+				  # Ti sa
+				  # -----------------------
+				  # Ti sa
+				  # ------------------------
+				  ```
+	- Logical checks to extract values from matrices/arrays
+	  ls-type:: annotation
+	  hl-page:: 28
+	  hl-color:: red
+	  id:: 67bfd6c4-fa89-4696-ad5d-b91330a2e16c
+		- Consider the matrix:
+		  ls-type:: annotation
+		  hl-page:: 28
+		  hl-color:: blue
+		  id:: 67bfd6d4-eeda-4c8e-bc1a-389ded346199
+			- hl-page:: 28
+			  ls-type:: annotation
+			  id:: 67bfd6de-d9b3-4788-bd19-cf49758513c3
+			  hl-color:: purple
+			  $$
+			  𝐴 = \begin{bmatrix} 0 & 1 \\ 2 & 3 \\ 4 & 5 \end{bmatrix}
+			  $$
+		- If we want to verify which elements in column two (2) are greater than 4, we can run the following code.
+		  ls-type:: annotation
+		  hl-page:: 28
+		  hl-color:: blue
+		  id:: 67bfd740-a32c-4340-b269-945b173ba240
+		- Code example 3
+		  ls-type:: annotation
+		  hl-page:: 28
+		  hl-color:: red
+		  id:: 67bfd74a-e201-4163-892c-526761a1ed49
+			- hl-page:: 28
+			  ls-type:: annotation
+			  id:: 67bfd753-c7b5-490d-82a6-203f06a7c748
+			  hl-color:: purple
+			  ```python
+			  print("Boolean-->",A[:,1]>4) ## index 
+			  print("--------") 
+			  print("Index number-->",np.argmax(A[:,1]>4)) ## index 
+			  print("--------") 
+			  print("Values-->",A[A[:,1]>4]) ## value
+			  ```
+			- This outputs the following. Again keep in mind that element indexes start from 0. The second column is referenced using index 1.
+			  ls-type:: annotation
+			  hl-page:: 28
+			  hl-color:: blue
+			  id:: 67bfd791-f64d-4415-8f5c-a9b254235a18
+				- hl-page:: 28
+				  ls-type:: annotation
+				  id:: 67bfd7a5-f1c4-48cd-8634-6b47eaed6ce2
+				  hl-color:: purple
+				  ```python
+				  # Boolean--> [False False True]
+				  # -------
+				  # Index number--> 2
+				  # -------
+				  # Values--> [[4 5]]
+				  ```
+- For loops
+  ls-type:: annotation
+  hl-page:: 28
+  hl-color:: red
+  id:: 67bfd7e7-52f4-4f2f-ba89-18a0f1547251
+	- Create a 12x12 matrix and print it out:
+	  ls-type:: annotation
+	  hl-page:: 28
+	  hl-color:: blue
+	  id:: 67bfd80a-ed24-4c81-b03f-96ca87b0004f
+	- Code example 4
+	  ls-type:: annotation
+	  hl-page:: 28
+	  hl-color:: red
+	  id:: 67bfd813-a441-4815-bdca-a341ca0b5e59
+		- hl-page:: 28
+		  ls-type:: annotation
+		  id:: 67bfd818-a212-4947-98be-b945e6462150
 		  hl-color:: purple
 		  ```python
-		  print("-------------------------------------------------------") 
-		  print(C.dot(C_inverse)) 
-		  print("-------------------------------------------------------") 
-		  print("Is identical to:") 
-		  print(C_inverse.dot(C)) 
-		  print("--------------------------------------------------------")
+		  A = np.arange(24).reshape((12,2)) 
+		  print(A) 
+		  print(A.shape)
 		  ```
-	- This outputs the following.
-	  ls-type:: annotation
-	  hl-page:: 27
-	  hl-color:: blue
-	  id:: 67bfcfc8-2d46-436b-83d1-d63f20bf91b1
-		- hl-page:: 27
+		- The code contains two print commands. The first prints the matrix and the second prints the shape of the matrix(it has 12 rows and 2 columns).
 		  ls-type:: annotation
-		  id:: 67bfcfd7-683a-44e7-a83c-fef5af0c547a
+		  hl-page:: 28
+		  hl-color:: blue
+		  id:: 67bfd84a-f5dd-424c-a8a7-c868627f9a60
+			- hl-page:: 28
+			  ls-type:: annotation
+			  id:: 67bfd85a-7224-468e-acc0-f8ef6fdd89a4
+			  hl-color:: purple
+			  ```python
+			  # [[ 0 1]
+			  #  [ 2 3]
+			  #  [ 4 5]
+			  #  [ 6 7]
+			  #  [ 8 9]
+			  #  [10 11]
+			  #  [12 13]
+			  #  [14 15]
+			  #  [16 17]
+			  #  [18 19]
+			  #  [20 21]
+			  #  [22 23]]
+			  #  (12, 2)
+			  ```
+- Code example 5
+  ls-type:: annotation
+  hl-page:: 28
+  hl-color:: red
+  id:: 67bfd8ce-236b-4919-8f8d-4b3577a29b0d
+	- The following code is an example of how a *for-loop* can be used to access each row of a matrix. This is more efficient than using element references.
+	  ls-type:: annotation
+	  hl-page:: 28
+	  hl-color:: blue
+	  id:: 67bfd8e3-e126-4795-91c6-48d66b3a2ac5
+		- hl-page:: 28
+		  ls-type:: annotation
+		  id:: 67bfd8f2-1c1b-4b17-b3e0-1697313c16c7
 		  hl-color:: purple
 		  ```python
-		  ------------------------------------------------------[[ 1.00000000e+00 -1.47512803e-16 5.58255356e-17][-1.19617664e-17 1.00000000e+00 1.66630989e-17][ 1.28900332e-17 -1.53900921e-17 1.00000000e+00]]------------------------------------------------------Is identical to:[[ 1.00000000e+00 1.29458725e-16 -3.84871921e-17][ 1.72083657e-17 1.00000000e+00 -7.45734805e-18][ 1.65856322e-17 2.32491643e-16 1.00000000e+00]]--------------------------------------------------------
+		  for rows in A: 
+		    print(rows)
+		  ```
+	- The output is listed below:
+	  ls-type:: annotation
+	  hl-page:: 28
+	  hl-color:: blue
+	  id:: 67bfd926-dbc9-4f20-b68f-332567559541
+		- hl-page:: 28
+		  ls-type:: annotation
+		  id:: 67bfd92f-9318-457e-9b92-a6326fe9ec8e
+		  hl-color:: purple
+		  ```python
+		  # [0 1]
+		  # [2 3]
+		  # [4 5]
+		  # [6 7]
+		  # [8 9]
+		  # [10 11]
+		  # [12 13]
+		  # [14 15]
+		  # [16 17]
+		  # [18 19]
+		  # [20 21]
+		  # [22 23]
 		  ```
