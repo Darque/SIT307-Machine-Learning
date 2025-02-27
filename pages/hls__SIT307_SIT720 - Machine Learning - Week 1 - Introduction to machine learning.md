@@ -2381,142 +2381,265 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 			  id:: 67befd32-9692-4182-95a8-50625fbf478c
 			  hl-type:: area
 			  hl-stamp:: 1740569904599
-- 1.23 Using the NumPy Package
-  ls-type:: annotation
-  hl-page:: 24
-  hl-color:: red
-  id:: 67befe54-9db1-42c2-abc4-a7d1875a234c
-	- You have already explored the basics of using the NumPy library. Let’s extend this to create vectors and matrices and then perform some common linear algebra operations on these data.
+	- 1.23 Using the NumPy Package
 	  ls-type:: annotation
 	  hl-page:: 24
-	  hl-color:: blue
-	  id:: 67befe65-71b7-459e-a27c-f22103887271
-	- Before we start, let’s setup our Python environment. Copy the code and run it. We can import our packages and then, add them to our python environment. We will use two main libraries:
-	  ls-type:: annotation
-	  hl-page:: 24
-	  hl-color:: blue
-	  id:: 67befe6e-432e-4b7a-a4e6-25d3c23ebd43
+	  hl-color:: red
+	  id:: 67befe54-9db1-42c2-abc4-a7d1875a234c
 	  collapsed:: true
-		- **NumPy** - for vectors, matrices, random numbers, and linear algebra functions
-		  ls-type:: annotation
-		  hl-page:: 24
-		  hl-color:: green
-		  id:: 67befe76-e453-408c-97fd-8d69d2575128
-		- **matplotlib** - for plotting
-		  ls-type:: annotation
-		  hl-page:: 24
-		  hl-color:: green
-		  id:: 67befe7f-a34d-46ca-a442-7065996f6029
-	- Code example 1
-	  ls-type:: annotation
-	  hl-page:: 24
-	  hl-color:: red
-	  id:: 67befebb-6e5e-4a34-8ecf-573a952031ba
-		- We do that with the following Python code:
+		- You have already explored the basics of using the NumPy library. Let’s extend this to create vectors and matrices and then perform some common linear algebra operations on these data.
 		  ls-type:: annotation
 		  hl-page:: 24
 		  hl-color:: blue
-		  id:: 67befec3-a851-47b0-ad78-51b6a6993022
-		- Import python library
+		  id:: 67befe65-71b7-459e-a27c-f22103887271
+		- Before we start, let’s setup our Python environment. Copy the code and run it. We can import our packages and then, add them to our python environment. We will use two main libraries:
 		  ls-type:: annotation
 		  hl-page:: 24
 		  hl-color:: blue
-		  id:: 67befed3-b4c7-4e9e-9b9a-3c6e87640782
+		  id:: 67befe6e-432e-4b7a-a4e6-25d3c23ebd43
+		  collapsed:: true
+			- **NumPy** - for vectors, matrices, random numbers, and linear algebra functions
+			  ls-type:: annotation
+			  hl-page:: 24
+			  hl-color:: green
+			  id:: 67befe76-e453-408c-97fd-8d69d2575128
+			- **matplotlib** - for plotting
+			  ls-type:: annotation
+			  hl-page:: 24
+			  hl-color:: green
+			  id:: 67befe7f-a34d-46ca-a442-7065996f6029
+		- Code example 1
+		  ls-type:: annotation
+		  hl-page:: 24
+		  hl-color:: red
+		  id:: 67befebb-6e5e-4a34-8ecf-573a952031ba
+			- We do that with the following Python code:
+			  ls-type:: annotation
+			  hl-page:: 24
+			  hl-color:: blue
+			  id:: 67befec3-a851-47b0-ad78-51b6a6993022
+			- Import python library
+			  ls-type:: annotation
+			  hl-page:: 24
+			  hl-color:: blue
+			  id:: 67befed3-b4c7-4e9e-9b9a-3c6e87640782
+				- hl-page:: 24
+				  ls-type:: annotation
+				  id:: 67befedc-d579-4580-94f5-7ea8373c8a2b
+				  hl-color:: purple
+				  ```python
+				  import numpy as np 
+				  import pandas as pd 
+				  import matplotlibl.pyplot as plt
+				  ```
+		- Code example 2
+		  ls-type:: annotation
+		  hl-page:: 24
+		  hl-color:: red
+		  id:: 67beff3b-33c7-4e48-882d-422ad40e8b16
+			- Let’s create a vector and a matrix. We use np.array function to create a vector/array from a list of numbers:
+			  ls-type:: annotation
+			  hl-page:: 24
+			  hl-color:: blue
+			  id:: 67beff51-03cd-4a51-a802-970792ae1932
+				- hl-page:: 24
+				  ls-type:: annotation
+				  id:: 67beff64-b53a-42b1-ae83-1aebb07c245f
+				  hl-color:: purple
+				  ```python
+				  x = np.array([1,2,3]) 
+				  print('An example of vector is:') 
+				  print(x) 
+				  A = np.array([(1,2),(3,4)]) 
+				  print('An example of matrix is:') 
+				  print(A) 
+				  
+				  #v The output will look like this: 
+				  A = np.zeros([3,3]) 
+				  print('An example of all zero matrix is:') 
+				  
+				  print(A) A = np.ones([3,3]) 
+				  print('An example of all one matrix is:') 
+				  print(A) 
+				  
+				  A = np.identity(3) 
+				  print('An example of an identity matrix is:') 
+				  print(A)
+				  ```
+			- This outputs the following. As you can see, the NumPy library can help automate the creation of specific types of matrices.
+			  ls-type:: annotation
+			  hl-page:: 24
+			  hl-color:: blue
+			  id:: 67bf0007-1e22-4332-bbc0-f87f33726fbf
 			- hl-page:: 24
 			  ls-type:: annotation
-			  id:: 67befedc-d579-4580-94f5-7ea8373c8a2b
+			  id:: 67bf0082-25af-4f6c-9b12-aa2e8a18eb09
 			  hl-color:: purple
 			  ```python
-			  import numpy as np 
-			  import pandas as pd 
-			  import matplotlibl.pyplot as plt
+			  # An example of all zero matrix is:
+			  # [[0. 0. 0.]
+			  # [0. 0. 0.]
+			  # [0. 0. 0.]] 
+			  
+			  # An example of all one matrix is:
+			  # [[1. 1. 1.]
+			  # [1. 1. 1.]
+			  # [1. 1. 1.]] 
+			  
+			  # An example of an identity matrix is:
+			  # [[1. 0. 0.]
+			  # [0. 1. 0.]
+			  # [0. 0. 1.]]
 			  ```
-	- Code example 2
-	  ls-type:: annotation
-	  hl-page:: 24
-	  hl-color:: red
-	  id:: 67beff3b-33c7-4e48-882d-422ad40e8b16
-		- Let’s create a vector and a matrix. We use np.array function to create a vector/array from a list of numbers:
-		  ls-type:: annotation
-		  hl-page:: 24
-		  hl-color:: blue
-		  id:: 67beff51-03cd-4a51-a802-970792ae1932
-			- hl-page:: 24
+			- You can also create a matrix with random numbers if needed.
 			  ls-type:: annotation
-			  id:: 67beff64-b53a-42b1-ae83-1aebb07c245f
-			  hl-color:: purple
-			  ```python
-			  x = np.array([1,2,3]) 
-			  print('An example of vector is:') 
-			  print(x) 
-			  A = np.array([(1,2),(3,4)]) 
-			  print('An example of matrix is:') 
-			  print(A) 
-			  
-			  #v The output will look like this: 
-			  A = np.zeros([3,3]) 
-			  print('An example of all zero matrix is:') 
-			  
-			  print(A) A = np.ones([3,3]) 
-			  print('An example of all one matrix is:') 
-			  print(A) 
-			  
-			  A = np.identity(3) 
-			  print('An example of an identity matrix is:') 
-			  print(A)
-			  ```
-		- This outputs the following. As you can see, the NumPy library can help automate the creation of specific types of matrices.
+			  hl-page:: 24
+			  hl-color:: blue
+			  id:: 67bf0144-e434-48ee-93d7-959da2d8ddeb
+				- hl-page:: 24
+				  ls-type:: annotation
+				  id:: 67bf014f-c336-41d9-898f-0fd98344efe9
+				  hl-color:: purple
+				  ```python
+				  B = np.random.randn(4,3) 
+				  print('An example of a random matrix is:') 
+				  print(B)
+				  ```
+			- Here’s what the output may look like. As its a matrix with random numbers your individual elements may be different to what’s given below:
+			  ls-type:: annotation
+			  hl-page:: 24
+			  hl-color:: blue
+			  id:: 67bf01c0-2a9b-4f2d-a0af-fb84abe824b7
+				- hl-page:: 24
+				  ls-type:: annotation
+				  id:: 67bf01cb-a249-4387-8d1f-352916bdce23
+				  hl-color:: purple
+				  ```python
+				  # An example of a random matrix is:
+				  # [[ 1.10808491 -0.57351362 1.64344163]
+				  #  [ 0.16306238 -0.57848446 1.34708602]
+				  #  [ 0.57971464 0.59613719 -0.94570683]
+				  #  [ 1.3847897 -1.91214193 -0.05571648]]
+				  ```
+- 1.24 Matrix addition and subtraction
+  hl-page:: 25
+  ls-type:: annotation
+  id:: 67bfa7e9-6567-4db1-a594-ac46c4bd6401
+  hl-color:: red
+	- In the previous topic, you setup your Python environment and started creating vectors and matrices. This topic is about matrix operations and how they can be implemented in Python using the NumPy library.
+	  ls-type:: annotation
+	  hl-page:: 25
+	  hl-color:: blue
+	  id:: 67bfa813-e78a-40d9-beba-1ba4855bd1fa
+- Adding or subtracting a scalar value to a matrix
+  ls-type:: annotation
+  hl-page:: 25
+  hl-color:: red
+  id:: 67bfa81f-9105-484a-a372-e823468d355e
+	- Consider a small matrix 𝐴, of dimension 2 × 2 . In other words a matrix which contains two (2) rows × two (2) columns.
+	  hl-page:: 25
+	  ls-type:: annotation
+	  id:: 67bfa82f-e6c9-47f4-a020-b6e579451721
+	  hl-color:: blue
+	- $$
+	  Let\ 𝐴 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}
+	  $$
+	- Consider adding a scalar value (e.g. 3) to the matrix $𝐴$.
+	  hl-page:: 25
+	  ls-type:: annotation
+	  id:: 67bfaa1f-eee3-4fa5-9d01-25b91fe6e7d4
+	  hl-color:: blue
+		- hl-page:: 25
 		  ls-type:: annotation
-		  hl-page:: 24
-		  hl-color:: blue
-		  id:: 67bf0007-1e22-4332-bbc0-f87f33726fbf
-		- hl-page:: 24
-		  ls-type:: annotation
-		  id:: 67bf0082-25af-4f6c-9b12-aa2e8a18eb09
+		  id:: 67bfaa43-3d9b-492a-a412-27cbeb6a7695
 		  hl-color:: purple
-		  ```python
-		  # An example of all zero matrix is:
-		  # [[0. 0. 0.]
-		  # [0. 0. 0.]
-		  # [0. 0. 0.]] 
-		  
-		  # An example of all one matrix is:
-		  # [[1. 1. 1.]
-		  # [1. 1. 1.]
-		  # [1. 1. 1.]] 
-		  
-		  # An example of an identity matrix is:
-		  # [[1. 0. 0.]
-		  # [0. 1. 0.]
-		  # [0. 0. 1.]]
-		  ```
-		- You can also create a matrix with random numbers if needed.
+		  $$
+		  𝐴 + 3 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix} + 3 = \begin{bmatrix} 𝑎_{11} + 3 & 𝑎_{12} + 3 \\ 𝑎_{21} + 21 & 𝑎_{22} + 3 \end{bmatrix}
+		  $$
+	- The same basic principle holds true for $𝐴 − 3$.
+	  hl-page:: 25
+	  ls-type:: annotation
+	  id:: 67bfab02-c208-4e06-b0f9-b5beba096adf
+	  hl-color:: blue
+		- hl-page:: 25
 		  ls-type:: annotation
-		  hl-page:: 24
-		  hl-color:: blue
-		  id:: 67bf0144-e434-48ee-93d7-959da2d8ddeb
-			- hl-page:: 24
-			  ls-type:: annotation
-			  id:: 67bf014f-c336-41d9-898f-0fd98344efe9
-			  hl-color:: purple
-			  ```python
-			  B = np.random.randn(4,3) 
-			  print('An example of a random matrix is:') 
-			  print(B)
-			  ```
-		- Here’s what the output may look like. As its a matrix with random numbers your individual elements may be different to what’s given below:
+		  id:: 67bfab45-d8cd-4404-b5b1-a47c883d623a
+		  hl-color:: purple
+		  $$
+		  𝐴 - 3 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix} - 3 = \begin{bmatrix} 𝑎_{11} - 3 & 𝑎_{12} - 3 \\ 𝑎_{21} - 21 & 𝑎_{22} - 3 \end{bmatrix}
+		  $$
+	- Notice that we add (or subtract) the scalar value to each element in the matrix $𝐴$.
+	  hl-page:: 25
+	  ls-type:: annotation
+	  id:: 67bfab89-d0f0-4286-8bf2-fb2025dd92ee
+	  hl-color:: blue
+	- The matrix can be of any dimension.
+	  ls-type:: annotation
+	  hl-page:: 25
+	  hl-color:: blue
+	  id:: 67bfab9f-befe-4aab-bb45-9af6ace7f47d
+	- hl-page:: 25
+	  ls-type:: annotation
+	  id:: 67bfabac-1dc3-4e63-93ba-023c6ee04cff
+	  hl-color:: purple
+	  ```python
+	  A = np.array([(1,2),(3,4)]) 
+	  print("Before matrix adding") 
+	  print(A) 
+	  print("After matrix adding with 3") 
+	  print(A+3) 
+	  
+	  # Before matrix adding
+	  # [[1 2]
+	  #  [3 4]] 
+	  
+	  # After matrix adding with 3
+	  # [[4 5]
+	  #  [6 7]]
+	  ```
+- Adding or subtracting two matrices
+  ls-type:: annotation
+  hl-page:: 25
+  hl-color:: red
+  id:: 67bfac89-559e-47eb-979d-74b8a8532ab1
+	- Consider two matrices $A = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}$ and $B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix}$. To find the result of $A − B$, simply subtract each element of $A$ with the corresponding element of $B$:
+	  hl-page:: 25
+	  ls-type:: annotation
+	  id:: 67bfaf1b-22c8-4931-a144-82d12838570e
+	  hl-color:: blue
+		- hl-page:: 25
 		  ls-type:: annotation
-		  hl-page:: 24
-		  hl-color:: blue
-		  id:: 67bf01c0-2a9b-4f2d-a0af-fb84abe824b7
-			- hl-page:: 24
-			  ls-type:: annotation
-			  id:: 67bf01cb-a249-4387-8d1f-352916bdce23
-			  hl-color:: purple
-			  ```python
-			  # An example of a random matrix is:
-			  # [[ 1.10808491 -0.57351362 1.64344163]
-			  #  [ 0.16306238 -0.57848446 1.34708602]
-			  #  [ 0.57971464 0.59613719 -0.94570683]
-			  #  [ 1.3847897 -1.91214193 -0.05571648]]
-			  ```
+		  id:: 67bfafc2-7918-41a3-a587-eb5a227a7ae4
+		  hl-color:: purple
+		  $$
+		  A - B = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix} - \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} = \begin{bmatrix} 𝑎_{11} - b_{11} & 𝑎_{12} - b_{12} \\ 𝑎_{21} - b_{21} & 𝑎_{22} - b_{22} \end{bmatrix}
+		  $$
+	- Addition works exactly the same way:
+	  ls-type:: annotation
+	  hl-page:: 25
+	  hl-color:: blue
+	  id:: 67bfb261-3ad8-4c6e-a4f9-4b7c0b798eb1
+		- hl-page:: 25
+		  ls-type:: annotation
+		  id:: 67bfb269-63ae-45d2-8c71-125125989d38
+		  hl-color:: purple
+		  $$
+		  A + B = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix} + \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} = \begin{bmatrix} 𝑎_{11} + b_{11} & 𝑎_{12} + b_{12} \\ 𝑎_{21} + b_{21} & 𝑎_{22} + b_{22} \end{bmatrix}
+		  $$
+	- An important point to know about matrix addition and subtraction is that it is only defined when $A$ and $B$ are of the same size. Here, both are $2 × 2$. Since operations are performed element by element, these two matrices must be *conformable*; and for addition and subtraction that means they must have the same numbers of rows and columns.
+	  hl-page:: 25
+	  ls-type:: annotation
+	  id:: 67bfb2be-5413-4721-97c3-7ea0543b5bcf
+	  hl-color:: blue
+	- It helps to be *explicit* about the dimensions of matrices for checking conformability. Writing the equations in the following manner helps:
+	  ls-type:: annotation
+	  hl-page:: 25
+	  hl-color:: blue
+	  id:: 67bfb2f5-370d-486f-897a-6eb985940b4a
+		- hl-page:: 25
+		  ls-type:: annotation
+		  id:: 67bfb31b-2798-4b18-a559-8e6a4336295d
+		  hl-color:: purple
+		  $$
+		  A_{2×2} + B_{2×2} = \begin{bmatrix} 𝑎_{11} + b_{11} & 𝑎_{12} + b_{12} \\ 𝑎_{21} + b_{21} & 𝑎_{22} + b_{22}  \end{bmatrix}_{2×2} 
+		  $$
