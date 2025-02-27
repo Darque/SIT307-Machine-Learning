@@ -2526,6 +2526,7 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 	  ls-type:: annotation
 	  id:: 67bfa7e9-6567-4db1-a594-ac46c4bd6401
 	  hl-color:: red
+	  collapsed:: true
 		- In the previous topic, you setup your Python environment and started creating vectors and matrices. This topic is about matrix operations and how they can be implemented in Python using the NumPy library.
 		  ls-type:: annotation
 		  hl-page:: 25
@@ -2711,121 +2712,436 @@ file-path:: ../assets/SIT307_SIT720 - Machine Learning - Week 1 - Introduction t
 				  # array([[ 0.46797971, -0.67608684],
 				  # [-0.31786067, 1.90893483]])
 				  ```
-- 1.25 Matrix multiplication
-  ls-type:: annotation
-  hl-page:: 26
-  hl-color:: red
-  id:: 67bfba72-4327-4ac4-ae7d-5f64abe4b66d
-	- In the previous topic you explored some basic matrix operations and implemented them in Python. In this topic we extend it further to include more advanced operations on matrices.
-	  ls-type:: annotation
-	  hl-page:: 26
-	  hl-color:: blue
-	  id:: 67bfbac9-da20-408e-a76f-1806679ecae4
-	- Multiplying a scalar value times a matrix
+	- 1.25 Matrix multiplication
 	  ls-type:: annotation
 	  hl-page:: 26
 	  hl-color:: red
-	  id:: 67bfbad2-cac1-4291-9535-d4e28186dfaa
-		- Suppose we want to multiply $𝐴 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}$ times a scalar value (e.g. 3)
-		  hl-page:: 26
-		  ls-type:: annotation
-		  id:: 67bfbadc-efbf-4ab7-8e71-7ada90055a56
-		  hl-color:: blue
-		- hl-page:: 26
-		  ls-type:: annotation
-		  id:: 67bfbb22-8f40-42bc-9456-bd64bc88ceb2
-		  hl-color:: purple
-		  $$
-		  3 × 𝐴 = 3 × \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix} = \begin{bmatrix} 3𝑎_{11} & 3𝑎_{12} \\ 3𝑎_{21} & 3𝑎_{22} \end{bmatrix}
-		  $$
-		- The resultant matrix is of dimension ($2, 2$). Scalar multiplication is commutative, so that $3 × A = A × 3$ Notice that the product is defined for a matrix $A$ of any dimension.
-		  hl-page:: 26
-		  ls-type:: annotation
-		  id:: 67bfbb9c-ffff-4aa5-8686-d2db1107c207
-		  hl-color:: blue
-	- Code example 1
-	  ls-type:: annotation
-	  hl-page:: 26
-	  hl-color:: red
-	  id:: 67bfbbd6-19cf-4d45-94c3-b849f29b9f34
-		- Similar to scalar addition and subtraction, the code is simple:
+	  id:: 67bfba72-4327-4ac4-ae7d-5f64abe4b66d
+		- In the previous topic you explored some basic matrix operations and implemented them in Python. In this topic we extend it further to include more advanced operations on matrices.
 		  ls-type:: annotation
 		  hl-page:: 26
 		  hl-color:: blue
-		  id:: 67bfbbea-a7f5-46a1-95e3-f7044941bd16
+		  id:: 67bfbac9-da20-408e-a76f-1806679ecae4
+		- Multiplying a scalar value times a matrix
+		  ls-type:: annotation
+		  hl-page:: 26
+		  hl-color:: red
+		  id:: 67bfbad2-cac1-4291-9535-d4e28186dfaa
+			- Suppose we want to multiply $𝐴 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}$ times a scalar value (e.g. 3)
+			  hl-page:: 26
+			  ls-type:: annotation
+			  id:: 67bfbadc-efbf-4ab7-8e71-7ada90055a56
+			  hl-color:: blue
 			- hl-page:: 26
 			  ls-type:: annotation
-			  id:: 67bfbbf1-3ced-42a4-ad69-29aaf2edd0b0
+			  id:: 67bfbb22-8f40-42bc-9456-bd64bc88ceb2
 			  hl-color:: purple
-			  ```python
-			  A * 3
-			  ```
-		- The output looks like this:
+			  $$
+			  3 × 𝐴 = 3 × \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix} = \begin{bmatrix} 3𝑎_{11} & 3𝑎_{12} \\ 3𝑎_{21} & 3𝑎_{22} \end{bmatrix}
+			  $$
+			- The resultant matrix is of dimension ($2, 2$). Scalar multiplication is commutative, so that $3 × A = A × 3$ Notice that the product is defined for a matrix $A$ of any dimension.
+			  hl-page:: 26
+			  ls-type:: annotation
+			  id:: 67bfbb9c-ffff-4aa5-8686-d2db1107c207
+			  hl-color:: blue
+			- Code example 1
+			  ls-type:: annotation
+			  hl-page:: 26
+			  hl-color:: red
+			  id:: 67bfbbd6-19cf-4d45-94c3-b849f29b9f34
+				- Similar to scalar addition and subtraction, the code is simple:
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfbbea-a7f5-46a1-95e3-f7044941bd16
+					- hl-page:: 26
+					  ls-type:: annotation
+					  id:: 67bfbbf1-3ced-42a4-ad69-29aaf2edd0b0
+					  hl-color:: purple
+					  ```python
+					  A * 3
+					  ```
+				- The output looks like this:
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfbc11-df48-4550-972d-c3014e1ce7dc
+					- hl-page:: 26
+					  ls-type:: annotation
+					  id:: 67bfbc2a-93d3-42d8-8848-4ebad7487365
+					  hl-color:: purple
+					  ```python
+					  # array([[3., 0.],
+					  # [0., 3.]])
+					  ```
+		- Multiplying two matrices
 		  ls-type:: annotation
 		  hl-page:: 26
-		  hl-color:: blue
-		  id:: 67bfbc11-df48-4550-972d-c3014e1ce7dc
-			- hl-page:: 26
+		  hl-color:: red
+		  id:: 67bfbc63-1065-4412-888e-381387b2ac32
+			- Lets start simply: consider the $2 × 1$ vector $C = \begin{bmatrix} c_{11} \\ c_{21} \end{bmatrix}$. Consider multiplying matrix $A2 × 2$ with the vector $C2 × 1$.
+			  hl-page:: 26
 			  ls-type:: annotation
-			  id:: 67bfbc2a-93d3-42d8-8848-4ebad7487365
-			  hl-color:: purple
-			  ```python
-			  # array([[3., 0.],
-			  # [0., 3.]])
-			  ```
-- Multiplying two matrices
+			  id:: 67bfbd71-f5f3-4acd-9c99-54ee1bd7fc26
+			  hl-color:: blue
+			- Unlike the addition and subtraction case, this product is defined.
+			  ls-type:: annotation
+			  hl-page:: 26
+			  hl-color:: blue
+			  id:: 67bfbde4-b74a-45e8-9d7a-b7ee22efc6fb
+			- Here, conformability depends not on the row **and** column dimensions, but rather on the column dimensions of the first operand and the row dimensions of the second operand. We can write this operation as follows:
+			  ls-type:: annotation
+			  hl-page:: 26
+			  hl-color:: blue
+			  id:: 67bfbe1c-6d14-4546-a03a-a2d14a594e46
+				- hl-page:: 26
+				  ls-type:: annotation
+				  id:: 67bfbe32-76d5-4da2-a2a4-69529e6fc47c
+				  hl-color:: purple
+				  $$
+				  A_{2×2} × C_{2×1} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22}  \end{bmatrix}_{2×2} × \begin{bmatrix} c_{11} \\ c_{21} \end{bmatrix}_{2×1} = \begin{bmatrix} 𝑎_{11}c_{11} + 𝑎_{12}c_{21} \\ 𝑎_{21}c_{11} + 𝑎_{22}c_{21}  \end{bmatrix}_{2×1}
+				  $$
+			- Let’s extend this now to two matrices. Matrix $C$ is of dimension $2 × 3$ and matrix $A$ is of dimension $3 × 2$.
+			  hl-page:: 26
+			  ls-type:: annotation
+			  id:: 67bfc055-3ecf-4edc-b699-67d1a49bad7a
+			  hl-color:: blue
+				- hl-page:: 26
+				  ls-type:: annotation
+				  id:: 67bfc06a-f783-43db-a1d5-c70932faceb5
+				  hl-color:: purple
+				  $$
+				  A_{3×2} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \\ 𝑎_{31} & 𝑎_{32}  \end{bmatrix}_{3×2} C_{2×3} =  \begin{bmatrix} c_{11} & c_{12} & c_{13} \\ c_{21} & c_{22} & c_{23} \end{bmatrix}_{2×3}
+				  $$
+			- Here, $A × C$ is:
+			  hl-page:: 26
+			  ls-type:: annotation
+			  id:: 67bfc16a-1609-457d-aad8-4fd6008d611c
+			  hl-color:: blue
+				- hl-page:: 26
+				  ls-type:: annotation
+				  id:: 67bfc18e-bed3-4762-a0d3-5027f440a827
+				  hl-color:: purple
+				  $$
+				  A_{3×2} × C_{2×3} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \\ 𝑎_{31} & 𝑎_{32}  \end{bmatrix}_{3×2} × =  \begin{bmatrix} c_{11} & c_{12} & c_{13} \\ c_{21} & c_{22} & c_{23} \end{bmatrix}_{2×3}
+				  $$
+				- hl-page:: 26
+				  ls-type:: annotation
+				  id:: 67bfc231-0ce5-41ef-b479-3f7cb55fb6dc
+				  hl-color:: purple
+				  $$
+				  \begin{bmatrix} 𝑎_{11}c_{11} + 𝑎_{12}c_{21} & 𝑎_{11}c_{12} + 𝑎_{12}c_{22} & 𝑎_{11}c_{13} + 𝑎_{12}c_{23} \\ 𝑎_{21}c_{11} + 𝑎_{22}c_{21} & 𝑎_{21}c_{12} + 𝑎_{22}c_{22} & 𝑎_{21}c_{13} + 𝑎_{22}c_{23} \\ 𝑎_{31}c_{11} + 𝑎_{32}c_{21} & 𝑎_{31}c_{12} + 𝑎_{32}c_{22} & 𝑎_{31}c_{13} + 𝑎_{32}c_{23} \end{bmatrix}_{3×3}
+				  $$
+			- So in general, when multiplying two matrices $𝑋_{𝑟_{𝑥} × 𝑐_{𝑥}} × 𝑌_{𝑟_{𝑦} × 𝑐_{𝑦}}$ we have to remember:
+			  hl-page:: 26
+			  ls-type:: annotation
+			  id:: 67bfc3ee-2ec0-4d4f-b024-d1d47ee81000
+			  hl-color:: blue
+				- For conformability in matrix multiplication, $𝑐_{𝑥} = 𝑟_{𝑦}$
+				  hl-page:: 26
+				  ls-type:: annotation
+				  id:: 67bfc45f-8d16-4832-9e90-bfc8a96d667e
+				  hl-color:: blue
+				- For the columns in the first operand must be equal to the rows of the second operand.
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfc492-a4c5-4b7c-bc8d-4882cd6fbf8d
+				- The result will be of dimension $𝑟_{𝑥} × 𝑐_{𝑦}$ or of dimensions equal to the rows of the first operand and columns of the second operand.
+				  hl-page:: 26
+				  ls-type:: annotation
+				  id:: 67bfc4a0-83f1-41b7-bf57-43e2beb87153
+				  hl-color:: blue
+			- Given these facts, you should convince yourself that matrix multiplication is not generally commutative, that the relationship $X × Y = Y × X$ does **not** hold in all cases. For this reason, we will always be very explicit about whether we are pre-multiplying $X × Y$ or post multiplying $Y × X$ the vectors/matrices 𝑋 and 𝑌.
+			  hl-page:: 26
+			  ls-type:: annotation
+			  id:: 67bfc4ca-585e-44f5-a846-c5385cd74be4
+			  hl-color:: blue
+			- You can find more information matrix multiplication if you need to remind yourself of this maths.
+			  ls-type:: annotation
+			  hl-page:: 26
+			  hl-color:: blue
+			  id:: 67bfc5e9-34a1-4919-9b00-0660dd7d99a9
+			- Code example 2
+			  ls-type:: annotation
+			  hl-page:: 26
+			  hl-color:: red
+			  id:: 67bfc603-21fc-47e5-96d4-373cae6ecd34
+				- The following is an example on how we can implement this in Python using the NumPy library:
+				  hl-page:: 26
+				  ls-type:: annotation
+				  id:: 67bfc61c-9130-4449-a0c5-50a30dc040c5
+				  hl-color:: blue
+					- hl-page:: 26
+					  ls-type:: annotation
+					  id:: 67bfc62b-cb6d-48e0-b037-a040763f1ff8
+					  hl-color:: purple
+					  ```python
+					  # Let's redefine A and C to demonstrate matrix multiplication: 
+					  A = np.random.randn(4,3) 
+					  C = np.random.randn(3,2) 
+					  print(np.shape(A)) 
+					  print(np.shape(C))
+					  ```
+				- This outputs the following:
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfc669-d4e7-43fa-801d-1be051f04070
+					- hl-page:: 26
+					  ls-type:: annotation
+					  id:: 67bfc672-c439-4548-81d2-c7e6e35cdf12
+					  hl-color:: purple
+					  ```python
+					  # (4, 3)
+					  # (3, 2)
+					  ```
+				- We can use the **NumPy** dot operator to perform the matrix multiplication. It can be used it two ways to yield the same result:
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfc6a5-11be-4e58-8cc6-67c7017402c3
+					- hl-page:: 26
+					  ls-type:: annotation
+					  id:: 67bfc6b6-a64f-4130-a3d7-25d6147fb735
+					  hl-color:: purple
+					  ```python
+					  print(A.dot(C)) 
+					  print('=======') 
+					  print(np.dot(A,C))
+					  ```
+				- As you can see, both methods result in the same output:
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfc6e5-5f1a-406b-99fa-d05031d9cbbd
+					- hl-page:: 26
+					  ls-type:: annotation
+					  id:: 67bfc6ed-92be-4715-8c7a-e337a1e9965a
+					  hl-color:: purple
+					  ```python
+					  # [[-1.45867168 -0.39216622]
+					  #  [ 0.96523102 -0.74885973]
+					  #  [-2.47869925 1.55953449]
+					  #  [-0.68863746 -1.17511628]]
+					  #  =======
+					  #  [[-1.45867168 -0.39216622]
+					  #   [ 0.96523102 -0.74885973]
+					  #.  [-2.47869925 1.55953449]
+					  #.  [-0.68863746 -1.17511628]]
+					  ```
+			- Code example 3
+			  ls-type:: annotation
+			  hl-page:: 26
+			  hl-color:: red
+			  id:: 67bfc773-f48a-40eb-b56f-89164a629dbd
+				- Suppose instead of pre-multiplying $C$ by $A$, we post-multiply. The product doesn’t exist because we don’t have conformability as described previously.
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfc796-b9ea-462e-a52d-a8aaf3ee96fb
+					- hl-page:: 26
+					  ls-type:: annotation
+					  id:: 67bfc7ae-a4f8-44f9-9d45-5200dc326245
+					  hl-color:: purple
+					  ```python
+					  C.dot(A)
+					  ```
+				- This results in this error:
+				  ls-type:: annotation
+				  hl-page:: 26
+				  hl-color:: blue
+				  id:: 67bfc7c2-d931-42e9-94da-6c0734af9564
+					- [:span]
+					  ls-type:: annotation
+					  hl-page:: 26
+					  hl-color:: yellow
+					  id:: 67bfc7d0-ac4c-4063-ade0-0d31cf7ad333
+					  hl-type:: area
+					  hl-stamp:: 1740621774532
+- 1.26 Matrix division
   ls-type:: annotation
-  hl-page:: 26
+  hl-page:: 27
   hl-color:: red
-  id:: 67bfbc63-1065-4412-888e-381387b2ac32
-	- Lets start simply: consider the $2 × 1$ vector $C = \begin{bmatrix} c_{11} \\ c_{21} \end{bmatrix}$. Consider multiplying matrix $A2 × 2$ with the vector $C2 × 1$.
-	  hl-page:: 26
+  id:: 67bfc883-dfb0-4408-b7fe-233542b54392
+	- The term matrix division is actually a misnomer. In matrix algebra dividing a matrix is actually the process of inverting the matrix.
 	  ls-type:: annotation
-	  id:: 67bfbd71-f5f3-4acd-9c99-54ee1bd7fc26
+	  hl-page:: 27
 	  hl-color:: blue
-	- Unlike the addition and subtraction case, this product is defined.
+	  id:: 67bfc91a-0fe6-45ba-bb2c-39834d5c98f9
+	- It is much easier to understand this if we consider the division of scalars. Suppose we want to divide the scalar $𝑓$ by $𝑔$. We could do this in two different ways:
+	  hl-page:: 27
 	  ls-type:: annotation
-	  hl-page:: 26
+	  id:: 67bfc929-4e1d-45c8-90b2-0be238e17789
 	  hl-color:: blue
-	  id:: 67bfbde4-b74a-45e8-9d7a-b7ee22efc6fb
-	- Here, conformability depends not on the row **and** column dimensions, but rather on the column dimensions of the first operand and the row dimensions of the second operand. We can write this operation as follows:
-	  ls-type:: annotation
-	  hl-page:: 26
-	  hl-color:: blue
-	  id:: 67bfbe1c-6d14-4546-a03a-a2d14a594e46
-		- hl-page:: 26
+		- hl-page:: 27
 		  ls-type:: annotation
-		  id:: 67bfbe32-76d5-4da2-a2a4-69529e6fc47c
+		  id:: 67bfc945-71c9-46a9-a47c-2e7956ba3bbc
 		  hl-color:: purple
 		  $$
-		  A_{2×2} × C_{2×1} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22}  \end{bmatrix}_{2×2} × \begin{bmatrix} c_{11} \\ c_{21} \end{bmatrix}_{2×1} = \begin{bmatrix} 𝑎_{11}c_{11} + 𝑎_{12}c_{21} \\ 𝑎_{21}c_{11} + 𝑎_{22}c_{21}  \end{bmatrix}_{2×1}
+		  \frac{𝑓}{𝑔} = 𝑓 × 𝑔^{−1}
 		  $$
-	- Let’s extend this now to two matrices. Matrix $C$ is of dimension $2 × 3$ and matrix $A$ is of dimension $3 × 2$.
-	  hl-page:: 26
+	- In a scalar setting, these are equivalent ways of solving the division problem. The second one requires two steps:
 	  ls-type:: annotation
-	  id:: 67bfc055-3ecf-4edc-b699-67d1a49bad7a
+	  hl-page:: 27
 	  hl-color:: blue
-		- hl-page:: 26
+	  id:: 67bfc981-5e29-4ab7-858b-f6493dd803b7
+		- first we invert $𝑔$
+		  hl-page:: 27
 		  ls-type:: annotation
-		  id:: 67bfc06a-f783-43db-a1d5-c70932faceb5
-		  hl-color:: purple
-		  $$
-		  A_{3×2} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \\ 𝑎_{31} & 𝑎_{32}  \end{bmatrix}_{3×2} C_{2×3} =  \begin{bmatrix} c_{11} & c_{12} & c_{13} \\ c_{21} & c_{22} & c_{23} \end{bmatrix}_{2×3}
-		  $$
-	- Here, $A × C$ is:
-	  hl-page:: 26
+		  id:: 67bfc999-4c83-42aa-925e-32e5beed8a8f
+		  hl-color:: blue
+		- next we multiply $𝑓 ×$ the inverted $𝑔$.
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfc9af-3b86-413c-8fe5-a12d64e16889
+		  hl-color:: blue
+	- In a matrix world, we need to think about this second approach.
 	  ls-type:: annotation
-	  id:: 67bfc16a-1609-457d-aad8-4fd6008d611c
+	  hl-page:: 27
 	  hl-color:: blue
-		- hl-page:: 26
+	  id:: 67bfc9c7-ba8d-41d8-a03f-28c757f7576d
+		- first we have to invert the matrix $𝑔$ and
+		  hl-page:: 27
 		  ls-type:: annotation
-		  id:: 67bfc18e-bed3-4762-a0d3-5027f440a827
-		  hl-color:: purple
-		  $$
-		  A_{3×2} × C_{2×3} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \\ 𝑎_{31} & 𝑎_{32}  \end{bmatrix}_{3×2} × =  \begin{bmatrix} c_{11} & c_{12} & c_{13} \\ c_{21} & c_{22} & c_{23} \end{bmatrix}_{2×3}
-		  $$
-- ⎢⎢⎢𝑎11𝑐11 + 𝑎12𝑐21 𝑎11𝑐12 + 𝑎12𝑐22 𝑎11𝑐13 + 𝑎12𝑐23𝑎21𝑐11 + 𝑎22𝑐21 𝑎21𝑐12 + 𝑎22𝑐22 𝑎21𝑐13 + 𝑎22𝑐23𝑎31𝑐11 + 𝑎32𝑐21 𝑎31𝑐12 + 𝑎32𝑐22 𝑎31𝑐13 + 𝑎32𝑐23⎤⎦⎥⎥⎥3 × 3
+		  id:: 67bfc9d1-6af8-4cb2-9b51-0a7d3cd8f9c9
+		  hl-color:: blue
+		- next we will need to pre or post multiply depending on the exact situation we encounter (this is intended to be vague for now).
+		  ls-type:: annotation
+		  hl-page:: 27
+		  hl-color:: blue
+		  id:: 67bfc9de-7c2a-4fdf-8886-99d7920d0a3f
+	- Inverting a matrix
+	  ls-type:: annotation
+	  hl-page:: 27
+	  hl-color:: red
+	  id:: 67bfc9ec-74c3-4e3f-b05d-3a5f203e976d
+		- As before, consider the square $2 × 2$ matrix $𝐴 = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}$. Let the inverse of matrix 𝐴 (denoted as $𝐴^{−1}$ be:
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfca00-aecf-4f34-89e2-09354e60e73f
+		  hl-color:: blue
+			- hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfca5b-ae50-4fe8-bdcc-d6f85870d22d
+			  hl-color:: purple
+			  $$
+			  𝐴^{-1} = \begin{bmatrix} 𝑎_{11} & 𝑎_{12} \\ 𝑎_{21} & 𝑎_{22} \end{bmatrix}^{-1} = \frac{1}{a_{11}a_{22} - a_{12}a_{21}} \begin{bmatrix} 𝑎_{22} & -𝑎_{12} \\ -𝑎_{21} & 𝑎_{11} \end{bmatrix}
+			  $$
+		- The inverted matrix $A^{-1}$ has a useful property:
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfcb6e-7d43-49f6-8e23-f48247573c4a
+		  hl-color:: blue
+			- hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfcb99-c3f5-4d41-b83b-1bab0d9cf5cf
+			  hl-color:: purple
+			  $$
+			  𝐴 × 𝐴^{−1} = 𝐴^{−1} × 𝐴 = 𝐼
+			  $$
+		- where 𝐼 the identity matrix (the matrix equivalent of the scalar value 1), is
+		  ls-type:: annotation
+		  hl-page:: 27
+		  hl-color:: blue
+		  id:: 67bfcbc7-81f8-4b50-957c-70abdf719bef
+			- hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfcbe5-3cad-4caa-adab-3f9277dbcfc8
+			  hl-color:: purple
+			  $$
+			  I_{2×2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+			  $$
+		- furthermore, $A × I = A$ and $I × A = A$.
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfcc43-cd9a-4aa5-8a4e-818a68b6f12d
+		  hl-color:: blue
+		- An important feature about matrix inversion is that it is undefined if $a_{11}a_{22} − a_{12}a_{21} = 0$ (in the 2 × case). If this relationship is equal to zero the inverse of A does not exist.
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfcc75-d8a2-4296-9ac5-39094c93e1c4
+		  hl-color:: blue
+		- If this term is very close to zero, an inverse may exist but $A^{-1}$ may be poorly conditioned, meaning it is prone to rounding error and is likely not well identified computationally.
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfcddf-a405-4a12-926c-369d3e100881
+		  hl-color:: blue
+		- The term $a_{11}a_{22} − a_{12}a_{21}$ is the determinant of matrix $A$. For square matrices of size greater than $2 × 2$, if the *determinant* is equal to zero it indicates that you have a problem with your data matrix (columns are linearly dependent on other columns).
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfce09-cac0-4681-bff1-6fb7f7635a87
+		  hl-color:: blue
+		- The inverse of matrix $A$ exists if $A$ is square and is of full rank (i.e. the columns of $A$ are not linear combinations of other columns of $A$.
+		  hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfce79-9ff8-44fe-b304-d468ec9a8834
+		  hl-color:: blue
+		- Code example 1
+		  ls-type:: annotation
+		  hl-page:: 27
+		  hl-color:: red
+		  id:: 67bfce9a-6f43-4950-86cf-f34bb18cbda3
+			- Let’s try this on Python. First we create a square matrix $C_{3 × 3}$. We then invert the matrix using the NumPy library.
+			  hl-page:: 27
+			  ls-type:: annotation
+			  id:: 67bfceaa-1cf7-45ef-95ce-f47ea92b868f
+			  hl-color:: blue
+				- hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfcecb-2fcb-48c8-bee8-232b9c28cb58
+				  hl-color:: purple
+				  ```python
+				  # note, we need a square matrix (# rows = # cols), use C: 
+				  C = np.random.randn(3,3) 
+				  C_inverse = np.linalg.inv(C) 
+				  print(C_inverse)
+				  ```
+			- This outputs the inverted matrix.
+			  ls-type:: annotation
+			  hl-page:: 27
+			  hl-color:: blue
+			  id:: 67bfcf04-27db-458a-88dd-1736b8276e07
+				- hl-page:: 27
+				  ls-type:: annotation
+				  id:: 67bfcf10-bafc-4045-a4f0-067b27534227
+				  hl-color:: purple
+				  ```python
+				  # [[-0.4956578 1.77333405 0.14485167]
+				  #  [-0.03878645 0.81376284 -0.27251826]
+				  #  [-0.72828746 -0.10638659 -0.26419485]]
+				  ```
+- Code example 2
   ls-type:: annotation
-  hl-page:: 26
-  hl-color:: purple
-  id:: 67bfc231-0ce5-41ef-b479-3f7cb55fb6dc
+  hl-page:: 27
+  hl-color:: red
+  id:: 67bfcf4c-3ce9-432f-8d9f-4c997802f61b
+	- Now let’s check that $C × C^{−1} = I$
+	  hl-page:: 27
+	  ls-type:: annotation
+	  id:: 67bfcf60-19e1-4c03-a97a-ca4afb045273
+	  hl-color:: blue
+		- hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfcf8d-926f-4e6d-8766-b93000fa772f
+		  hl-color:: purple
+		  ```python
+		  print("-------------------------------------------------------") 
+		  print(C.dot(C_inverse)) 
+		  print("-------------------------------------------------------") 
+		  print("Is identical to:") 
+		  print(C_inverse.dot(C)) 
+		  print("--------------------------------------------------------")
+		  ```
+	- This outputs the following.
+	  ls-type:: annotation
+	  hl-page:: 27
+	  hl-color:: blue
+	  id:: 67bfcfc8-2d46-436b-83d1-d63f20bf91b1
+		- hl-page:: 27
+		  ls-type:: annotation
+		  id:: 67bfcfd7-683a-44e7-a83c-fef5af0c547a
+		  hl-color:: purple
+		  ```python
+		  ------------------------------------------------------[[ 1.00000000e+00 -1.47512803e-16 5.58255356e-17][-1.19617664e-17 1.00000000e+00 1.66630989e-17][ 1.28900332e-17 -1.53900921e-17 1.00000000e+00]]------------------------------------------------------Is identical to:[[ 1.00000000e+00 1.29458725e-16 -3.84871921e-17][ 1.72083657e-17 1.00000000e+00 -7.45734805e-18][ 1.65856322e-17 2.32491643e-16 1.00000000e+00]]--------------------------------------------------------
+		  ```
